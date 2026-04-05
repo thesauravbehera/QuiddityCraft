@@ -1,5 +1,6 @@
 import { Preloader } from './components/Preloader';
 import { HeroSection } from './components/HeroSection';
+import { TimesSquareTVC } from './components/TimesSquareTVC';
 import { TVCShowcase } from './components/TVCShowcase';
 import { TVCReel } from './components/TVCReel';
 import { TVCAchievements } from './components/TVCAchievements';
@@ -24,6 +25,7 @@ export default function App() {
       <AmbientBackground />
       <Navigation />
       <HeroSection />
+      <TimesSquareTVC />
       <TVCShowcase />
       <TVCReel />
       <TVCAchievements />

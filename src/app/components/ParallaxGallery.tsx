@@ -2,7 +2,6 @@ import { useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
-import assetList from './assetList.json';
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
@@ -12,34 +11,30 @@ export function ParallaxGallery() {
   const col1Ref = useRef<HTMLDivElement>(null);
   const col2Ref = useRef<HTMLDivElement>(null);
 
-  // Curate 6 striking images from the asset list
-  // Skipping the first few to grab more diverse visual imagery mapped to indexes
-  const galleryImages = [
-    assetList[12],
-    assetList[25],
-    assetList[45],
-    assetList[61],
-    assetList[78],
-    assetList[86]
-  ].filter(Boolean); // fallback if array bounds change
+  // Directly mapping the user's newly dropped cinematic aesthetic videos
+  const galleryVideos = [
+    "/videos/AI.mp4",
+    "/videos/Energy drinks.mp4",
+    "/videos/Motion graphics.mp4",
+    "/videos/Clinique Video 04_04 English.mp4",
+    "/videos/Shelajit AD 2.mp4",
+    "/videos/AI Capsules 1.mp4",
+    "/videos/Kaboom Reel.mp4",
+    "/videos/Founding Father (AI) 2.mp4"
+  ];
 
-  // Provide fallback images if assetList doesn't have enough entries
-  const curatedImages = galleryImages.length === 6 ? galleryImages : assetList.slice(0, 6);
-
-  const col1Images = curatedImages.slice(0, 3);
-  const col2Images = curatedImages.slice(3, 6);
+  const col1Videos = galleryVideos.slice(0, 4);
+  const col2Videos = galleryVideos.slice(4, 8);
 
   useGSAP(() => {
-    // 1. Pin the text layer dead-center of the screen during the entire 300vh scroll segment
     ScrollTrigger.create({
       trigger: containerRef.current,
       start: "top top",
       end: "bottom bottom",
       pin: textRef.current,
-      pinSpacing: false, // Prevents GSAP from adding extra padding, letting the elements flow naturally over it
+      pinSpacing: false,
     });
 
-    // 2. Parallax Column 1: Moves upward faster than the natural scroll to create depth
     gsap.to(col1Ref.current, {
       y: "-50vh",
       ease: "none",
@@ -51,7 +46,6 @@ export function ParallaxGallery() {
       }
     });
 
-    // 3. Parallax Column 2: Placed further down but moves much faster upward to overtake
     gsap.to(col2Ref.current, {
       y: "-120vh",
       ease: "none",
@@ -73,13 +67,13 @@ export function ParallaxGallery() {
         className="absolute top-0 left-0 w-full h-screen flex flex-col items-center justify-center z-10 pointer-events-none px-6"
       >
         <p 
-          className="text-white/60 text-sm uppercase font-medium mb-6" 
+          className="text-white/60 text-sm uppercase font-medium mb-6 backdrop-blur-sm px-4 py-1 rounded-full bg-black/20" 
           style={{ fontFamily: 'Barlow, sans-serif', letterSpacing: '0.4em' }}
         >
           Explorations
         </p>
         <h2 
-          className="text-white text-center leading-[1.1] mb-6" 
+          className="text-white text-center leading-[1.1] mb-6 drop-shadow-2xl" 
           style={{ 
             fontFamily: 'Barlow, sans-serif', 
             fontSize: 'clamp(50px, 8vw, 100px)', 
@@ -87,49 +81,53 @@ export function ParallaxGallery() {
             letterSpacing: '-2px' 
           }}
         >
-          Visual <span style={{ fontFamily: 'Instrument Serif, serif', fontStyle: 'italic', fontWeight: 400, color: 'rgba(255,255,255,0.7)' }}>playground</span>
+          Visual <span style={{ fontFamily: 'Instrument Serif, serif', fontStyle: 'italic', fontWeight: 400, color: 'rgba(255,255,255,0.9)' }}>playground</span>
         </h2>
         <p 
-          className="text-white/50 text-base md:text-lg max-w-md mx-auto text-center font-medium leading-relaxed" 
+          className="text-white/80 text-base md:text-lg max-w-lg mx-auto text-center font-medium leading-relaxed drop-shadow-xl backdrop-blur-sm bg-black/10 rounded-xl p-4 border border-white/5" 
           style={{ fontFamily: 'Barlow, sans-serif' }}
         >
-          Designing seamless digital interactions by focusing on the unique nuances which bring systems to life.
+          Designing seamless digital interactions by pushing heavily optimized cinematic 3D simulations inside web engines.
         </p>
       </div>
 
-      {/* Parallax Image Columns (z-20) */}
+      {/* Parallax Video Columns (z-20) */}
       <div className="absolute top-0 left-0 w-full h-full z-20 pointer-events-none">
         <div className="max-w-[1400px] h-full mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-40 items-start">
           
-          {/* Column 1 - Starts immediately, moves moderately */}
+          {/* Column 1 */}
           <div ref={col1Ref} className="flex flex-col gap-16 md:gap-40 mt-[30vh] pointer-events-auto items-center md:items-end">
-            {col1Images.map((src, i) => (
+            {col1Videos.map((src, i) => (
               <div 
                 key={`col1-${i}`} 
-                className="group relative overflow-hidden rounded-[24px] bg-zinc-950/40 backdrop-blur-md border border-white/10 transition-all duration-700 hover:scale-[1.03] hover:shadow-[0_0_50px_rgba(255,255,255,0.1)] aspect-square max-w-[340px] w-full shadow-2xl"
+                className="group relative overflow-hidden rounded-[24px] bg-zinc-950/40 backdrop-blur-md border border-white/10 transition-all duration-700 hover:scale-[1.03] hover:shadow-[0_0_50px_rgba(255,255,255,0.1)] aspect-video md:aspect-[4/5] max-w-[400px] w-full shadow-2xl"
               >
-                <img 
+                <video 
                   src={src} 
-                  alt="Exploration Concept" 
-                  className="w-full h-full object-cover filter grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700" 
-                  loading="lazy" 
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className="w-full h-full object-cover filter grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700" 
                 />
               </div>
             ))}
           </div>
 
-          {/* Column 2 - Starts lower offset, moves rapidly */}
+          {/* Column 2 */}
           <div ref={col2Ref} className="flex flex-col gap-16 md:gap-40 mt-[80vh] pointer-events-auto items-center md:items-start">
-            {col2Images.map((src, i) => (
+            {col2Videos.map((src, i) => (
               <div 
                 key={`col2-${i}`} 
-                className="group relative overflow-hidden rounded-[24px] bg-zinc-950/40 backdrop-blur-md border border-white/10 transition-all duration-700 hover:scale-[1.03] hover:shadow-[0_0_50px_rgba(255,255,255,0.1)] aspect-[4/5] max-w-[300px] w-full shadow-2xl"
+                className="group relative overflow-hidden rounded-[24px] bg-zinc-950/40 backdrop-blur-md border border-white/10 transition-all duration-700 hover:scale-[1.03] hover:shadow-[0_0_50px_rgba(255,255,255,0.1)] aspect-video md:aspect-square max-w-[350px] w-full shadow-2xl"
               >
-                <img 
+                <video 
                   src={src} 
-                  alt="Exploration Concept" 
-                  className="w-full h-full object-cover filter grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700" 
-                  loading="lazy" 
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className="w-full h-full object-cover filter grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700" 
                 />
               </div>
             ))}
