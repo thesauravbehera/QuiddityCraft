@@ -7,7 +7,7 @@ export function TimesSquareTVC() {
       {/* Background Video */}
       <div className="absolute inset-0 z-0">
         <video
-          src="/videos/NAC TVC AI Video 03.mov"
+          src="/videos/Kaboom 14th Sept(Time Square).mp4"
           autoPlay
           loop
           muted
@@ -53,7 +53,7 @@ export function TimesSquareTVC() {
             className="mt-8 text-white/60 max-w-2xl mx-auto text-base sm:text-lg lg:text-xl font-light"
             style={{ fontFamily: 'Barlow, sans-serif' }}
           >
-            Our NAC AI Commercial took over the heart of New York City, demonstrating the unprecedented scale of artificial intelligence in mass broadcast advertising.
+            The Kaboom showcase took over the heart of New York City, demonstrating the unprecedented scale of artificial intelligence in mass broadcast advertising.
           </p>
 
         </motion.div>
