@@ -15,7 +15,7 @@ export function BrandLogos() {
           transition={{ duration: 0.8 }}
           className="text-center mb-10"
         >
-          <p className="text-white/60 text-sm uppercase tracking-[0.2em]" style={{ fontFamily: 'Barlow, sans-serif' }}>
+          <p className="text-white text-base font-semibold uppercase tracking-[0.25em] drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]" style={{ fontFamily: 'Barlow, sans-serif' }}>
             Trusted by leading brands
           </p>
         </motion.div>
@@ -39,12 +39,12 @@ export function BrandLogos() {
             {duplicatedLogos.map((src, index) => (
               <div 
                 key={index} 
-                className="flex items-center justify-center shrink-0 w-[120px] h-[80px]"
+                className="flex items-center justify-center shrink-0 w-[140px] h-[90px]"
               >
                 <img 
                   src={src} 
                   alt="Brand Logo" 
-                  className="max-w-full max-h-full object-contain filter grayscale opacity-50 contrast-125 hover:grayscale-0 hover:opacity-100 transition-all duration-300 rounded-[10px]"
+                  className="max-w-full max-h-full object-contain filter grayscale opacity-90 contrast-150 drop-shadow-[0_0_10px_rgba(255,255,255,0.3)] hover:scale-110 hover:drop-shadow-[0_0_20px_rgba(255,255,255,0.8)] hover:grayscale-0 hover:opacity-100 transition-all duration-300 rounded-[10px]"
                   loading="lazy"
                 />
               </div>
