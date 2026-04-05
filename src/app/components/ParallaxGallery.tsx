@@ -100,7 +100,7 @@ export function ParallaxGallery() {
             {col1Videos.map((src, i) => (
               <div 
                 key={`col1-${i}`} 
-                className="group relative overflow-hidden rounded-[24px] bg-zinc-950/40 backdrop-blur-md border border-white/10 transition-all duration-700 hover:scale-[1.03] hover:shadow-[0_0_50px_rgba(255,255,255,0.1)] aspect-video md:aspect-[4/5] max-w-[400px] w-full shadow-2xl"
+                className="group relative overflow-hidden rounded-[24px] bg-zinc-950/40 backdrop-blur-md border border-white/10 transition-all duration-700 hover:scale-[1.03] hover:shadow-[0_0_80px_rgba(255,255,255,0.15)] aspect-video md:aspect-[4/5] max-w-[600px] w-full shadow-2xl"
               >
                 <video 
                   src={src} 
@@ -108,7 +108,7 @@ export function ParallaxGallery() {
                   muted
                   loop
                   playsInline
-                  className="w-full h-full object-cover filter grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700" 
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
                 />
               </div>
             ))}
@@ -119,7 +119,7 @@ export function ParallaxGallery() {
             {col2Videos.map((src, i) => (
               <div 
                 key={`col2-${i}`} 
-                className="group relative overflow-hidden rounded-[24px] bg-zinc-950/40 backdrop-blur-md border border-white/10 transition-all duration-700 hover:scale-[1.03] hover:shadow-[0_0_50px_rgba(255,255,255,0.1)] aspect-video md:aspect-square max-w-[350px] w-full shadow-2xl"
+                className="group relative overflow-hidden rounded-[24px] bg-zinc-950/40 backdrop-blur-md border border-white/10 transition-all duration-700 hover:scale-[1.03] hover:shadow-[0_0_80px_rgba(255,255,255,0.15)] aspect-video md:aspect-square max-w-[500px] w-full shadow-2xl"
               >
                 <video 
                   src={src} 
@@ -127,7 +127,7 @@ export function ParallaxGallery() {
                   muted
                   loop
                   playsInline
-                  className="w-full h-full object-cover filter grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700" 
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
                 />
               </div>
             ))}
