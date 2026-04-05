@@ -7,22 +7,22 @@ export function HeroSection() {
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
 
   const tvcVideos = [
-    '/videos/Kaboom 14th Sept(Time Square).mp4',
+    '/videos/Sharan.mp4',
     '/videos/astruanuat.mp4',
     '/videos/Astruanuat2.mp4',
-    '/videos/Motion graphics.mp4',
-    '/videos/Clinique Video 04_04 English.mp4',
     '/videos/Astruanuat3.mp4',
     '/videos/Firefighter.mp4',
     '/videos/Firefighter2.mp4',
+    '/videos/granny 2.mp4',
+    '/videos/Granny.mp4',
     '/videos/Mountain 1.mp4',
     '/videos/Mountain2.mp4',
     '/videos/Party 2.mp4',
     '/videos/Party 3.mp4',
     '/videos/Party wide angle .mp4',
     '/videos/Party1.mp4',
-    '/videos/Granny.mp4',
-    '/videos/granny 2.mp4',
+    '/videos/Clinique Video 04_04 English.mp4',
+    '/videos/Motion graphics.mp4',
   ];
 
   useEffect(() => {

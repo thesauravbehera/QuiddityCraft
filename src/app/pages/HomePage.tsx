@@ -5,6 +5,7 @@ import { TimesSquareTVC } from '../components/TimesSquareTVC';
 import { ParallaxGallery } from '../components/ParallaxGallery';
 import { ReelsCarousel } from '../components/ReelsCarousel';
 import { WorkGrid } from '../components/WorkGrid';
+import { VideoGridShowcase } from '../components/VideoGridShowcase';
 import { ServicesSection } from '../components/ServicesSection';
 import { TestimonialsSection } from '../components/TestimonialsSection';
 import { CTASection } from '../components/CTASection';
@@ -19,6 +20,7 @@ export function HomePage() {
       <ParallaxGallery />
       <ReelsCarousel />
       <WorkGrid />
+      <VideoGridShowcase />
       <ServicesSection />
       <TestimonialsSection />
       <CTASection />
