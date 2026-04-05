@@ -17,9 +17,9 @@ export function HomePage() {
       <SectionSpacer />
       <TimesSquareTVC />
       <BrandLogos />
+      <WorkGrid />
       <ParallaxGallery />
       <ReelsCarousel />
-      <WorkGrid />
       <VideoGridShowcase />
       <ServicesSection />
       <TestimonialsSection />
