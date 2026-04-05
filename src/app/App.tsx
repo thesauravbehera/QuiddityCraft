@@ -9,6 +9,7 @@ import { StatsSection } from './components/StatsSection';
 import { ServicesSection } from './components/ServicesSection';
 import { ProcessSection } from './components/ProcessSection';
 import { ProjectsSection } from './components/ProjectsSection';
+import { ParallaxGallery } from './components/ParallaxGallery';
 import { WorkGrid } from './components/WorkGrid';
 import { TestimonialsSection } from './components/TestimonialsSection';
 import { CTASection } from './components/CTASection';
@@ -32,6 +33,7 @@ export default function App() {
       <ServicesSection />
       <ProcessSection />
       <ProjectsSection />
+      <ParallaxGallery />
       <WorkGrid />
       <TestimonialsSection />
       <CTASection />
