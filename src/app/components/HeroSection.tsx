@@ -8,7 +8,6 @@ export function HeroSection() {
 
   const tvcVideos = [
     '/videos/Fenty Beauty .mov',
-    '/videos/AI AVATAR_TedX 9x16.mp4',
     '/videos/AI.mp4',
     '/videos/Energy drinks.mp4',
     '/videos/Kaboom 14th Sept(Time Square).mp4',
@@ -18,7 +17,6 @@ export function HeroSection() {
     '/videos/Clinique Video 04_04 English.mp4',
     '/videos/Astruanuat3.mp4',
     '/videos/Firefighter.mp4',
-    '/videos/Shelajit AD 2.mp4',
     '/videos/AI Capsules 1.mp4',
     '/videos/Firefighter2.mp4',
     '/videos/Mountain 1.mp4',

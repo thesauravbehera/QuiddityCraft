@@ -9,12 +9,12 @@ export function Layout() {
     <div className="relative w-full min-h-screen overflow-x-hidden bg-[#060608]">
       <Preloader />
       <AmbientBackground />
-      <Navigation />
-      
       {/* Route Content Area */}
       <main className="w-full relative z-10 flex flex-col min-h-screen">
         <Outlet />
       </main>
+      
+      <Navigation />
       
       <ScrollToTop />
     </div>

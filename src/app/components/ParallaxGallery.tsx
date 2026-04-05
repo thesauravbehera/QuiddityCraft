@@ -12,27 +12,10 @@ export function ParallaxGallery() {
   const col2Ref = useRef<HTMLDivElement>(null);
 
   const galleryVideos = [
-    "/videos/AI.mp4",
+    "/videos/Fenty Beauty .mov",
+    "/videos/Kaboom 14th Sept(Time Square).mp4",
     "/videos/Energy drinks.mp4",
-    "/videos/astruanuat.mp4",
-    "/videos/Astruanuat2.mp4",
-    "/videos/Motion graphics.mp4",
-    "/videos/Clinique Video 04_04 English.mp4",
-    "/videos/Astruanuat3.mp4",
-    "/videos/Firefighter.mp4",
-    "/videos/Shelajit AD 2.mp4",
-    "/videos/AI Capsules 1.mp4",
-    "/videos/Firefighter2.mp4",
-    "/videos/Mountain 1.mp4",
-    "/videos/Kaboom Reel.mp4",
-    "/videos/Founding Father (AI) 2.mp4",
-    "/videos/Mountain2.mp4",
-    "/videos/Party 2.mp4",
-    "/videos/Party 3.mp4",
-    "/videos/Party wide angle .mp4",
-    "/videos/Party1.mp4",
-    "/videos/Granny.mp4",
-    "/videos/granny 2.mp4",
+    "/videos/AI.mp4"
   ];
 
   const mid = Math.ceil(galleryVideos.length / 2);
@@ -72,12 +55,12 @@ export function ParallaxGallery() {
   }, { scope: containerRef });
 
   return (
-    <section ref={containerRef} className="relative w-full h-[600vh] bg-transparent mt-20 border-t border-white/5 pt-10">
+    <section ref={containerRef} className="relative w-full h-[200vh] bg-transparent mt-20 border-t border-white/5 pt-10">
       
-      {/* Pinned Text Layer (z-10) */}
+      {/* Pinned Text Layer (z-30) */}
       <div 
         ref={textRef}
-        className="absolute top-0 left-0 w-full h-screen flex flex-col items-center justify-center z-10 pointer-events-none px-6"
+        className="absolute top-0 left-0 w-full h-screen flex flex-col items-center justify-center z-30 pointer-events-none px-6"
       >
         <p 
           className="text-white/60 text-sm uppercase font-medium mb-6 backdrop-blur-sm px-4 py-1 rounded-full bg-black/20" 
