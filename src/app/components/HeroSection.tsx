@@ -7,9 +7,6 @@ export function HeroSection() {
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
 
   const tvcVideos = [
-    '/videos/Fenty Beauty .mov',
-    '/videos/AI.mp4',
-    '/videos/Energy drinks.mp4',
     '/videos/Kaboom 14th Sept(Time Square).mp4',
     '/videos/astruanuat.mp4',
     '/videos/Astruanuat2.mp4',
@@ -17,7 +14,6 @@ export function HeroSection() {
     '/videos/Clinique Video 04_04 English.mp4',
     '/videos/Astruanuat3.mp4',
     '/videos/Firefighter.mp4',
-    '/videos/AI Capsules 1.mp4',
     '/videos/Firefighter2.mp4',
     '/videos/Mountain 1.mp4',
     '/videos/Mountain2.mp4',

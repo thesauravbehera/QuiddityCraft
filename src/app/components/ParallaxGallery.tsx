@@ -87,40 +87,46 @@ export function ParallaxGallery() {
           
           {/* Column 1 */}
           <div ref={col1Ref} className="flex flex-col gap-16 md:gap-40 mt-[30vh] pointer-events-auto items-center md:items-end">
-            {col1Videos.map((src, i) => (
-              <div 
-                key={`col1-${i}`} 
-                className="group relative overflow-hidden rounded-[24px] bg-zinc-950/40 backdrop-blur-md border border-white/10 transition-all duration-700 hover:scale-[1.03] hover:shadow-[0_0_50px_rgba(255,255,255,0.1)] aspect-video md:aspect-[4/5] max-w-[400px] w-full shadow-2xl"
-              >
-                <video 
-                  src={src} 
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
-                />
-              </div>
-            ))}
+            {col1Videos.map((src, i) => {
+              const is9x16 = src.includes('AI.mp4') || src.includes('Energy drinks.mp4') || src.includes('TedX');
+              return (
+                <div 
+                  key={`col1-${i}`} 
+                  className={`group relative overflow-hidden rounded-[24px] bg-zinc-950/40 backdrop-blur-md border border-white/10 transition-all duration-700 hover:scale-[1.03] hover:shadow-[0_0_50px_rgba(255,255,255,0.1)] w-full shadow-2xl ${is9x16 ? 'aspect-[9/16] max-w-[300px]' : 'aspect-video md:aspect-[4/5] max-w-[400px]'}`}
+                >
+                  <video 
+                    src={src} 
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+                  />
+                </div>
+              );
+            })}
           </div>
 
           {/* Column 2 */}
           <div ref={col2Ref} className="flex flex-col gap-16 md:gap-40 mt-[80vh] pointer-events-auto items-center md:items-start">
-            {col2Videos.map((src, i) => (
-              <div 
-                key={`col2-${i}`} 
-                className="group relative overflow-hidden rounded-[24px] bg-zinc-950/40 backdrop-blur-md border border-white/10 transition-all duration-700 hover:scale-[1.03] hover:shadow-[0_0_50px_rgba(255,255,255,0.1)] aspect-video md:aspect-square max-w-[350px] w-full shadow-2xl"
-              >
-                <video 
-                  src={src} 
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
-                />
-              </div>
-            ))}
+            {col2Videos.map((src, i) => {
+              const is9x16 = src.includes('AI.mp4') || src.includes('Energy drinks.mp4') || src.includes('TedX');
+              return (
+                <div 
+                  key={`col2-${i}`} 
+                  className={`group relative overflow-hidden rounded-[24px] bg-zinc-950/40 backdrop-blur-md border border-white/10 transition-all duration-700 hover:scale-[1.03] hover:shadow-[0_0_50px_rgba(255,255,255,0.1)] w-full shadow-2xl ${is9x16 ? 'aspect-[9/16] max-w-[300px]' : 'aspect-video md:aspect-square max-w-[350px]'}`}
+                >
+                  <video 
+                    src={src} 
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+                  />
+                </div>
+              );
+            })}
           </div>
 
         </div>

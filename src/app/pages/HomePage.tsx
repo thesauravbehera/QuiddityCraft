@@ -1,11 +1,10 @@
 import { HeroSection } from '../components/HeroSection';
 import { StatRibbon } from '../components/StatRibbon';
 import { SectionSpacer } from '../components/SectionSpacer';
-import { TimesSquareTVC } from '../components/TimesSquareTVC';
 import { BrandLogos } from '../components/BrandLogos';
-import { TVCReel } from '../components/TVCReel';
-import { TVCAchievements } from '../components/TVCAchievements';
+import { TimesSquareTVC } from '../components/TimesSquareTVC';
 import { ParallaxGallery } from '../components/ParallaxGallery';
+import { ReelsCarousel } from '../components/ReelsCarousel';
 import { WorkGrid } from '../components/WorkGrid';
 import { ServicesSection } from '../components/ServicesSection';
 import { TestimonialsSection } from '../components/TestimonialsSection';
@@ -20,6 +19,7 @@ export function HomePage() {
       <TimesSquareTVC />
       <BrandLogos />
       <ParallaxGallery />
+      <ReelsCarousel />
       <WorkGrid />
       <ServicesSection />
       <TestimonialsSection />
