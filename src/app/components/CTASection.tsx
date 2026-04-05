@@ -4,10 +4,7 @@ import { Phone, Mail } from 'lucide-react';
 
 export function CTASection() {
   return (
-    <section className="py-32 bg-transparent relative overflow-hidden">
-      {/* Background gradients */}
-      <div className="absolute inset-0 bg-gradient-to-b from-zinc-900 to-black" />
-
+    <section className="py-32 bg-transparent relative overflow-hidden border-t border-white/5">
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -22,6 +19,7 @@ export function CTASection() {
               fontStyle: 'italic',
               fontSize: 'clamp(32px, 5vw, 64px)',
               lineHeight: '1.2',
+              textShadow: '0 0 40px rgba(255,255,255,0.3)'
             }}
           >
             Let's create something unforgettable.

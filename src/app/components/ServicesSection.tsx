@@ -52,6 +52,7 @@ export function ServicesSection() {
               fontStyle: 'italic',
               fontSize: 'clamp(32px, 4vw, 56px)',
               lineHeight: '1.3',
+              textShadow: '0 0 40px rgba(255,255,255,0.2)'
             }}
           >
             What I Do

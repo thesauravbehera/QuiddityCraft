@@ -24,7 +24,7 @@ export function TestimonialsSection() {
   ];
 
   return (
-    <section id="testimonial" className="py-32 bg-black">
+    <section id="testimonial" className="py-32 bg-transparent border-t border-white/5">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -40,6 +40,7 @@ export function TestimonialsSection() {
               fontStyle: 'italic',
               fontSize: 'clamp(32px, 4vw, 56px)',
               lineHeight: '1.3',
+              textShadow: '0 0 40px rgba(255,255,255,0.2)'
             }}
           >
             What Clients Say
