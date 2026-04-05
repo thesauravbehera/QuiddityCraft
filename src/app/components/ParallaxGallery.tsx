@@ -77,7 +77,7 @@ export function ParallaxGallery() {
     });
 
     gsap.to(col1Ref.current, {
-      y: "-50vh",
+      yPercent: -70,
       ease: "none",
       scrollTrigger: {
         trigger: containerRef.current,
@@ -88,7 +88,7 @@ export function ParallaxGallery() {
     });
 
     gsap.to(col2Ref.current, {
-      y: "-120vh",
+      yPercent: -90,
       ease: "none",
       scrollTrigger: {
         trigger: containerRef.current,
@@ -100,7 +100,7 @@ export function ParallaxGallery() {
   }, { scope: containerRef });
 
   return (
-    <section ref={containerRef} className="relative w-full h-[200vh] bg-transparent mt-20 border-t border-white/5 pt-10">
+    <section ref={containerRef} className="relative w-full h-[300vh] bg-transparent mt-20 border-t border-white/5 pt-10 overflow-hidden">
       
       {/* Pinned Text Layer */}
       <div 
