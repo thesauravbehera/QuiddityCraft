@@ -102,10 +102,10 @@ export function ParallaxGallery() {
   return (
     <section ref={containerRef} className="relative w-full h-[200vh] bg-transparent mt-20 border-t border-white/5 pt-10">
       
-      {/* Pinned Text Layer (z-30) */}
+      {/* Pinned Text Layer */}
       <div 
         ref={textRef}
-        className="absolute top-0 left-0 w-full h-screen flex flex-col items-center justify-center z-30 pointer-events-none px-6"
+        className="absolute top-0 left-0 w-full h-screen flex flex-col items-center justify-center z-0 pointer-events-none px-6"
       >
         <p 
           className="text-white/60 text-sm uppercase font-medium mb-6 backdrop-blur-sm px-4 py-1 rounded-full bg-black/20" 
@@ -126,8 +126,8 @@ export function ParallaxGallery() {
         </h2>
       </div>
 
-      {/* Parallax Video Columns (z-20) */}
-      <div className="absolute top-0 left-0 w-full h-full z-20 pointer-events-none">
+      {/* Parallax Video Columns */}
+      <div className="absolute top-0 left-0 w-full h-full z-[5] pointer-events-none">
         <div className="max-w-[1400px] h-full mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-40 items-start">
           
           {/* Column 1 */}

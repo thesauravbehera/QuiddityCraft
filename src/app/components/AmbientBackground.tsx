@@ -92,7 +92,6 @@ export function AmbientBackground() {
       <Canvas camera={{ position: [0, 0, 1] }}>
         <fog attach="fog" args={['#060608', 10, 50]} />
         <Starfield />
-        <GalacticStarFall />
       </Canvas>
       {/* Gradient mask to blend the top and bottom into the void smoothly */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#060608] via-transparent to-[#060608] opacity-80" />
