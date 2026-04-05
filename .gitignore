@@ -1,0 +1,32 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Massive Local Assets
+PIXelPRmt/
+public/videos/Mumbai 2.mp4
+public/videos/Shelajit Gummies (AI_Podcast_Style)9x16.mp4
+public/videos/Player Montage Edit (Mohamed Salah).mp4
+public/videos/AI Cat Edits 2.mp4
+public/videos/REEL.mp4
