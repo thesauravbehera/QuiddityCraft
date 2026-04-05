@@ -13,7 +13,7 @@ export function ParallaxGallery() {
 
   const galleryVideos = [
     "/videos/Fenty Beauty .mov",
-    "/videos/Kaboom 14th Sept(Time Square).mp4",
+    "/videos/AI Capsules 1.mp4",
     "/videos/Energy drinks.mp4",
     "/videos/AI.mp4"
   ];
