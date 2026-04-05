@@ -14,8 +14,6 @@ export function HomePage() {
   return (
     <>
       <HeroSection />
-      <StatRibbon />
-      <SectionSpacer />
       <TimesSquareTVC />
       <BrandLogos />
       <ParallaxGallery />
