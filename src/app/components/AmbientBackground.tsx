@@ -32,7 +32,7 @@ function Starfield() {
 function GalacticStarFall() {
   const pointsRef = useRef<THREE.Points>(null);
   
-  const particleCount = 2000;
+  const particleCount = 400; // Drastically reduced for subtlety
   
   const positions = useMemo(() => {
     const coords = new Float32Array(particleCount * 3);
@@ -79,7 +79,7 @@ function GalacticStarFall() {
         size={0.15} 
         sizeAttenuation 
         transparent 
-        opacity={0.7} 
+        opacity={0.25} // Reduced opacity
         blending={THREE.AdditiveBlending}
       />
     </points>

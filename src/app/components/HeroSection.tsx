@@ -85,24 +85,26 @@ export function HeroSection() {
               className="mb-6"
             >
               <h1
-                className="text-white mb-2"
+                className="text-white mb-2 relative"
                 style={{
                   fontFamily: 'Barlow, sans-serif',
                   fontWeight: 300,
                   fontSize: 'clamp(32px, 5vw, 64px)',
                   lineHeight: '1.2',
                   letterSpacing: '-2px',
+                  textShadow: '0 0 30px rgba(255,255,255,0.4)'
                 }}
               >
                 Agency that makes your
               </h1>
               <h1
-                className="text-white"
+                className="text-white relative"
                 style={{
                   fontFamily: 'Instrument Serif, serif',
                   fontStyle: 'italic',
                   fontSize: 'clamp(32px, 5vw, 64px)',
                   lineHeight: '1.2',
+                  textShadow: '0 0 40px rgba(255,255,255,0.5)'
                 }}
               >
                 videos & reels viral

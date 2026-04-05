@@ -15,7 +15,7 @@ export function TimesSquareTVC() {
           className="w-full h-full object-cover opacity-80 mix-blend-screen"
         />
         {/* Darkness Overlay mapped against the neon Times Square lights */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#060608] via-[#060608]/40 to-[#060608]/20" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#060608]/80 via-transparent to-transparent" />
       </div>
 
       {/* Foreground Content */}
@@ -40,7 +40,11 @@ export function TimesSquareTVC() {
           {/* Core Typography */}
           <h2 
             className="text-white leading-[0.9] tracking-tighter"
-            style={{ fontSize: 'clamp(50px, 8vw, 130px)', fontFamily: 'Instrument Serif, serif' }}
+            style={{ 
+              fontSize: 'clamp(50px, 8vw, 130px)', 
+              fontFamily: 'Instrument Serif, serif',
+              textShadow: '0 0 40px rgba(255,255,255,0.4), 0 0 80px rgba(100,150,255,0.2)'
+            }}
           >
             Featured On <br />
             <span className="italic bg-clip-text text-transparent bg-gradient-to-r from-white via-blue-100 to-white/70">

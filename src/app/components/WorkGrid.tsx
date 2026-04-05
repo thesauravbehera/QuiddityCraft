@@ -34,7 +34,7 @@ export function WorkGrid() {
         </motion.div>
 
         {/* Masonry Layout using CSS Columns */}
-        <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 xl:columns-5 gap-4 space-y-4">
+        <div className="columns-2 sm:columns-3 md:columns-4 lg:columns-5 xl:columns-6 gap-3 sm:gap-4 space-y-3 sm:space-y-4">
           {assetList.map((src, index) => {
             // Get a clean title from the filename
             const filename = src.split('/').pop() || '';

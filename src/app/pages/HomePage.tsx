@@ -1,5 +1,4 @@
 import { HeroSection } from '../components/HeroSection';
-import { StatRibbon } from '../components/StatRibbon';
 import { SectionSpacer } from '../components/SectionSpacer';
 import { BrandLogos } from '../components/BrandLogos';
 import { TimesSquareTVC } from '../components/TimesSquareTVC';
@@ -14,6 +13,7 @@ export function HomePage() {
   return (
     <>
       <HeroSection />
+      <SectionSpacer />
       <TimesSquareTVC />
       <BrandLogos />
       <ParallaxGallery />
