@@ -83,12 +83,6 @@ export function ParallaxGallery() {
         >
           Visual <span style={{ fontFamily: 'Instrument Serif, serif', fontStyle: 'italic', fontWeight: 400, color: 'rgba(255,255,255,0.9)' }}>playground</span>
         </h2>
-        <p 
-          className="text-white/80 text-base md:text-lg max-w-lg mx-auto text-center font-medium leading-relaxed drop-shadow-xl backdrop-blur-sm bg-black/10 rounded-xl p-4 border border-white/5" 
-          style={{ fontFamily: 'Barlow, sans-serif' }}
-        >
-          Designing seamless digital interactions by pushing heavily optimized cinematic 3D simulations inside web engines.
-        </p>
       </div>
 
       {/* Parallax Video Columns (z-20) */}
@@ -108,7 +102,7 @@ export function ParallaxGallery() {
                   muted
                   loop
                   playsInline
-                  className="w-full h-full object-cover filter grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700" 
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
                 />
               </div>
             ))}
@@ -127,7 +121,7 @@ export function ParallaxGallery() {
                   muted
                   loop
                   playsInline
-                  className="w-full h-full object-cover filter grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700" 
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
                 />
               </div>
             ))}

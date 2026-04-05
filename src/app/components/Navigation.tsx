@@ -2,10 +2,12 @@ import { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
 import { ArrowUpRight, Menu, X } from 'lucide-react';
 import { Button } from './ui/button';
+import { Link, useLocation } from 'react-router';
 
 export function Navigation() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,10 +19,9 @@ export function Navigation() {
   }, []);
 
   const navLinks = [
-    { href: '#about', label: 'About' },
-    { href: '#works', label: 'Works' },
-    { href: '#services', label: 'Services' },
-    { href: '#testimonial', label: 'Testimonial' },
+    { href: '/', label: 'Home' },
+    { href: '/about', label: 'About' },
+    { href: '/services', label: 'Services' }
   ];
 
   return (
@@ -42,21 +43,27 @@ export function Navigation() {
         >
           {/* Logo */}
           <div className="flex items-center">
-            <span className="text-2xl font-bold text-white tracking-widest drop-shadow-md">VIBIVIDLY</span>
+            <Link to="/">
+              <span className="text-2xl font-bold text-white tracking-widest drop-shadow-md">VIBIVIDLY</span>
+            </Link>
           </div>
 
           {/* Desktop Navigation Links */}
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.href}
-                href={link.href}
-                className="text-sm font-medium text-white/60 hover:text-white transition-colors relative group"
+                to={link.href}
+                className={`text-sm font-medium transition-colors relative group ${
+                  location.pathname === link.href ? 'text-white' : 'text-white/60 hover:text-white'
+                }`}
                 style={{ fontFamily: 'Barlow, sans-serif' }}
               >
                 {link.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-white transition-all duration-300 group-hover:w-full" />
-              </a>
+                <span className={`absolute -bottom-1 left-0 h-[1px] bg-white transition-all duration-300 ${
+                  location.pathname === link.href ? 'w-full' : 'w-0 group-hover:w-full'
+                }`} />
+              </Link>
             ))}
           </div>
 
