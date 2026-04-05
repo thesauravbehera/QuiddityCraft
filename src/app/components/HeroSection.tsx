@@ -58,21 +58,6 @@ export function HeroSection() {
 
       {/* Content Container with Corner Accents */}
       <div className="relative z-10 max-w-5xl mx-auto px-6 text-center pb-[250px]">
-        {/* Featured Badge */}
-        <motion.div
-          initial={{ y: 50, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="flex justify-center mb-8"
-        >
-          <div className="bg-white/10 backdrop-blur-sm rounded-full px-6 py-2">
-            <div className="bg-white/90 backdrop-blur-md rounded-full px-6 py-2">
-              <span className="text-sm font-medium text-black" style={{ fontFamily: 'Barlow, sans-serif' }}>
-                🎬 National TVC • Times Square • 100M+ Views
-              </span>
-            </div>
-          </div>
-        </motion.div>
 
         {/* Corner Accents Container */}
         <div className="relative inline-block">
