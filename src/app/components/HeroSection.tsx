@@ -34,7 +34,7 @@ export function HeroSection() {
   }, []);
 
   return (
-    <section className="relative min-h-[90vh] w-full flex items-center justify-center overflow-hidden">
+    <section className="relative h-screen w-full flex items-center justify-center overflow-hidden bg-[#060608]">
       {/* Video Background with fade transition */}
       <div className="absolute inset-0">
         <AnimatePresence mode="wait">
@@ -58,6 +58,9 @@ export function HeroSection() {
       {/* Overlay for better text visibility */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/60" />
       <div className="absolute inset-0 bg-black/20" />
+      
+      {/* Ramp Effect to blend into layout */}
+      <div className="absolute bottom-0 left-0 w-full h-[25vh] bg-gradient-to-b from-transparent to-[#060608] pointer-events-none z-10" />
 
       {/* Content Container with Corner Accents */}
       <div className="relative z-10 max-w-5xl mx-auto px-6 text-center pb-[250px]">
