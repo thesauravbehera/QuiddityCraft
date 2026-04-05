@@ -1,9 +1,45 @@
-import { useRef } from 'react';
+import { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
+
+function PlayOnViewVideo({ src, className }: { src: string, className?: string }) {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            videoRef.current?.play().catch(() => {});
+          } else {
+            videoRef.current?.pause();
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    if (videoRef.current) {
+      observer.observe(videoRef.current);
+    }
+    return () => observer.disconnect();
+  }, [src]);
+
+  return (
+    <video
+      ref={videoRef}
+      src={src}
+      muted
+      loop
+      playsInline
+      preload="metadata"
+      className={className}
+    />
+  );
+}
 
 export function ParallaxGallery() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -94,12 +130,8 @@ export function ParallaxGallery() {
                   key={`col1-${i}`} 
                   className={`group relative overflow-hidden rounded-[24px] bg-zinc-950/40 backdrop-blur-md border border-white/10 transition-all duration-700 hover:scale-[1.03] hover:shadow-[0_0_50px_rgba(255,255,255,0.1)] w-full shadow-2xl ${is9x16 ? 'aspect-[9/16] max-w-[300px]' : 'aspect-video md:aspect-[4/5] max-w-[400px]'}`}
                 >
-                  <video 
+                  <PlayOnViewVideo 
                     src={src} 
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
                   />
                 </div>
@@ -116,12 +148,8 @@ export function ParallaxGallery() {
                   key={`col2-${i}`} 
                   className={`group relative overflow-hidden rounded-[24px] bg-zinc-950/40 backdrop-blur-md border border-white/10 transition-all duration-700 hover:scale-[1.03] hover:shadow-[0_0_50px_rgba(255,255,255,0.1)] w-full shadow-2xl ${is9x16 ? 'aspect-[9/16] max-w-[300px]' : 'aspect-video md:aspect-square max-w-[350px]'}`}
                 >
-                  <video 
+                  <PlayOnViewVideo 
                     src={src} 
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
                   />
                 </div>
