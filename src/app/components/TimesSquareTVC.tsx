@@ -12,7 +12,7 @@ export function TimesSquareTVC() {
           loop
           muted
           playsInline
-          className="w-full h-full object-cover opacity-80 mix-blend-screen"
+          className="w-full h-full object-cover opacity-60"
         />
         {/* Darkness Overlay mapped against the neon Times Square lights */}
         <div className="absolute inset-0 bg-gradient-to-t from-[#060608]/80 via-transparent to-transparent" />
