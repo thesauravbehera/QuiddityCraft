@@ -1,3 +1,4 @@
+import { Preloader } from './components/Preloader';
 import { HeroSection } from './components/HeroSection';
 import { TVCShowcase } from './components/TVCShowcase';
 import { TVCReel } from './components/TVCReel';
@@ -18,6 +19,7 @@ import { ScrollToTop } from './components/ScrollToTop';
 export default function App() {
   return (
     <div className="relative w-full min-h-screen overflow-x-hidden bg-[#060608]">
+      <Preloader />
       <AmbientBackground />
       <Navigation />
       <HeroSection />
