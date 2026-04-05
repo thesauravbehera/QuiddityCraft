@@ -15,8 +15,6 @@ export function HomePage() {
       <HeroSection />
       <TimesSquareTVC />
       <BrandLogos />
-      <TVCReel />
-      <TVCAchievements />
       <ParallaxGallery />
       <WorkGrid />
       <ServicesSection />
