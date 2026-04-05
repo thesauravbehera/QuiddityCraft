@@ -2,7 +2,6 @@ import { motion } from 'motion/react';
 
 export function VideoGridShowcase() {
   const allVideos = [
-    '/videos/Kaboom 14th Sept(Time Square).mp4',
     '/videos/Kaboom Reel.mp4',
     '/videos/Sharan.mp4',
     '/videos/astruanuat.mp4',
