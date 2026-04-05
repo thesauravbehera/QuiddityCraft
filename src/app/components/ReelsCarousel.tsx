@@ -14,7 +14,6 @@ export function ReelsCarousel() {
     { src: '/videos/Fenty Beauty .mov', badge: 'Fenty Edit' },
     { src: '/videos/Founding Father (AI) 2.mp4', badge: 'AI Founding' },
     { src: '/videos/GreenAmericanGuy1.mp4', badge: 'Character AI' },
-    { src: '/videos/Kaboom Reel.mp4', badge: 'Kaboom Reel' },
     { src: '/videos/Keyframe .mov', badge: 'Keyframe' },
     { src: '/videos/Motion graphics.mp4', badge: 'Motion FX' },
     { src: '/videos/Mumbai 2.mp4', badge: 'Mumbai Scene' },
