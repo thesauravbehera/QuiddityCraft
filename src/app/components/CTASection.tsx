@@ -101,7 +101,7 @@ export function CTASection() {
             className="text-white/40 text-sm"
             style={{ fontFamily: 'Barlow, sans-serif' }}
           >
-            © 2026 Logoisum. All rights reserved.
+            © 2026 Vibividly. All rights reserved.
           </p>
         </motion.div>
       </div>

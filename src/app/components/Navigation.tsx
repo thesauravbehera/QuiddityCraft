@@ -42,7 +42,7 @@ export function Navigation() {
         >
           {/* Logo */}
           <div className="flex items-center">
-            <span className="text-2xl font-bold text-white tracking-widest drop-shadow-md">STORYARC</span>
+            <span className="text-2xl font-bold text-white tracking-widest drop-shadow-md">VIBIVIDLY</span>
           </div>
 
           {/* Desktop Navigation Links */}
