@@ -48,10 +48,19 @@ export function ParallaxGallery() {
   const col2Ref = useRef<HTMLDivElement>(null);
 
   const galleryVideos = [
-    "/videos/Fenty Beauty .mov",
-    "/videos/AI Capsules 1.mp4",
-    "/videos/Energy drinks.mp4",
-    "/videos/AI.mp4"
+    "/videos/astruanuat.mp4",
+    "/videos/Astruanuat2.mp4",
+    "/videos/Astruanuat3.mp4",
+    "/videos/Firefighter.mp4",
+    "/videos/Firefighter2.mp4",
+    "/videos/granny 2.mp4",
+    "/videos/Granny.mp4",
+    "/videos/Mountain 1.mp4",
+    "/videos/Mountain2.mp4",
+    "/videos/Party 2.mp4",
+    "/videos/Party 3.mp4",
+    "/videos/Party wide angle .mp4",
+    "/videos/Party1.mp4"
   ];
 
   const mid = Math.ceil(galleryVideos.length / 2);
@@ -128,7 +137,7 @@ export function ParallaxGallery() {
               return (
                 <div 
                   key={`col1-${i}`} 
-                  className={`group relative overflow-hidden rounded-[24px] bg-zinc-950/40 backdrop-blur-md border border-white/10 transition-all duration-700 hover:scale-[1.03] hover:shadow-[0_0_50px_rgba(255,255,255,0.1)] w-full shadow-2xl ${is9x16 ? 'aspect-[9/16] max-w-[300px]' : 'aspect-video md:aspect-[4/5] max-w-[400px]'}`}
+                  className={`group relative overflow-hidden rounded-[24px] bg-zinc-950/40 backdrop-blur-md border border-white/10 transition-all duration-700 hover:scale-[1.03] hover:shadow-[0_0_50px_rgba(255,255,255,0.1)] w-full shadow-2xl aspect-video max-w-[500px]`}
                 >
                   <PlayOnViewVideo 
                     src={src} 
@@ -146,7 +155,7 @@ export function ParallaxGallery() {
               return (
                 <div 
                   key={`col2-${i}`} 
-                  className={`group relative overflow-hidden rounded-[24px] bg-zinc-950/40 backdrop-blur-md border border-white/10 transition-all duration-700 hover:scale-[1.03] hover:shadow-[0_0_50px_rgba(255,255,255,0.1)] w-full shadow-2xl ${is9x16 ? 'aspect-[9/16] max-w-[300px]' : 'aspect-video md:aspect-square max-w-[350px]'}`}
+                  className={`group relative overflow-hidden rounded-[24px] bg-zinc-950/40 backdrop-blur-md border border-white/10 transition-all duration-700 hover:scale-[1.03] hover:shadow-[0_0_50px_rgba(255,255,255,0.1)] w-full shadow-2xl aspect-video max-w-[450px]`}
                 >
                   <PlayOnViewVideo 
                     src={src} 
