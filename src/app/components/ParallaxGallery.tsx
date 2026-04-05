@@ -100,7 +100,7 @@ export function ParallaxGallery() {
   }, { scope: containerRef });
 
   return (
-    <section ref={containerRef} className="relative w-full h-[300vh] bg-transparent mt-20 border-t border-white/5 pt-10 overflow-hidden">
+    <section ref={containerRef} className="relative w-full h-[300vh] bg-transparent mt-20 border-t border-white/5 pt-10" style={{ overflow: 'hidden', clipPath: 'inset(0)' }}>
       
       {/* Pinned Text Layer */}
       <div 
@@ -127,7 +127,7 @@ export function ParallaxGallery() {
       </div>
 
       {/* Parallax Video Columns */}
-      <div className="absolute top-0 left-0 w-full h-full z-[5] pointer-events-none">
+      <div className="absolute top-0 left-0 w-full h-full z-[5] pointer-events-none overflow-hidden" style={{ clipPath: 'inset(0)' }}>
         <div className="max-w-[1400px] h-full mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-40 items-start">
           
           {/* Column 1 */}

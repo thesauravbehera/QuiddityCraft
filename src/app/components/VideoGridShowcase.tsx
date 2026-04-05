@@ -71,7 +71,7 @@ export function VideoGridShowcase() {
         </motion.div>
 
         {/* Masonry Layout using CSS Columns */}
-        <div className="columns-2 sm:columns-3 md:columns-4 lg:columns-5 gap-3 sm:gap-4 space-y-3 sm:space-y-4">
+        <div className="columns-2 sm:columns-3 md:columns-4 lg:columns-5 gap-3 sm:gap-4 pb-10">
           {allVideos.map((src, index) => {
             const filename = src.split('/').pop() || '';
             const cleanTitle = filename.replace(/\.[^/.]+$/, '').replace(/[-_]/g, ' ').trim();
@@ -83,7 +83,7 @@ export function VideoGridShowcase() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true, margin: "0px 0px -50px 0px" }}
                 transition={{ duration: 0.4, delay: (index % 8) * 0.05 }}
-                className="group relative break-inside-avoid overflow-hidden rounded-[16px] bg-zinc-950 border border-white/10 cursor-pointer transform transition-all duration-500 hover:scale-[1.03] hover:shadow-[0_0_30px_rgba(255,255,255,0.1)] hover:border-white/30 hover:z-10"
+                className="group relative break-inside-avoid inline-block w-full mb-3 sm:mb-4 overflow-hidden rounded-[16px] bg-zinc-950 border border-white/10 cursor-pointer transform transition-all duration-500 hover:scale-[1.03] hover:shadow-[0_0_30px_rgba(255,255,255,0.1)] hover:border-white/30 hover:z-10"
               >
                 {/* 
                   Using onMouseEnter/onMouseLeave to handle playback 
