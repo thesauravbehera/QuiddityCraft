@@ -22,7 +22,7 @@ export function FeaturedWork() {
               lineHeight: '1.3',
             }}
           >
-            Featured Campaigns
+            Featured Operations
           </h2>
           <p
             className="text-white/60 max-w-2xl mx-auto"
@@ -31,7 +31,7 @@ export function FeaturedWork() {
               fontSize: '18px',
             }}
           >
-            Broadcast-quality productions that reached millions
+            Galactic-scale operations that echoed across the universe
           </p>
         </motion.div>
 

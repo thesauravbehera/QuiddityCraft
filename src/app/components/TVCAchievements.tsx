@@ -5,13 +5,13 @@ export function TVCAchievements() {
   const achievements = [
     {
       icon: TvMinimal,
-      value: 'USA Broadcast',
-      label: 'National Television',
+      value: 'Interstellar Broadcast',
+      label: 'Universal Television',
     },
     {
       icon: MapPin,
       value: 'Times Square',
-      label: 'NYC Billboard',
+      label: 'Planetary Billboard',
     },
     {
       icon: Eye,

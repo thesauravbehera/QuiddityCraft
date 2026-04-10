@@ -16,8 +16,8 @@ export function BrandLogos() {
            transition={{ duration: 0.8 }}
            className="text-center mb-10 flex flex-col items-center px-6"
         >
-          <p className="text-white/60 text-base font-semibold uppercase tracking-[0.25em] drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]" style={{ fontFamily: 'Barlow, sans-serif' }}>
-            Trusted by leading brands
+          <p className="text-[#00ffff] text-base font-semibold uppercase tracking-[0.25em] drop-shadow-[0_0_8px_rgba(0,255,255,0.6)]" style={{ fontFamily: 'Barlow, sans-serif' }}>
+            Trusted across the galaxy
           </p>
         </motion.div>
 
@@ -25,8 +25,8 @@ export function BrandLogos() {
         <div className="relative flex overflow-hidden w-full border-t border-b border-white/10 group">
           
           {/* Subtle Fading edges for depth */}
-          <div className="absolute top-0 left-0 bottom-0 w-16 md:w-48 bg-gradient-to-r from-[#060608] to-transparent z-10 pointer-events-none" />
-          <div className="absolute top-0 right-0 bottom-0 w-16 md:w-48 bg-gradient-to-l from-[#060608] to-transparent z-10 pointer-events-none" />
+          <div className="absolute top-0 left-0 bottom-0 w-16 md:w-48 bg-gradient-to-r from-[#02000A] to-transparent z-10 pointer-events-none" />
+          <div className="absolute top-0 right-0 bottom-0 w-16 md:w-48 bg-gradient-to-l from-[#02000A] to-transparent z-10 pointer-events-none" />
 
           {/* Scrolling Motion Div containing the rigid boxes */}
           <motion.div

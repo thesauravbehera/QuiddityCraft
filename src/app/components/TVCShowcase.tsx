@@ -68,7 +68,7 @@ export function TVCShowcase() {
                 className="text-white/80 text-sm font-medium uppercase tracking-wider"
                 style={{ fontFamily: 'Barlow, sans-serif' }}
               >
-                ⭐ Broadcast Quality Productions
+                ⭐ Galactic Quality Operations
               </span>
             </div>
           </motion.div>
@@ -82,7 +82,7 @@ export function TVCShowcase() {
               lineHeight: '1.2',
             }}
           >
-            Featured TVC Campaigns
+            Featured Transmission Operations
           </h2>
           <p
             className="text-white/70 max-w-3xl mx-auto"
@@ -92,8 +92,8 @@ export function TVCShowcase() {
               lineHeight: '1.6',
             }}
           >
-            From national television to Times Square billboards — creating commercials that reach
-            millions and drive real business results
+            From planetary broadcasts to Times Square billboards — launching hyperspace transmissions that reach 
+            millions across the universe
           </p>
         </motion.div>
 

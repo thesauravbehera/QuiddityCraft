@@ -17,7 +17,7 @@ export function TVCReel() {
     {
       thumbnail: '/videos/REEL.webm',
       src: '/videos/REEL.webm',
-      title: 'Agency Master Reel',
+      title: 'Galactic Broadcasts',
       duration: 'Highlight',
       isHLS: false,
     },
@@ -49,7 +49,7 @@ export function TVCReel() {
                 fontSize: 'clamp(28px, 3vw, 42px)',
               }}
             >
-              Watch Our TVC Reel
+              Galactic Broadcasts
             </h3>
             <p
               className="text-white/60"
@@ -58,7 +58,7 @@ export function TVCReel() {
                 fontSize: '16px',
               }}
             >
-              Click to view full commercials
+              Transmissions that shook the cosmos
             </p>
           </motion.div>
 

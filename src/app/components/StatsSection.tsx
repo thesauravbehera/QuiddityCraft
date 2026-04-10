@@ -6,7 +6,7 @@ export function StatsSection() {
     {
       icon: Eye,
       value: '100M+',
-      label: 'Views Generated',
+      label: 'Cosmic Impressions',
     },
     {
       icon: Calendar,
@@ -16,12 +16,12 @@ export function StatsSection() {
     {
       icon: Award,
       value: '50+',
-      label: 'Projects Completed',
+      label: 'Missions Accomplished',
     },
     {
       icon: Users,
       value: '20+',
-      label: 'Happy Clients',
+      label: 'Allied Factions',
     },
   ];
 

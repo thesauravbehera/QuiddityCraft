@@ -43,7 +43,7 @@ export function TestimonialsSection() {
               textShadow: '0 0 40px rgba(255,255,255,0.2)'
             }}
           >
-            What Clients Say
+            Commendations from the Fleet
           </h2>
           <p
             className="text-white/60 max-w-2xl mx-auto"
@@ -52,7 +52,7 @@ export function TestimonialsSection() {
               fontSize: '18px',
             }}
           >
-            Trusted by brands and creators worldwide
+            Incoming Transmissions from our allies
           </p>
         </motion.div>
 

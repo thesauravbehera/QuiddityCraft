@@ -4,55 +4,19 @@ import { Play, ChevronDown } from 'lucide-react';
 import { Button } from './ui/button';
 
 export function HeroSection() {
-  const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
-
-  const tvcVideos = [
-    '/videos/Sharan.webm',
-    '/videos/astruanuat.webm',
-    '/videos/Astruanuat2.webm',
-    '/videos/Astruanuat3.webm',
-    '/videos/Firefighter.webm',
-    '/videos/Firefighter2.webm',
-    '/videos/granny 2.webm',
-    '/videos/Granny.webm',
-    '/videos/Mountain 1.webm',
-    '/videos/Mountain2.webm',
-    '/videos/Party 2.webm',
-    '/videos/Party 3.webm',
-    '/videos/Party wide angle .webm',
-    '/videos/Party1.webm',
-    '/videos/Clinique Video 04_04 English.webm',
-    '/videos/Motion graphics.webm',
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentVideoIndex((prevIndex) => (prevIndex + 1) % tvcVideos.length);
-    }, 10000);
-
-    return () => clearInterval(interval);
-  }, []);
-
   return (
     <section className="relative h-screen w-full flex items-center justify-center overflow-hidden bg-[#02000A]">
-      {/* Video Background with fade transition */}
+      {/* Video Background */}
       <div className="absolute inset-0">
-        <AnimatePresence mode="wait">
-          <motion.video
-            key={currentVideoIndex}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 1.5 }}
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="absolute inset-0 w-full h-full object-cover"
-          >
-            <source src={tvcVideos[currentVideoIndex]} type="video/mp4" />
-          </motion.video>
-        </AnimatePresence>
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="/LightSpeedimages/Astruanuat2.mp4" type="video/mp4" />
+        </video>
       </div>
 
       {/* Overlay for better text visibility */}
@@ -95,7 +59,7 @@ export function HeroSection() {
                   textShadow: '0 0 30px rgba(0, 255, 255, 0.6)'
                 }}
               >
-                Engage your audience at
+                Accelerate your brand to
               </h1>
               <h1
                 className="text-white relative"
@@ -107,7 +71,7 @@ export function HeroSection() {
                   textShadow: '0 0 40px rgba(0, 255, 255, 0.7)'
                 }}
               >
-                Warp Speed
+                Light Speed
               </h1>
             </motion.div>
 
@@ -124,7 +88,7 @@ export function HeroSection() {
                 textShadow: '0 0 10px rgba(0,255,255,0.3)'
               }}
             >
-              Galactic-scale Content, AI-Powered Visuals & Stellar Campaigns for Brands Worldwide
+              Cosmic-scale Content, AI-Powered Visuals & High-Velocity Campaigns for Brands Worldwide
             </motion.p>
           </div>
         </div>
@@ -149,24 +113,7 @@ export function HeroSection() {
         </motion.div>
       </div>
 
-      {/* Video Indicators */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 1 }}
-        className="absolute bottom-24 left-1/2 -translate-x-1/2 z-10 flex gap-2"
-      >
-        {tvcVideos.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentVideoIndex(index)}
-            className={`h-1 rounded-full transition-all duration-300 ${
-              index === currentVideoIndex ? 'w-12 bg-white' : 'w-6 bg-white/40 hover:bg-white/60'
-            }`}
-            aria-label={`Switch to video ${index + 1}`}
-          />
-        ))}
-      </motion.div>
+
 
       {/* Scroll Indicator */}
       <motion.div

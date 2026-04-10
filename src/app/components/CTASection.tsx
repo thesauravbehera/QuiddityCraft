@@ -59,7 +59,7 @@ export function CTASection() {
               7218676127
             </a>
             <a
-              href="mailto:sahil.storyarc@gmail.com"
+              href="mailto:comms@prepareoflightspeed.com"
               className="flex items-center gap-3 text-white/80 hover:text-white transition-colors"
               style={{
                 fontFamily: 'Barlow, sans-serif',
@@ -67,7 +67,7 @@ export function CTASection() {
               }}
             >
               <Mail className="w-5 h-5" />
-              sahil.storyarc@gmail.com
+              comms@prepareoflightspeed.com
             </a>
           </motion.div>
 

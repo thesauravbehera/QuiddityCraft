@@ -112,7 +112,7 @@ export function VideoGridShowcase() {
   ];
 
   return (
-    <section className="py-20 bg-[#060608] min-h-screen border-t border-white/10">
+    <section className="py-20 bg-[#02000A] min-h-screen border-t border-white/10">
       <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
            initial={{ opacity: 0, y: 30 }}
@@ -130,7 +130,7 @@ export function VideoGridShowcase() {
               textShadow: '0 0 30px rgba(255,255,255,0.2)'
             }}
           >
-            The Motion Archive
+            Archived Operations
           </h2>
           <p
             className="text-white/60 max-w-2xl mx-auto"
@@ -139,7 +139,7 @@ export function VideoGridShowcase() {
               fontSize: '18px',
             }}
           >
-            A continuous scroll of our entire production and generative video registry.
+            A continuous warp scroll of our entire generative transmission registry.
           </p>
         </motion.div>
 

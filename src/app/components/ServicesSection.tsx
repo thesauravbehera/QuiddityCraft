@@ -55,7 +55,7 @@ export function ServicesSection() {
               textShadow: '0 0 40px rgba(255,255,255,0.2)'
             }}
           >
-            What I Do
+            Operational Directives
           </h2>
           <p
             className="text-white/60 max-w-2xl mx-auto"
@@ -64,7 +64,7 @@ export function ServicesSection() {
               fontSize: '18px',
             }}
           >
-            Full-spectrum creative services powered by AI and human expertise
+            Full-spectrum spatial services powered by stellar AI and human command
           </p>
         </motion.div>
 

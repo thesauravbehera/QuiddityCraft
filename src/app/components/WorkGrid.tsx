@@ -1,7 +1,15 @@
-import { motion } from 'motion/react';
-import assetList from './assetList.json';
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'motion/react';
+import categorizedAssets from './categorizedAssets.json';
+
+type Category = keyof typeof categorizedAssets;
 
 export function WorkGrid() {
+  const categories = Object.keys(categorizedAssets) as Category[];
+  const [activeCategory, setActiveCategory] = useState<Category>(categories[0]);
+
+  const currentAssets = categorizedAssets[activeCategory] || [];
+
   return (
     <section className="py-20 bg-transparent min-h-screen">
       <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
@@ -20,7 +28,7 @@ export function WorkGrid() {
               fontSize: 'clamp(32px, 4vw, 56px)',
             }}
           >
-            Creative Visuals
+            Archived Operations
           </h2>
           <p
             className="text-white/60 max-w-2xl mx-auto"
@@ -29,13 +37,38 @@ export function WorkGrid() {
               fontSize: '18px',
             }}
           >
-            Explore our massive library of premium AI-generated concepts, lifestyle photography, and commercial renders.
+            Explore our massive databanks of premium AI-generated star charts, hyperspace recordings, and cosmic logs.
           </p>
         </motion.div>
 
+        {/* Category Navigation */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 mb-16"
+        >
+          {categories.map((category) => (
+            <button
+              key={category}
+              onClick={() => setActiveCategory(category)}
+              className={`px-6 py-2.5 rounded-full border text-sm uppercase tracking-wider transition-all duration-300 ${
+                activeCategory === category 
+                  ? 'bg-white text-black border-white shadow-[0_0_20px_rgba(255,255,255,0.4)]' 
+                  : 'bg-transparent text-white/50 border-white/10 hover:border-white/30 hover:text-white hover:bg-white/5'
+              }`}
+              style={{ fontFamily: 'Barlow, sans-serif' }}
+            >
+              {category}
+            </button>
+          ))}
+        </motion.div>
+
         {/* Masonry Layout using CSS Columns */}
-        <div className="columns-2 sm:columns-3 md:columns-4 lg:columns-5 xl:columns-6 gap-3 sm:gap-4 space-y-3 sm:space-y-4">
-          {assetList.map((src, index) => {
+        <div className="columns-2 sm:columns-3 md:columns-4 lg:columns-5 xl:columns-6 gap-3 sm:gap-4 space-y-3 sm:space-y-4 transition-all duration-500 min-h-[50vh]">
+          <AnimatePresence mode="popLayout">
+            {currentAssets.map((src, index) => {
             // Get a clean title from the filename
             const filename = src.split('/').pop() || '';
             const cleanTitle = filename
@@ -50,11 +83,12 @@ export function WorkGrid() {
 
             return (
               <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "0px 0px -100px 0px" }}
-                transition={{ duration: 0.5, delay: (index % 10) * 0.05 }}
+                key={src}
+                layout
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.8 }}
+                transition={{ duration: 0.4, delay: (index % 10) * 0.05 }}
                 className="group relative break-inside-avoid overflow-hidden rounded-[16px] bg-zinc-950/40 backdrop-blur-md border border-white/10 cursor-pointer transform transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(255,255,255,0.05)] hover:border-white/20"
               >
                 <img 
@@ -85,6 +119,7 @@ export function WorkGrid() {
               </motion.div>
             );
           })}
+          </AnimatePresence>
         </div>
       </div>
     </section>

@@ -2,7 +2,7 @@ import { motion } from 'motion/react';
 
 export function TimesSquareTVC() {
   return (
-    <section className="relative w-full h-screen overflow-hidden bg-[#060608] flex items-center justify-center border-t border-b border-white/10">
+    <section className="relative w-full h-screen overflow-hidden bg-[#02000A] flex items-center justify-center border-t border-b border-white/10">
       
       {/* Background Video */}
       <div className="absolute inset-0 z-0">
@@ -15,7 +15,7 @@ export function TimesSquareTVC() {
           className="w-full h-full object-cover opacity-60"
         />
         {/* Darkness Overlay mapped against the neon Times Square lights */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#060608]/80 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#02000A]/80 via-transparent to-transparent" />
       </div>
 
       {/* Foreground Content */}
@@ -32,7 +32,7 @@ export function TimesSquareTVC() {
           <div className="flex items-center justify-center gap-4 mb-6">
             <div className="w-12 h-[1px] bg-white/30" />
             <p className="text-white/80 text-xs sm:text-sm uppercase tracking-[0.4em] font-medium" style={{ fontFamily: 'Barlow, sans-serif' }}>
-              Global Milestone
+              Galactic Milestone
             </p>
             <div className="w-12 h-[1px] bg-white/30" />
           </div>
@@ -57,7 +57,7 @@ export function TimesSquareTVC() {
             className="mt-8 text-white/60 max-w-2xl mx-auto text-base sm:text-lg lg:text-xl font-light"
             style={{ fontFamily: 'Barlow, sans-serif' }}
           >
-            The Kaboom showcase took over the heart of New York City, demonstrating the unprecedented scale of artificial intelligence in mass broadcast advertising.
+            Broadcasting from the central hub of Times Square, demonstrating the unprecedented scale of artificial intelligence in galactic transmission.
           </p>
 
         </motion.div>

@@ -4,18 +4,18 @@ export function ProcessSection() {
   const steps = [
     {
       number: '01',
-      title: 'Define Your Vision',
-      description: 'We align on goals, audience, and creative direction.',
+      title: 'Align Coordinates',
+      description: 'We align on goals, orbit, and creative direction.',
     },
     {
       number: '02',
-      title: 'Submit Your Request',
-      description: 'You share your brief — I map and execute the creative flow.',
+      title: 'Transmit Brief',
+      description: 'You transmit your brief — I map and execute the cosmic flow.',
     },
     {
       number: '03',
-      title: 'Project Delivered',
-      description: 'You receive polished, performance-ready content — on time and on brand.',
+      title: 'Payload Deployed',
+      description: 'You receive polished, performance-ready content — at warp speed.',
     },
   ];
 
@@ -38,7 +38,7 @@ export function ProcessSection() {
               lineHeight: '1.3',
             }}
           >
-            How It Works
+            Launch Sequence
           </h2>
           <p
             className="text-white/60 max-w-2xl mx-auto"
@@ -47,7 +47,7 @@ export function ProcessSection() {
               fontSize: '18px',
             }}
           >
-            A simple, streamlined process from concept to completion
+            A stellar progression from concept to hyperdrive
           </p>
         </motion.div>
 
