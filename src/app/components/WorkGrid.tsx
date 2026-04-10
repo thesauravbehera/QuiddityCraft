@@ -40,10 +40,10 @@ export function WorkGrid() {
             const filename = src.split('/').pop() || '';
             const cleanTitle = filename
               .replace(/^[0-9]+_/, '')
-              .replace(/_remix_.*\.png$/, '')
+              .replace(/_remix_.*\.webp$/, '')
               .replace(/freepik__.*?-/, '')
-              .replace(/-__\d+\.jpeg$/, '')
-              .replace(/-\d+\.jpeg$/, '')
+              .replace(/-__\d+\.webp$/, '')
+              .replace(/-\d+\.webp$/, '')
               .replace(/\.[^/.]+$/, '') // remove extension
               .replace(/[-_]/g, ' ')
               .trim();

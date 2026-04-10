@@ -5,7 +5,7 @@ import { VideoPlayer } from './VideoPlayer';
 export function TVCShowcase() {
   const tvcProjects = [
     {
-      src: '/videos/Fenty Beauty .mov',
+      src: '/videos/Fenty Beauty .webm',
       title: 'Fenty Beauty Campaign',
       subtitle: 'Luxury Cosmetics Edit',
       description: 'High-end cosmetic advertising featuring extreme physics-based motion graphics and seamless compositing.',
@@ -14,7 +14,7 @@ export function TVCShowcase() {
       isHLS: false,
     },
     {
-      src: '/videos/AI AVATAR_TedX 9x16.mp4',
+      src: '/videos/AI AVATAR_TedX 9x16.webm',
       title: 'TedX AI Experience',
       subtitle: 'Avatars in Broadcast',
       description: 'Pushing the boundary of thought leadership with ultra-realistic AI generated avatars specifically for TedX features.',
@@ -23,7 +23,7 @@ export function TVCShowcase() {
       isHLS: false,
     },
     {
-      src: '/videos/AI.mp4',
+      src: '/videos/AI.webm',
       title: 'Antigravity Synthetics',
       subtitle: 'Unbound Creative AI',
       description: 'A completely unhinged showcase of raw generative processing and cinematic lighting designed entirely from code.',
@@ -32,7 +32,7 @@ export function TVCShowcase() {
       isHLS: false,
     },
     {
-      src: '/videos/Energy drinks.mp4',
+      src: '/videos/Energy drinks.webm',
       title: 'High-Octane Beverage',
       subtitle: 'Liquid Dynamics',
       description: 'Pulse-pounding commercial edits involving dynamic liquid simulations and adrenaline-focused color grading.',

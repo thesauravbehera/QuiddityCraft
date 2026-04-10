@@ -7,7 +7,7 @@ export function TimesSquareTVC() {
       {/* Background Video */}
       <div className="absolute inset-0 z-0">
         <video
-          src="/videos/Kaboom 14th Sept(Time Square).mp4"
+          src="/videos/Kaboom 14th Sept(Time Square).webm"
           autoPlay
           loop
           muted

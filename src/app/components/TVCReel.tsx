@@ -8,22 +8,22 @@ export function TVCReel() {
 
   const tvcReels = [
     {
-      thumbnail: '/videos/Shelajit Gummies (AI_Podcast_Style)9x16.mp4',
-      src: '/videos/Shelajit Gummies (AI_Podcast_Style)9x16.mp4',
+      thumbnail: '/videos/Shelajit Gummies (AI_Podcast_Style)9x16.webm',
+      src: '/videos/Shelajit Gummies (AI_Podcast_Style)9x16.webm',
       title: 'Shilajit Gummies',
       duration: 'Podcast Edit',
       isHLS: false,
     },
     {
-      thumbnail: '/videos/REEL.mp4',
-      src: '/videos/REEL.mp4',
+      thumbnail: '/videos/REEL.webm',
+      src: '/videos/REEL.webm',
       title: 'Agency Master Reel',
       duration: 'Highlight',
       isHLS: false,
     },
     {
-      thumbnail: '/videos/AI Cat Edits 2.mp4',
-      src: '/videos/AI Cat Edits 2.mp4',
+      thumbnail: '/videos/AI Cat Edits 2.webm',
+      src: '/videos/AI Cat Edits 2.webm',
       title: 'AI Cat Edits',
       duration: 'Creative AI',
       isHLS: false,

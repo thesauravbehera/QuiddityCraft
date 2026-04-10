@@ -6,7 +6,7 @@ export function ProjectsSection() {
   const projects = [
     {
       type: 'video',
-      src: '/videos/Shelajit Gummies (AI_Podcast_Style)9x16.mp4',
+      src: '/videos/Shelajit Gummies (AI_Podcast_Style)9x16.webm',
       title: 'BetterAlt Shilajit Gummies',
       category: 'TVC • Commercial',
       featured: true,
@@ -14,7 +14,7 @@ export function ProjectsSection() {
     },
     {
       type: 'video',
-      src: '/videos/Player Montage Edit (Mohamed Salah).mp4',
+      src: '/videos/Player Montage Edit (Mohamed Salah).webm',
       title: 'Sports Action Montage',
       category: 'Sports',
       featured: true,
@@ -22,7 +22,7 @@ export function ProjectsSection() {
     },
     {
       type: 'video',
-      src: '/videos/Mumbai 2.mp4',
+      src: '/videos/Mumbai 2.webm',
       title: 'Mumbai City Showcase',
       category: 'Cinematic',
       featured: true,
@@ -30,35 +30,35 @@ export function ProjectsSection() {
     },
     {
       type: 'video',
-      src: '/videos/AI Cat Edits 2.mp4',
+      src: '/videos/AI Cat Edits 2.webm',
       title: 'Creative Cat Edits',
       category: 'AI Visual Production',
       isHLS: false,
     },
     {
       type: 'video',
-      src: '/videos/REEL.mp4',
+      src: '/videos/REEL.webm',
       title: 'Agency Highlight Reel',
       category: 'Showcase',
       isHLS: false,
     },
     {
       type: 'video',
-      src: '/videos/Astruanuat2.mp4',
+      src: '/videos/Astruanuat2.webm',
       title: 'Cinematic Space Journey',
       category: 'AI Visual Production',
       isHLS: false,
     },
     {
       type: 'video',
-      src: '/videos/Firefighter.mp4',
+      src: '/videos/Firefighter.webm',
       title: 'Action Sequence',
       category: 'AI Generated',
       isHLS: false,
     },
     {
       type: 'video',
-      src: '/videos/Mountain 1.mp4',
+      src: '/videos/Mountain 1.webm',
       title: 'Mountain Drone Shot',
       category: 'Cinematic',
       isHLS: false,

@@ -48,19 +48,19 @@ export function ParallaxGallery() {
   const col2Ref = useRef<HTMLDivElement>(null);
 
   const galleryVideos = [
-    "/videos/astruanuat.mp4",
-    "/videos/Astruanuat2.mp4",
-    "/videos/Astruanuat3.mp4",
-    "/videos/Firefighter.mp4",
-    "/videos/Firefighter2.mp4",
-    "/videos/granny 2.mp4",
-    "/videos/Granny.mp4",
-    "/videos/Mountain 1.mp4",
-    "/videos/Mountain2.mp4",
-    "/videos/Party 2.mp4",
-    "/videos/Party 3.mp4",
-    "/videos/Party wide angle .mp4",
-    "/videos/Party1.mp4"
+    "/videos/astruanuat.webm",
+    "/videos/Astruanuat2.webm",
+    "/videos/Astruanuat3.webm",
+    "/videos/Firefighter.webm",
+    "/videos/Firefighter2.webm",
+    "/videos/granny 2.webm",
+    "/videos/Granny.webm",
+    "/videos/Mountain 1.webm",
+    "/videos/Mountain2.webm",
+    "/videos/Party 2.webm",
+    "/videos/Party 3.webm",
+    "/videos/Party wide angle .webm",
+    "/videos/Party1.webm"
   ];
 
   const mid = Math.ceil(galleryVideos.length / 2);
@@ -133,7 +133,7 @@ export function ParallaxGallery() {
           {/* Column 1 */}
           <div ref={col1Ref} className="flex flex-col gap-16 md:gap-40 mt-[30vh] pointer-events-auto items-center md:items-end">
             {col1Videos.map((src, i) => {
-              const is9x16 = src.includes('AI.mp4') || src.includes('Energy drinks.mp4') || src.includes('TedX');
+              const is9x16 = src.includes('AI.webm') || src.includes('Energy drinks.webm') || src.includes('TedX');
               return (
                 <div 
                   key={`col1-${i}`} 
@@ -151,7 +151,7 @@ export function ParallaxGallery() {
           {/* Column 2 */}
           <div ref={col2Ref} className="flex flex-col gap-16 md:gap-40 mt-[80vh] pointer-events-auto items-center md:items-start">
             {col2Videos.map((src, i) => {
-              const is9x16 = src.includes('AI.mp4') || src.includes('Energy drinks.mp4') || src.includes('TedX');
+              const is9x16 = src.includes('AI.webm') || src.includes('Energy drinks.webm') || src.includes('TedX');
               return (
                 <div 
                   key={`col2-${i}`} 

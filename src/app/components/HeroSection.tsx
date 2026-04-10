@@ -7,22 +7,22 @@ export function HeroSection() {
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
 
   const tvcVideos = [
-    '/videos/Sharan.mp4',
-    '/videos/astruanuat.mp4',
-    '/videos/Astruanuat2.mp4',
-    '/videos/Astruanuat3.mp4',
-    '/videos/Firefighter.mp4',
-    '/videos/Firefighter2.mp4',
-    '/videos/granny 2.mp4',
-    '/videos/Granny.mp4',
-    '/videos/Mountain 1.mp4',
-    '/videos/Mountain2.mp4',
-    '/videos/Party 2.mp4',
-    '/videos/Party 3.mp4',
-    '/videos/Party wide angle .mp4',
-    '/videos/Party1.mp4',
-    '/videos/Clinique Video 04_04 English.mp4',
-    '/videos/Motion graphics.mp4',
+    '/videos/Sharan.webm',
+    '/videos/astruanuat.webm',
+    '/videos/Astruanuat2.webm',
+    '/videos/Astruanuat3.webm',
+    '/videos/Firefighter.webm',
+    '/videos/Firefighter2.webm',
+    '/videos/granny 2.webm',
+    '/videos/Granny.webm',
+    '/videos/Mountain 1.webm',
+    '/videos/Mountain2.webm',
+    '/videos/Party 2.webm',
+    '/videos/Party 3.webm',
+    '/videos/Party wide angle .webm',
+    '/videos/Party1.webm',
+    '/videos/Clinique Video 04_04 English.webm',
+    '/videos/Motion graphics.webm',
   ];
 
   useEffect(() => {
