@@ -34,8 +34,8 @@ function SmartVideoNode({ src, cleanTitle, delayIndex }: { src: string, cleanTit
       whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true, margin: "0px 0px -50px 0px" }}
       transition={{ duration: 0.4, delay: delayIndex * 0.05 }}
-      // Owled Box aesthetic without destroying the masonry
-      className="group relative break-inside-avoid inline-block w-full mb-3 sm:mb-4 overflow-hidden rounded-[8px] bg-[#0B0914] border border-white/10 cursor-pointer transform transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(255,255,255,0.05)] hover:border-white/20 hover:z-10"
+      // Keeping the classic Masonry aesthetic geometry
+      className="group relative break-inside-avoid inline-block w-full mb-3 sm:mb-4 overflow-hidden rounded-[16px] bg-zinc-950 border border-white/10 cursor-pointer transform transition-all duration-500 hover:scale-[1.03] hover:shadow-[0_0_30px_rgba(255,255,255,0.1)] hover:border-white/30 hover:z-10"
     >
       <video 
         ref={videoRef}
@@ -53,7 +53,7 @@ function SmartVideoNode({ src, cleanTitle, delayIndex }: { src: string, cleanTit
       />
 
       {/* Dark Vignette/Gradient overlay for text readability */}
-      <div className="absolute inset-x-0 bottom-0 top-1/2 bg-gradient-to-t from-black/95 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 pointer-events-none" />
+      <div className="absolute inset-x-0 bottom-0 top-1/2 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 pointer-events-none" />
 
       {/* Hover Content */}
       <div className="absolute bottom-0 left-0 right-0 p-4 transform translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 z-20 pointer-events-none">
@@ -61,7 +61,7 @@ function SmartVideoNode({ src, cleanTitle, delayIndex }: { src: string, cleanTit
           className="text-white capitalize tracking-wide"
           style={{
             fontFamily: 'Barlow, sans-serif',
-            fontSize: '13px',
+            fontSize: '14px',
             fontWeight: 600,
             lineHeight: '1.2',
           }}
@@ -112,27 +112,25 @@ export function VideoGridShowcase() {
   ];
 
   return (
-    <section className="py-24 bg-[#0B0914] min-h-screen border-t border-white/5">
+    <section className="py-20 bg-[#060608] min-h-screen border-t border-white/10">
       <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-20"
+           initial={{ opacity: 0, y: 30 }}
+           whileInView={{ opacity: 1, y: 0 }}
+           viewport={{ once: true }}
+           transition={{ duration: 0.8 }}
+           className="text-center mb-16"
         >
-          <p className="text-[#A855F7] text-sm md:text-base font-bold tracking-[0.2em] uppercase mb-4" style={{ fontFamily: 'Outfit, sans-serif' }}>
-            Production Library
-          </p>
           <h2
-            className="text-white mb-4 uppercase tracking-tighter leading-none"
+            className="text-white mb-4"
             style={{
-              fontFamily: 'Outfit, sans-serif',
-              fontSize: 'clamp(48px, 6vw, 80px)',
-              fontWeight: 900
+              fontFamily: 'Instrument Serif, serif',
+              fontStyle: 'italic',
+              fontSize: 'clamp(32px, 4vw, 56px)',
+              textShadow: '0 0 30px rgba(255,255,255,0.2)'
             }}
           >
-            The Cinematic <span className="bg-gradient-to-r from-[#A855F7] via-[#D946EF] to-[#EC4899] bg-clip-text text-transparent">Nexus</span>
+            The Motion Archive
           </h2>
           <p
             className="text-white/60 max-w-2xl mx-auto"
@@ -141,7 +139,7 @@ export function VideoGridShowcase() {
               fontSize: '18px',
             }}
           >
-            A continuous scroll of our entire galactic production registry. Engineered for instant playback.
+            A continuous scroll of our entire production and generative video registry.
           </p>
         </motion.div>
 

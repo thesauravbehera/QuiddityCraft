@@ -6,7 +6,7 @@ export function BrandLogos() {
   const duplicatedLogos = [...brandLogos, ...brandLogos, ...brandLogos, ...brandLogos];
 
   return (
-    <section className="relative py-24 border-t border-b border-white/5 bg-[#0B0914] overflow-hidden">
+    <section className="relative py-16 bg-transparent border-t border-b border-white/5 overflow-hidden">
       <div className="relative z-10 w-full">
         {/* Header Section */}
         <motion.div
@@ -14,29 +14,19 @@ export function BrandLogos() {
            whileInView={{ opacity: 1, y: 0 }}
            viewport={{ once: true }}
            transition={{ duration: 0.8 }}
-           className="text-center mb-16 flex flex-col items-center px-6"
+           className="text-center mb-10 flex flex-col items-center px-6"
         >
-          <p className="text-[#E0E7FF] text-sm md:text-base font-bold tracking-[0.2em] uppercase mb-4" style={{ fontFamily: 'Outfit, sans-serif',
-              fontWeight: 900,
-              textTransform: 'uppercase', }}>
-            Trusted by visionaries who
+          <p className="text-white/60 text-base font-semibold uppercase tracking-[0.25em] drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]" style={{ fontFamily: 'Barlow, sans-serif' }}>
+            Trusted by leading brands
           </p>
-          <h2 className="text-4xl md:text-6xl lg:text-7xl font-black uppercase tracking-tight leading-none" style={{ fontFamily: 'Outfit, sans-serif',
-              fontWeight: 900,
-              textTransform: 'uppercase', }}>
-            <span className="text-white">Defy </span>
-            <span className="bg-gradient-to-r from-[#A855F7] via-[#D946EF] to-[#EC4899] bg-clip-text text-transparent">
-              The Ordinary
-            </span>
-          </h2>
         </motion.div>
 
         {/* Outer Marquee Track Container */}
-        <div className="relative flex overflow-hidden w-full border-t border-b border-white/10">
+        <div className="relative flex overflow-hidden w-full border-t border-b border-white/10 group">
           
           {/* Subtle Fading edges for depth */}
-          <div className="absolute top-0 left-0 bottom-0 w-16 md:w-48 bg-gradient-to-r from-[#0a0a0a] to-transparent z-10 pointer-events-none" />
-          <div className="absolute top-0 right-0 bottom-0 w-16 md:w-48 bg-gradient-to-l from-[#0a0a0a] to-transparent z-10 pointer-events-none" />
+          <div className="absolute top-0 left-0 bottom-0 w-16 md:w-48 bg-gradient-to-r from-[#060608] to-transparent z-10 pointer-events-none" />
+          <div className="absolute top-0 right-0 bottom-0 w-16 md:w-48 bg-gradient-to-l from-[#060608] to-transparent z-10 pointer-events-none" />
 
           {/* Scrolling Motion Div containing the rigid boxes */}
           <motion.div
@@ -51,7 +41,7 @@ export function BrandLogos() {
             {duplicatedLogos.map((src, index) => (
                <div 
                  key={index} 
-                 className="relative border-r border-white/10 shrink-0 w-[180px] md:w-[220px] h-[140px] flex items-center justify-center p-8 group hover:bg-white/5 transition-colors duration-500"
+                 className="relative border-r border-white/10 shrink-0 w-[180px] md:w-[220px] h-[120px] flex items-center justify-center p-8 group-hover:bg-white/5 transition-colors duration-500"
                >
                   {/* Left Side Rigid Crosshairs */}
                   <div className="absolute top-0 left-0 -translate-x-1/2 -translate-y-1/2 text-white/50 text-xs font-mono font-light pointer-events-none select-none">+</div>
@@ -60,7 +50,7 @@ export function BrandLogos() {
                   <img 
                     src={src} 
                     alt="Brand Logo Client" 
-                    className="max-w-full max-h-full object-contain filter grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500 group-hover:scale-105"
+                    className="max-w-full max-h-full object-contain filter grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500 hover:scale-110 hover:drop-shadow-[0_0_20px_rgba(255,255,255,0.8)]"
                     loading="lazy"
                   />
                </div>

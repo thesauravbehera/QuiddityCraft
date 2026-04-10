@@ -1,97 +1,99 @@
 import { motion } from 'motion/react';
 import { Button } from './ui/button';
+import { Phone, Mail } from 'lucide-react';
 
 export function CTASection() {
   return (
-    <section className="py-24 bg-transparent relative overflow-hidden">
-      <div className="relative z-10 max-w-7xl mx-auto px-6">
-        
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-8 items-center">
-          {/* Left Column: Typography */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="flex flex-col justify-center"
+    <section className="py-32 bg-transparent relative overflow-hidden border-t border-white/5">
+      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
+          <h2
+            className="text-white mb-6"
+            style={{
+              fontFamily: 'Instrument Serif, serif',
+              fontStyle: 'italic',
+              fontSize: 'clamp(32px, 5vw, 64px)',
+              lineHeight: '1.2',
+              textShadow: '0 0 40px rgba(255,255,255,0.3)'
+            }}
           >
-            <p className="text-[#E0E7FF] text-sm uppercase tracking-widest font-bold mb-6" style={{ fontFamily: 'Outfit, sans-serif' }}>
-              Contact Us
-            </p>
-            <h2
-              className="text-white text-6xl md:text-7xl lg:text-[5.5rem] font-black uppercase leading-[0.85] tracking-tighter"
-              style={{ fontFamily: 'Outfit, sans-serif' }}
-            >
-              Bring Us<br/>
-              <span className="bg-gradient-to-r from-[#A855F7] via-[#D946EF] to-[#EC4899] bg-clip-text text-transparent break-words">
-                The Vision,
-              </span>
-              <br/>
-              <span className="ml-[10%] md:ml-[20%]">We'll Build</span><br/>
-              <span className="ml-[10%] md:ml-[20%] bg-gradient-to-r from-[#A855F7] via-[#D946EF] to-[#EC4899] bg-clip-text text-transparent break-words">
-                The Universe.
-              </span>
-            </h2>
-          </motion.div>
+            Let's create something unforgettable.
+          </h2>
 
-          {/* Right Column: Form */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="w-full max-w-md mx-auto lg:ml-auto lg:mr-0 bg-[#161616] p-8 md:p-12 border-t border-white/5 shadow-2xl"
+            className="text-white/70 text-lg mb-12 max-w-2xl mx-auto"
+            style={{
+              fontFamily: 'Barlow, sans-serif',
+              fontSize: '20px',
+              lineHeight: '1.6',
+            }}
           >
-            <form className="flex flex-col space-y-8" onSubmit={(e) => e.preventDefault()}>
-              
-              <div className="flex flex-col space-y-2">
-                <label className="text-white/60 text-sm font-medium" style={{ fontFamily: 'Barlow, sans-serif' }}>Email</label>
-                <input 
-                  type="email" 
-                  placeholder="Email" 
-                  className="bg-transparent border-b border-white/20 pb-2 text-white placeholder:text-white/20 focus:outline-none focus:border-[#A855F7] transition-colors rounded-none"
-                  style={{ fontFamily: 'Barlow, sans-serif' }}
-                />
-              </div>
+            If you're a brand or agency looking for content that actually moves people — and moves
+            the needle — let's talk.
+          </motion.p>
 
-              <div className="flex flex-col space-y-2">
-                <label className="text-white/60 text-sm font-medium" style={{ fontFamily: 'Barlow, sans-serif' }}>Phone</label>
-                <input 
-                  type="tel" 
-                  placeholder="+91 0000000000" 
-                  className="bg-transparent border-b border-white/20 pb-2 text-white placeholder:text-white/20 focus:outline-none focus:border-[#A855F7] transition-colors rounded-none"
-                  style={{ fontFamily: 'Barlow, sans-serif' }}
-                />
-              </div>
-
-              <div className="flex flex-col space-y-2 pb-6">
-                <label className="text-white/60 text-sm font-medium" style={{ fontFamily: 'Barlow, sans-serif' }}>Tell us about your project</label>
-                <textarea 
-                  placeholder="Write here" 
-                  rows={3}
-                  className="bg-transparent border-b border-white/20 pb-2 text-white placeholder:text-white/20 focus:outline-none focus:border-[#A855F7] transition-colors resize-none rounded-none"
-                  style={{ fontFamily: 'Barlow, sans-serif' }}
-                />
-              </div>
-
-              <Button
-                type="submit"
-                className="bg-[#A855F7] text-white hover:bg-[#7E22CE] rounded-none w-max px-10 py-6 text-sm font-bold tracking-widest uppercase transition-all"
-                style={{ fontFamily: 'Outfit, sans-serif' }}
-              >
-                Send Your Brief
-              </Button>
-            </form>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12"
+          >
+            <a
+              href="tel:7218676127"
+              className="flex items-center gap-3 text-white/80 hover:text-white transition-colors"
+              style={{
+                fontFamily: 'Barlow, sans-serif',
+                fontSize: '18px',
+              }}
+            >
+              <Phone className="w-5 h-5" />
+              7218676127
+            </a>
+            <a
+              href="mailto:sahil.storyarc@gmail.com"
+              className="flex items-center gap-3 text-white/80 hover:text-white transition-colors"
+              style={{
+                fontFamily: 'Barlow, sans-serif',
+                fontSize: '18px',
+              }}
+            >
+              <Mail className="w-5 h-5" />
+              sahil.storyarc@gmail.com
+            </a>
           </motion.div>
-        </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+          >
+            <Button
+              className="bg-white text-black hover:bg-white/90 rounded-[2px] px-10 py-6 text-lg font-medium transition-all"
+              style={{ fontFamily: 'Barlow, sans-serif' }}
+            >
+              Book a Call
+            </Button>
+          </motion.div>
+        </motion.div>
 
         {/* Footer */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="mt-24 pt-8 border-t border-white/10 flex justify-between items-center"
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className="mt-24 pt-8 border-t border-white/10"
         >
           <p
             className="text-white/40 text-sm"
@@ -99,10 +101,6 @@ export function CTASection() {
           >
             © 2026 Vibividly. All rights reserved.
           </p>
-          <div className="flex items-center gap-6 text-white/40 text-sm text-center" style={{ fontFamily: 'Barlow, sans-serif' }}>
-            <a href="#" className="hover:text-white transition-colors">Instagram</a>
-            <a href="#" className="hover:text-white transition-colors">LinkedIn</a>
-          </div>
         </motion.div>
       </div>
     </section>

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Play, ChevronDown, BatteryFull } from 'lucide-react';
+import { Play, ChevronDown } from 'lucide-react';
 import { Button } from './ui/button';
 
 export function HeroSection() {
@@ -34,7 +34,7 @@ export function HeroSection() {
   }, []);
 
   return (
-    <section className="relative h-screen w-full flex items-center justify-center overflow-hidden bg-[#0B0914]">
+    <section className="relative h-screen w-full flex items-center justify-center overflow-hidden bg-[#060608]">
       {/* Video Background with fade transition */}
       <div className="absolute inset-0">
         <AnimatePresence mode="wait">
@@ -50,71 +50,124 @@ export function HeroSection() {
             playsInline
             className="absolute inset-0 w-full h-full object-cover"
           >
-            <source src={tvcVideos[currentVideoIndex]} type="video/webm" />
+            <source src={tvcVideos[currentVideoIndex]} type="video/mp4" />
           </motion.video>
         </AnimatePresence>
       </div>
 
-      {/* Overlay for pristine contrast */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/80" />
+      {/* Overlay for better text visibility */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/60" />
+      <div className="absolute inset-0 bg-black/20" />
       
       {/* Ramp Effect to blend into layout */}
-      <div className="absolute bottom-0 left-0 w-full h-[25vh] bg-gradient-to-b from-transparent to-[#0a0a0a] pointer-events-none z-10" />
+      <div className="absolute bottom-0 left-0 w-full h-[25vh] bg-gradient-to-b from-transparent to-[#060608] pointer-events-none z-10" />
 
-      {/* Main Content Area */}
-      <div className="relative z-10 w-full max-w-[1600px] px-6 md:px-12 xl:px-20 -translate-y-12">
-        <motion.div
-           initial={{ opacity: 0, y: 30 }}
-           animate={{ opacity: 1, y: 0 }}
-           transition={{ duration: 0.8, delay: 0.2 }}
-        >
-          {/* Studio Tagline */}
-          <p className="text-[#A855F7] font-bold tracking-[0.2em] uppercase text-sm md:text-base mb-6" style={{ fontFamily: 'Outfit, sans-serif' }}>
-            The Galactic Studio
-          </p>
-          
-          {/* Massive Owled-style Headline */}
-          <h1 className="text-white font-black uppercase leading-[0.85] tracking-tight text-[4rem] sm:text-[6rem] md:text-[8rem] lg:text-[10rem] mb-8" style={{ fontFamily: 'Outfit, sans-serif',
-              fontWeight: 900,
-              textTransform: 'uppercase', }}>
-            Beyond The <span className="text-[#A855F7]">Atmosphere</span>
-          </h1>
+      {/* Content Container with Corner Accents */}
+      <div className="relative z-10 max-w-5xl mx-auto px-6 text-center pb-[250px]">
 
-          <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-12 max-w-4xl">
-            {/* Paragraph Text with Yellow Highlight */}
-            <p className="text-white/80 text-xl md:text-2xl font-light leading-relaxed max-w-2xl" style={{ fontFamily: 'Barlow, sans-serif' }}>
-              We transform ambitious ideas into high-fidelity entertainment. Utilizing a world-class production pipeline and <span className="bg-[#22D3EE] text-black font-semibold px-2 py-0.5 rounded-sm">AI-native visual infrastructure</span>, we engineer content that genuinely moves culture.
-            </p>
+        {/* Corner Accents Container */}
+        <div className="relative inline-block">
+          {/* Top-left corner */}
+          <div className="absolute -top-4 -left-4 w-[7px] h-[7px] bg-white" />
+          {/* Top-right corner */}
+          <div className="absolute -top-4 -right-4 w-[7px] h-[7px] bg-white" />
+          {/* Bottom-left corner */}
+          <div className="absolute -bottom-4 -left-4 w-[7px] h-[7px] bg-white" />
+          {/* Bottom-right corner */}
+          <div className="absolute -bottom-4 -right-4 w-[7px] h-[7px] bg-white" />
 
-            {/* Red Accent CTA */}
-            <Button
-              onClick={() => {
-                const tvcReelSection = document.querySelector('#tvc-reel');
-                tvcReelSection?.scrollIntoView({ behavior: 'smooth' });
-              }}
-              className="bg-[#A855F7] text-white hover:bg-[#7E22CE] rounded-none px-10 py-7 text-sm font-bold tracking-widest uppercase transition-all shrink-0"
-              style={{ fontFamily: 'Outfit, sans-serif' }}
+          <div className="p-8">
+            {/* Headline */}
+            <motion.div
+              initial={{ y: 50, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="mb-6"
             >
-              Start Project
-            </Button>
+              <h1
+                className="text-white mb-2 relative"
+                style={{
+                  fontFamily: 'Barlow, sans-serif',
+                  fontWeight: 300,
+                  fontSize: 'clamp(32px, 5vw, 64px)',
+                  lineHeight: '1.2',
+                  letterSpacing: '-2px',
+                  textShadow: '0 0 30px rgba(255,255,255,0.4)'
+                }}
+              >
+                Agency that makes your
+              </h1>
+              <h1
+                className="text-white relative"
+                style={{
+                  fontFamily: 'Instrument Serif, serif',
+                  fontStyle: 'italic',
+                  fontSize: 'clamp(32px, 5vw, 64px)',
+                  lineHeight: '1.2',
+                  textShadow: '0 0 40px rgba(255,255,255,0.5)'
+                }}
+              >
+                videos & reels viral
+              </h1>
+            </motion.div>
+
+            {/* Subheading */}
+            <motion.p
+              initial={{ y: 50, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              className="text-white/75 max-w-2xl mx-auto mb-8"
+              style={{
+                fontFamily: 'Barlow, sans-serif',
+                fontSize: '18px',
+                fontWeight: 500,
+              }}
+            >
+              Broadcast TVCs, AI-Powered Commercials & Premium Content for Brands Worldwide
+            </motion.p>
           </div>
+        </div>
+
+        {/* CTA Button */}
+        <motion.div
+          initial={{ y: 50, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+        >
+          <Button
+            onClick={() => {
+              const tvcReelSection = document.querySelector('#tvc-reel');
+              tvcReelSection?.scrollIntoView({ behavior: 'smooth' });
+            }}
+            className="bg-[#f8f8f8] text-[#171717] hover:bg-white rounded-[2px] px-8 py-6 text-base font-medium transition-colors flex items-center gap-3 mx-auto"
+            style={{ fontFamily: 'Barlow, sans-serif' }}
+          >
+            <Play className="w-5 h-5 fill-current" />
+            Watch TVC Reel
+          </Button>
         </motion.div>
       </div>
 
-      {/* Cinematic Viewfinder / REC Border effect at the bottom */}
-      <div className="absolute bottom-[8vh] left-0 right-0 z-20 flex justify-between items-end px-12 pb-6 border-t border-white/20 select-none pointer-events-none">
-         <div className="flex items-center gap-3 mt-6">
-            <motion.div 
-               animate={{ opacity: [1, 0, 1] }} 
-               transition={{ duration: 2, repeat: Infinity }}
-               className="w-4 h-4 rounded-full bg-[#A855F7] shadow-[0_0_15px_rgba(237,28,36,0.6)]" 
-            />
-            <span className="text-white/80 font-mono text-sm tracking-widest font-light">REC</span>
-         </div>
-         <BatteryFull className="text-white/80 w-8 h-8 opacity-80" />
-      </div>
+      {/* Video Indicators */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 1 }}
+        className="absolute bottom-24 left-1/2 -translate-x-1/2 z-10 flex gap-2"
+      >
+        {tvcVideos.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentVideoIndex(index)}
+            className={`h-1 rounded-full transition-all duration-300 ${
+              index === currentVideoIndex ? 'w-12 bg-white' : 'w-6 bg-white/40 hover:bg-white/60'
+            }`}
+            aria-label={`Switch to video ${index + 1}`}
+          />
+        ))}
+      </motion.div>
 
-      {/* Custom Scroll Indicator */}
+      {/* Scroll Indicator */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -127,7 +180,7 @@ export function HeroSection() {
           className="flex flex-col items-center gap-2 cursor-pointer"
           onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}
         >
-          <span className="text-white/60 text-xs uppercase tracking-[0.2em]" style={{ fontFamily: 'Barlow, sans-serif' }}>
+          <span className="text-white/60 text-xs uppercase tracking-wider" style={{ fontFamily: 'Barlow, sans-serif' }}>
             Scroll
           </span>
           <ChevronDown className="w-5 h-5 text-white/60" />

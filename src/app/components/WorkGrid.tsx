@@ -15,10 +15,9 @@ export function WorkGrid() {
           <h2
             className="text-white mb-4"
             style={{
-              fontFamily: 'Outfit, sans-serif',
-              fontWeight: 900,
-              textTransform: 'uppercase',
-                            fontSize: 'clamp(32px, 4vw, 56px)',
+              fontFamily: 'Instrument Serif, serif',
+              fontStyle: 'italic',
+              fontSize: 'clamp(32px, 4vw, 56px)',
             }}
           >
             Creative Visuals

@@ -122,9 +122,7 @@ export function ParallaxGallery() {
             letterSpacing: '-2px' 
           }}
         >
-          Visual <span style={{ fontFamily: 'Outfit, sans-serif',
-              fontWeight: 900,
-              textTransform: 'uppercase',  fontWeight: 400, color: 'rgba(255,255,255,0.9)' }}>playground</span>
+          Visual <span style={{ fontFamily: 'Instrument Serif, serif', fontStyle: 'italic', fontWeight: 400, color: 'rgba(255,255,255,0.9)' }}>playground</span>
         </h2>
       </div>
 
