@@ -71,23 +71,22 @@ export function HeroSection() {
                 className="text-white mb-2 relative"
                 style={{
                   fontFamily: 'Barlow, sans-serif',
-                  fontWeight: 300,
-                  fontSize: 'clamp(32px, 5vw, 64px)',
-                  lineHeight: '1.2',
-                  letterSpacing: '-2px',
-                  textShadow: '0 0 30px rgba(0, 255, 255, 0.6)'
+                  fontWeight: 500,
+                  fontSize: 'clamp(14px, 2vw, 18px)',
+                  letterSpacing: '0.3em',
+                  textTransform: 'uppercase',
+                  color: 'rgba(255, 255, 255, 0.6)'
                 }}
               >
                 Accelerate your brand to
               </h1>
-              <h1
-                className="text-white relative"
+                className="text-white mt-4 tracking-tighter"
                 style={{
-                  fontFamily: 'Instrument Serif, serif',
-                  fontStyle: 'italic',
-                  fontSize: 'clamp(32px, 5vw, 64px)',
-                  lineHeight: '1.2',
-                  textShadow: '0 0 40px rgba(0, 255, 255, 0.7)'
+                  fontFamily: 'Barlow, sans-serif',
+                  fontWeight: 800,
+                  fontSize: 'clamp(60px, 10vw, 120px)',
+                  lineHeight: '1',
+                  textTransform: 'uppercase'
                 }}
               >
                 Light Speed
@@ -99,12 +98,12 @@ export function HeroSection() {
               initial={{ y: 50, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.6 }}
-              className="text-white/80 max-w-2xl mx-auto mb-8 tracking-wide"
+              className="text-white/60 max-w-2xl mx-auto mb-10 tracking-wide"
               style={{
                 fontFamily: 'Barlow, sans-serif',
                 fontSize: '18px',
-                fontWeight: 500,
-                textShadow: '0 0 10px rgba(0,255,255,0.3)'
+                fontWeight: 400,
+                lineHeight: '1.6'
               }}
             >
               Cosmic-scale Content, AI-Powered Visuals & High-Velocity Campaigns for Brands Worldwide
@@ -123,11 +122,12 @@ export function HeroSection() {
               const tvcReelSection = document.querySelector('#tvc-reel');
               tvcReelSection?.scrollIntoView({ behavior: 'smooth' });
             }}
-            className="bg-[#f8f8f8] text-[#171717] hover:bg-white rounded-[2px] px-8 py-6 text-base font-medium transition-colors flex items-center gap-3 mx-auto"
+            className="relative overflow-hidden bg-transparent border border-white/20 text-white hover:text-black hover:bg-white rounded-none px-10 py-7 text-sm uppercase tracking-widest font-semibold transition-all duration-500 flex items-center gap-4 mx-auto group"
             style={{ fontFamily: 'Barlow, sans-serif' }}
           >
-            <Play className="w-5 h-5 fill-current" />
-            Enter the Cosmos
+            <div className="absolute inset-0 bg-white transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out -z-10" />
+            <Play className="w-4 h-4 fill-current" />
+            Initiate Sequence
           </Button>
         </motion.div>
       </div>
