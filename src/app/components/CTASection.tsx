@@ -23,13 +23,13 @@ export function CTASection() {
               style={{ fontFamily: 'Outfit, sans-serif' }}
             >
               Bring Us<br/>
-              <span className="bg-gradient-to-r from-[#E0E7FF] via-[#E1534E] to-[#99222B] bg-clip-text text-transparent break-words">
-                The Problem,
+              <span className="bg-gradient-to-r from-[#A855F7] via-[#D946EF] to-[#EC4899] bg-clip-text text-transparent break-words">
+                The Vision,
               </span>
               <br/>
-              <span className="ml-[10%] md:ml-[20%]">We'll Bring</span><br/>
-              <span className="ml-[10%] md:ml-[20%] bg-gradient-to-r from-[#E0E7FF] via-[#E1534E] to-[#99222B] bg-clip-text text-transparent break-words">
-                The Clarity.
+              <span className="ml-[10%] md:ml-[20%]">We'll Build</span><br/>
+              <span className="ml-[10%] md:ml-[20%] bg-gradient-to-r from-[#A855F7] via-[#D946EF] to-[#EC4899] bg-clip-text text-transparent break-words">
+                The Universe.
               </span>
             </h2>
           </motion.div>

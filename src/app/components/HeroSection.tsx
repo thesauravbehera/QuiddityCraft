@@ -70,12 +70,14 @@ export function HeroSection() {
         >
           {/* Studio Tagline */}
           <p className="text-[#A855F7] font-bold tracking-[0.2em] uppercase text-sm md:text-base mb-6" style={{ fontFamily: 'Outfit, sans-serif' }}>
-            The Global Cinematic Agency
+            The Galactic Studio
           </p>
           
           {/* Massive Owled-style Headline */}
-          <h1 className="text-white font-black uppercase leading-[0.85] tracking-tight text-[4rem] sm:text-[6rem] md:text-[8rem] lg:text-[10rem] mb-8" style={{ fontFamily: 'Outfit, sans-serif' }}>
-            Built For <span className="text-[#A855F7]">Virality</span>
+          <h1 className="text-white font-black uppercase leading-[0.85] tracking-tight text-[4rem] sm:text-[6rem] md:text-[8rem] lg:text-[10rem] mb-8" style={{ fontFamily: 'Outfit, sans-serif',
+              fontWeight: 900,
+              textTransform: 'uppercase', }}>
+            Beyond The <span className="text-[#A855F7]">Atmosphere</span>
           </h1>
 
           <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-12 max-w-4xl">

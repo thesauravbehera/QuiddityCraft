@@ -132,7 +132,7 @@ export function VideoGridShowcase() {
               fontWeight: 900
             }}
           >
-            The Motion <span className="bg-gradient-to-r from-[#E0E7FF] via-[#E1534E] to-[#99222B] bg-clip-text text-transparent">Archive</span>
+            The Cinematic <span className="bg-gradient-to-r from-[#A855F7] via-[#D946EF] to-[#EC4899] bg-clip-text text-transparent">Nexus</span>
           </h2>
           <p
             className="text-white/60 max-w-2xl mx-auto"
@@ -141,7 +141,7 @@ export function VideoGridShowcase() {
               fontSize: '18px',
             }}
           >
-            A continuous scroll of our entire production and generative video registry. Engineered for instant playback.
+            A continuous scroll of our entire galactic production registry. Engineered for instant playback.
           </p>
         </motion.div>
 

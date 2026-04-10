@@ -16,13 +16,17 @@ export function BrandLogos() {
            transition={{ duration: 0.8 }}
            className="text-center mb-16 flex flex-col items-center px-6"
         >
-          <p className="text-[#E0E7FF] text-sm md:text-base font-bold tracking-[0.2em] uppercase mb-4" style={{ fontFamily: 'Outfit, sans-serif' }}>
-            Trusted by brands that
+          <p className="text-[#E0E7FF] text-sm md:text-base font-bold tracking-[0.2em] uppercase mb-4" style={{ fontFamily: 'Outfit, sans-serif',
+              fontWeight: 900,
+              textTransform: 'uppercase', }}>
+            Trusted by visionaries who
           </p>
-          <h2 className="text-4xl md:text-6xl lg:text-7xl font-black uppercase tracking-tight leading-none" style={{ fontFamily: 'Outfit, sans-serif' }}>
-            <span className="text-white">Shape </span>
-            <span className="bg-gradient-to-r from-[#E0E7FF] via-[#E1534E] to-[#99222B] bg-clip-text text-transparent">
-              The World
+          <h2 className="text-4xl md:text-6xl lg:text-7xl font-black uppercase tracking-tight leading-none" style={{ fontFamily: 'Outfit, sans-serif',
+              fontWeight: 900,
+              textTransform: 'uppercase', }}>
+            <span className="text-white">Defy </span>
+            <span className="bg-gradient-to-r from-[#A855F7] via-[#D946EF] to-[#EC4899] bg-clip-text text-transparent">
+              The Ordinary
             </span>
           </h2>
         </motion.div>
