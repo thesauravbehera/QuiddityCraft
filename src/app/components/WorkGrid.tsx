@@ -5,12 +5,17 @@ import categorizedAssets from './categorizedAssets.json';
 type Category = keyof typeof categorizedAssets;
 
 export function WorkGrid() {
-  const categories = Object.keys(categorizedAssets) as Category[];
-  const [activeCategory, setActiveCategory] = useState<Category>(categories[0]);
+  const baseCategories = Object.keys(categorizedAssets) as Category[];
+  const categories = ['All', ...baseCategories] as const;
+  const [activeCategory, setActiveCategory] = useState<string>('All');
   const [showAll, setShowAll] = useState(false);
 
-  const currentAssets = categorizedAssets[activeCategory] || [];
-  const displayedAssets = showAll ? currentAssets : currentAssets.slice(0, 12);
+  // If 'All' is selected, merge all arrays. Otherwise, fetch the specific category array.
+  const currentAssets = activeCategory === 'All' 
+    ? Object.values(categorizedAssets).flat() 
+    : categorizedAssets[activeCategory as Category] || [];
+    
+  const displayedAssets = showAll ? currentAssets : currentAssets.slice(0, 24);
 
   return (
     <section className="py-20 bg-transparent min-h-screen">
@@ -128,7 +133,7 @@ export function WorkGrid() {
         </div>
 
         {/* View Entire Portfolio Button */}
-        {!showAll && currentAssets.length > 12 && (
+        {!showAll && currentAssets.length > 24 && (
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -137,7 +142,7 @@ export function WorkGrid() {
           >
             <button
               onClick={() => setShowAll(true)}
-              className="px-10 py-5 bg-transparent border border-white/20 text-white text-xs uppercase tracking-[0.2em] font-medium transition-all duration-500 hover:bg-white hover:text-black"
+              className="px-10 py-5 bg-transparent border border-white/20 text-white text-xs uppercase tracking-[0.2em] font-medium transition-all duration-500 hover:bg-white hover:text-black hover:scale-105"
               style={{ fontFamily: 'Barlow, sans-serif' }}
             >
               Access Full Archive
