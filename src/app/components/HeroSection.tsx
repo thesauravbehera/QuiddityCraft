@@ -34,7 +34,7 @@ export function HeroSection() {
   }, []);
 
   return (
-    <section className="relative h-screen w-full flex items-center justify-center overflow-hidden bg-[#060608]">
+    <section className="relative h-screen w-full flex items-center justify-center overflow-hidden bg-[#02000A]">
       {/* Video Background with fade transition */}
       <div className="absolute inset-0">
         <AnimatePresence mode="wait">
@@ -60,7 +60,7 @@ export function HeroSection() {
       <div className="absolute inset-0 bg-black/20" />
       
       {/* Ramp Effect to blend into layout */}
-      <div className="absolute bottom-0 left-0 w-full h-[25vh] bg-gradient-to-b from-transparent to-[#060608] pointer-events-none z-10" />
+      <div className="absolute bottom-0 left-0 w-full h-[25vh] bg-gradient-to-b from-transparent to-[#02000A] pointer-events-none z-10" />
 
       {/* Content Container with Corner Accents */}
       <div className="relative z-10 max-w-5xl mx-auto px-6 text-center pb-[250px]">
@@ -92,10 +92,10 @@ export function HeroSection() {
                   fontSize: 'clamp(32px, 5vw, 64px)',
                   lineHeight: '1.2',
                   letterSpacing: '-2px',
-                  textShadow: '0 0 30px rgba(255,255,255,0.4)'
+                  textShadow: '0 0 30px rgba(0, 255, 255, 0.6)'
                 }}
               >
-                Agency that makes your
+                Engage your audience at
               </h1>
               <h1
                 className="text-white relative"
@@ -104,10 +104,10 @@ export function HeroSection() {
                   fontStyle: 'italic',
                   fontSize: 'clamp(32px, 5vw, 64px)',
                   lineHeight: '1.2',
-                  textShadow: '0 0 40px rgba(255,255,255,0.5)'
+                  textShadow: '0 0 40px rgba(0, 255, 255, 0.7)'
                 }}
               >
-                videos & reels viral
+                Warp Speed
               </h1>
             </motion.div>
 
@@ -116,14 +116,15 @@ export function HeroSection() {
               initial={{ y: 50, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.6 }}
-              className="text-white/75 max-w-2xl mx-auto mb-8"
+              className="text-white/80 max-w-2xl mx-auto mb-8 tracking-wide"
               style={{
                 fontFamily: 'Barlow, sans-serif',
                 fontSize: '18px',
                 fontWeight: 500,
+                textShadow: '0 0 10px rgba(0,255,255,0.3)'
               }}
             >
-              Broadcast TVCs, AI-Powered Commercials & Premium Content for Brands Worldwide
+              Galactic-scale Content, AI-Powered Visuals & Stellar Campaigns for Brands Worldwide
             </motion.p>
           </div>
         </div>
@@ -143,7 +144,7 @@ export function HeroSection() {
             style={{ fontFamily: 'Barlow, sans-serif' }}
           >
             <Play className="w-5 h-5 fill-current" />
-            Watch TVC Reel
+            Enter the Cosmos
           </Button>
         </motion.div>
       </div>

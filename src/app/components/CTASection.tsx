@@ -22,7 +22,7 @@ export function CTASection() {
               textShadow: '0 0 40px rgba(255,255,255,0.3)'
             }}
           >
-            Let's create something unforgettable.
+            Ready to break the light barrier?
           </h2>
 
           <motion.p
@@ -37,8 +37,7 @@ export function CTASection() {
               lineHeight: '1.6',
             }}
           >
-            If you're a brand or agency looking for content that actually moves people — and moves
-            the needle — let's talk.
+            If you're a brand or agency ready to defy gravity and launch content that moves the universe—let's align our satellites.
           </motion.p>
 
           <motion.div
@@ -79,10 +78,10 @@ export function CTASection() {
             transition={{ duration: 0.8, delay: 0.6 }}
           >
             <Button
-              className="bg-white text-black hover:bg-white/90 rounded-[2px] px-10 py-6 text-lg font-medium transition-all"
+              className="bg-white text-black hover:bg-white/90 rounded-[2px] px-10 py-6 text-lg font-medium transition-all shadow-[0_0_20px_rgba(0,255,255,0.5)]"
               style={{ fontFamily: 'Barlow, sans-serif' }}
             >
-              Book a Call
+              Open Comms Channel
             </Button>
           </motion.div>
         </motion.div>
@@ -99,7 +98,7 @@ export function CTASection() {
             className="text-white/40 text-sm"
             style={{ fontFamily: 'Barlow, sans-serif' }}
           >
-            © 2026 Vibividly. All rights reserved.
+            © 2026 Prepare of Light Speed. All rights reserved.
           </p>
         </motion.div>
       </div>

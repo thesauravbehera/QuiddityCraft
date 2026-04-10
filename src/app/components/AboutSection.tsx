@@ -19,7 +19,7 @@ export function AboutSection() {
               lineHeight: '1.3',
             }}
           >
-            Hi, I'm Sahil Shaikh.
+            I am Sahil Shaikh, Commander of Visuals.
           </h2>
 
           <motion.div
@@ -36,17 +36,17 @@ export function AboutSection() {
             }}
           >
             <p>
-              I create visuals that make people stop scrolling and start caring.
+              I command visuals that break the gravitational pull of ordinary content.
             </p>
 
             <p>
-              With 3+ years of experience, 100M+ views generated, and multiple high-impact projects
-              across brands and industries, I blend cutting-edge AI with human creativity to build
+              With light-years of experience navigating the digital cosmos and 100M+ views generated
+              across the galaxy, I blend stellar AI with human creativity to build
               content that performs and connects.
             </p>
 
             <p>
-              I started as a video editor working with incredible brands, but what truly excites me
+              My journey began orbiting as a video editor working with incredible brands, but what truly excites me
               today is how I've integrated AI into my creative process. It allows me to bring
               ambitious ideas to life — the kind that once required massive budgets and timelines —
               without losing the emotional core of storytelling.
@@ -59,12 +59,12 @@ export function AboutSection() {
               I'm focused on one thing:
             </p>
 
-            <p className="text-white text-xl italic" style={{ fontFamily: 'Instrument Serif, serif' }}>
-              Creating work that resonates deeply and tells your brand's story authentically.
+            <p className="text-[#00ffff] text-xl italic" style={{ fontFamily: 'Instrument Serif, serif', textShadow: '0 0 20px rgba(0,255,255,0.4)' }}>
+              Forging cosmic visuals that resonate beyond the stratosphere.
             </p>
 
             <p>
-              Today, I work as a Creative Producer, handling everything across pre-production,
+              Today, I operate as your Creative Navigator, handling everything across pre-production,
               production, and post-production — your creative strategist, storyteller, and execution
               partner in one.
             </p>
