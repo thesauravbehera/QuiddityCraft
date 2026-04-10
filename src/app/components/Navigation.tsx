@@ -69,7 +69,7 @@ export function Navigation() {
 
           {/* Desktop CTA Button */}
           <Button 
-            className="hidden md:flex bg-[#ED1C24] text-white hover:bg-[#c9141c] rounded-none px-6 py-5 items-center gap-2 transition-transform shadow-none font-bold tracking-widest uppercase"
+            className="hidden md:flex bg-[#A855F7] text-white hover:bg-[#7E22CE] rounded-none px-6 py-5 items-center gap-2 transition-transform shadow-none font-bold tracking-widest uppercase"
             style={{ fontFamily: 'Outfit, sans-serif' }}
           >
             Start Project
@@ -108,7 +108,7 @@ export function Navigation() {
               </a>
             ))}
             <Button 
-              className="bg-[#ED1C24] text-white hover:bg-[#c9141c] rounded-none px-6 py-6 flex items-center justify-center gap-2 mt-4 w-full shadow-none font-bold tracking-widest uppercase"
+              className="bg-[#A855F7] text-white hover:bg-[#7E22CE] rounded-none px-6 py-6 flex items-center justify-center gap-2 mt-4 w-full shadow-none font-bold tracking-widest uppercase"
               style={{ fontFamily: 'Outfit, sans-serif' }}
             >
               Start Project

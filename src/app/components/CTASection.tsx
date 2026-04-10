@@ -15,7 +15,7 @@ export function CTASection() {
             transition={{ duration: 0.8 }}
             className="flex flex-col justify-center"
           >
-            <p className="text-[#FBB82B] text-sm uppercase tracking-widest font-bold mb-6" style={{ fontFamily: 'Outfit, sans-serif' }}>
+            <p className="text-[#E0E7FF] text-sm uppercase tracking-widest font-bold mb-6" style={{ fontFamily: 'Outfit, sans-serif' }}>
               Contact Us
             </p>
             <h2
@@ -23,12 +23,12 @@ export function CTASection() {
               style={{ fontFamily: 'Outfit, sans-serif' }}
             >
               Bring Us<br/>
-              <span className="bg-gradient-to-r from-[#FBB82B] via-[#E1534E] to-[#99222B] bg-clip-text text-transparent break-words">
+              <span className="bg-gradient-to-r from-[#E0E7FF] via-[#E1534E] to-[#99222B] bg-clip-text text-transparent break-words">
                 The Problem,
               </span>
               <br/>
               <span className="ml-[10%] md:ml-[20%]">We'll Bring</span><br/>
-              <span className="ml-[10%] md:ml-[20%] bg-gradient-to-r from-[#FBB82B] via-[#E1534E] to-[#99222B] bg-clip-text text-transparent break-words">
+              <span className="ml-[10%] md:ml-[20%] bg-gradient-to-r from-[#E0E7FF] via-[#E1534E] to-[#99222B] bg-clip-text text-transparent break-words">
                 The Clarity.
               </span>
             </h2>
@@ -49,7 +49,7 @@ export function CTASection() {
                 <input 
                   type="email" 
                   placeholder="Email" 
-                  className="bg-transparent border-b border-white/20 pb-2 text-white placeholder:text-white/20 focus:outline-none focus:border-[#ED1C24] transition-colors rounded-none"
+                  className="bg-transparent border-b border-white/20 pb-2 text-white placeholder:text-white/20 focus:outline-none focus:border-[#A855F7] transition-colors rounded-none"
                   style={{ fontFamily: 'Barlow, sans-serif' }}
                 />
               </div>
@@ -59,7 +59,7 @@ export function CTASection() {
                 <input 
                   type="tel" 
                   placeholder="+91 0000000000" 
-                  className="bg-transparent border-b border-white/20 pb-2 text-white placeholder:text-white/20 focus:outline-none focus:border-[#ED1C24] transition-colors rounded-none"
+                  className="bg-transparent border-b border-white/20 pb-2 text-white placeholder:text-white/20 focus:outline-none focus:border-[#A855F7] transition-colors rounded-none"
                   style={{ fontFamily: 'Barlow, sans-serif' }}
                 />
               </div>
@@ -69,14 +69,14 @@ export function CTASection() {
                 <textarea 
                   placeholder="Write here" 
                   rows={3}
-                  className="bg-transparent border-b border-white/20 pb-2 text-white placeholder:text-white/20 focus:outline-none focus:border-[#ED1C24] transition-colors resize-none rounded-none"
+                  className="bg-transparent border-b border-white/20 pb-2 text-white placeholder:text-white/20 focus:outline-none focus:border-[#A855F7] transition-colors resize-none rounded-none"
                   style={{ fontFamily: 'Barlow, sans-serif' }}
                 />
               </div>
 
               <Button
                 type="submit"
-                className="bg-[#ED1C24] text-white hover:bg-[#c9141c] rounded-none w-max px-10 py-6 text-sm font-bold tracking-widest uppercase transition-all"
+                className="bg-[#A855F7] text-white hover:bg-[#7E22CE] rounded-none w-max px-10 py-6 text-sm font-bold tracking-widest uppercase transition-all"
                 style={{ fontFamily: 'Outfit, sans-serif' }}
               >
                 Send Your Brief

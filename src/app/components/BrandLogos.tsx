@@ -6,7 +6,7 @@ export function BrandLogos() {
   const duplicatedLogos = [...brandLogos, ...brandLogos, ...brandLogos, ...brandLogos];
 
   return (
-    <section className="relative py-24 border-t border-b border-white/5 bg-[#0a0a0a] overflow-hidden">
+    <section className="relative py-24 border-t border-b border-white/5 bg-[#0B0914] overflow-hidden">
       <div className="relative z-10 w-full">
         {/* Header Section */}
         <motion.div
@@ -16,12 +16,12 @@ export function BrandLogos() {
            transition={{ duration: 0.8 }}
            className="text-center mb-16 flex flex-col items-center px-6"
         >
-          <p className="text-[#FBB82B] text-sm md:text-base font-bold tracking-[0.2em] uppercase mb-4" style={{ fontFamily: 'Outfit, sans-serif' }}>
+          <p className="text-[#E0E7FF] text-sm md:text-base font-bold tracking-[0.2em] uppercase mb-4" style={{ fontFamily: 'Outfit, sans-serif' }}>
             Trusted by brands that
           </p>
           <h2 className="text-4xl md:text-6xl lg:text-7xl font-black uppercase tracking-tight leading-none" style={{ fontFamily: 'Outfit, sans-serif' }}>
             <span className="text-white">Shape </span>
-            <span className="bg-gradient-to-r from-[#FBB82B] via-[#E1534E] to-[#99222B] bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#E0E7FF] via-[#E1534E] to-[#99222B] bg-clip-text text-transparent">
               The World
             </span>
           </h2>

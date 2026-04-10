@@ -34,7 +34,7 @@ export function HeroSection() {
   }, []);
 
   return (
-    <section className="relative h-screen w-full flex items-center justify-center overflow-hidden bg-[#0a0a0a]">
+    <section className="relative h-screen w-full flex items-center justify-center overflow-hidden bg-[#0B0914]">
       {/* Video Background with fade transition */}
       <div className="absolute inset-0">
         <AnimatePresence mode="wait">
@@ -69,19 +69,19 @@ export function HeroSection() {
            transition={{ duration: 0.8, delay: 0.2 }}
         >
           {/* Studio Tagline */}
-          <p className="text-[#ED1C24] font-bold tracking-[0.2em] uppercase text-sm md:text-base mb-6" style={{ fontFamily: 'Outfit, sans-serif' }}>
+          <p className="text-[#A855F7] font-bold tracking-[0.2em] uppercase text-sm md:text-base mb-6" style={{ fontFamily: 'Outfit, sans-serif' }}>
             The Global Cinematic Agency
           </p>
           
           {/* Massive Owled-style Headline */}
           <h1 className="text-white font-black uppercase leading-[0.85] tracking-tight text-[4rem] sm:text-[6rem] md:text-[8rem] lg:text-[10rem] mb-8" style={{ fontFamily: 'Outfit, sans-serif' }}>
-            Built For <span className="text-[#ED1C24]">Virality</span>
+            Built For <span className="text-[#A855F7]">Virality</span>
           </h1>
 
           <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-12 max-w-4xl">
             {/* Paragraph Text with Yellow Highlight */}
             <p className="text-white/80 text-xl md:text-2xl font-light leading-relaxed max-w-2xl" style={{ fontFamily: 'Barlow, sans-serif' }}>
-              We transform ambitious ideas into high-fidelity entertainment. Utilizing a world-class production pipeline and <span className="bg-[#FFD700] text-black font-semibold px-2 py-0.5 rounded-sm">AI-native visual infrastructure</span>, we engineer content that genuinely moves culture.
+              We transform ambitious ideas into high-fidelity entertainment. Utilizing a world-class production pipeline and <span className="bg-[#22D3EE] text-black font-semibold px-2 py-0.5 rounded-sm">AI-native visual infrastructure</span>, we engineer content that genuinely moves culture.
             </p>
 
             {/* Red Accent CTA */}
@@ -90,7 +90,7 @@ export function HeroSection() {
                 const tvcReelSection = document.querySelector('#tvc-reel');
                 tvcReelSection?.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="bg-[#ED1C24] text-white hover:bg-[#c9141c] rounded-none px-10 py-7 text-sm font-bold tracking-widest uppercase transition-all shrink-0"
+              className="bg-[#A855F7] text-white hover:bg-[#7E22CE] rounded-none px-10 py-7 text-sm font-bold tracking-widest uppercase transition-all shrink-0"
               style={{ fontFamily: 'Outfit, sans-serif' }}
             >
               Start Project
@@ -105,7 +105,7 @@ export function HeroSection() {
             <motion.div 
                animate={{ opacity: [1, 0, 1] }} 
                transition={{ duration: 2, repeat: Infinity }}
-               className="w-4 h-4 rounded-full bg-[#ED1C24] shadow-[0_0_15px_rgba(237,28,36,0.6)]" 
+               className="w-4 h-4 rounded-full bg-[#A855F7] shadow-[0_0_15px_rgba(237,28,36,0.6)]" 
             />
             <span className="text-white/80 font-mono text-sm tracking-widest font-light">REC</span>
          </div>

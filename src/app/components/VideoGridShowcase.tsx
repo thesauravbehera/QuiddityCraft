@@ -35,7 +35,7 @@ function SmartVideoNode({ src, cleanTitle, delayIndex }: { src: string, cleanTit
       viewport={{ once: true, margin: "0px 0px -50px 0px" }}
       transition={{ duration: 0.4, delay: delayIndex * 0.05 }}
       // Owled Box aesthetic without destroying the masonry
-      className="group relative break-inside-avoid inline-block w-full mb-3 sm:mb-4 overflow-hidden rounded-[8px] bg-[#0a0a0a] border border-white/10 cursor-pointer transform transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(255,255,255,0.05)] hover:border-white/20 hover:z-10"
+      className="group relative break-inside-avoid inline-block w-full mb-3 sm:mb-4 overflow-hidden rounded-[8px] bg-[#0B0914] border border-white/10 cursor-pointer transform transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(255,255,255,0.05)] hover:border-white/20 hover:z-10"
     >
       <video 
         ref={videoRef}
@@ -112,7 +112,7 @@ export function VideoGridShowcase() {
   ];
 
   return (
-    <section className="py-24 bg-[#0a0a0a] min-h-screen border-t border-white/5">
+    <section className="py-24 bg-[#0B0914] min-h-screen border-t border-white/5">
       <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -121,7 +121,7 @@ export function VideoGridShowcase() {
           transition={{ duration: 0.8 }}
           className="text-center mb-20"
         >
-          <p className="text-[#ED1C24] text-sm md:text-base font-bold tracking-[0.2em] uppercase mb-4" style={{ fontFamily: 'Outfit, sans-serif' }}>
+          <p className="text-[#A855F7] text-sm md:text-base font-bold tracking-[0.2em] uppercase mb-4" style={{ fontFamily: 'Outfit, sans-serif' }}>
             Production Library
           </p>
           <h2
@@ -132,7 +132,7 @@ export function VideoGridShowcase() {
               fontWeight: 900
             }}
           >
-            The Motion <span className="bg-gradient-to-r from-[#FBB82B] via-[#E1534E] to-[#99222B] bg-clip-text text-transparent">Archive</span>
+            The Motion <span className="bg-gradient-to-r from-[#E0E7FF] via-[#E1534E] to-[#99222B] bg-clip-text text-transparent">Archive</span>
           </h2>
           <p
             className="text-white/60 max-w-2xl mx-auto"
