@@ -68,11 +68,11 @@ export function Navigation() {
           </div>
 
           {/* Desktop CTA Button */}
-          <Button className="hidden md:flex bg-white text-black hover:bg-white/90 rounded-[8px] px-6 py-2 items-center gap-2 transition-transform hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(255,255,255,0.1)]">
-            Book A Free Meeting
-            <div className="w-5 h-5 rounded-full bg-black/10 flex items-center justify-center">
-              <ArrowUpRight className="w-3 h-3" />
-            </div>
+          <Button 
+            className="hidden md:flex bg-[#ED1C24] text-white hover:bg-[#c9141c] rounded-none px-6 py-5 items-center gap-2 transition-transform shadow-none font-bold tracking-widest uppercase"
+            style={{ fontFamily: 'Outfit, sans-serif' }}
+          >
+            Start Project
           </Button>
 
           {/* Mobile Menu Button */}
@@ -107,9 +107,11 @@ export function Navigation() {
                 {link.label}
               </a>
             ))}
-            <Button className="bg-white text-black hover:bg-white/90 rounded-[8px] px-6 py-4 flex items-center justify-center gap-2 mt-4 shadow-lg w-full">
-              Book A Free Meeting
-              <ArrowUpRight className="w-4 h-4" />
+            <Button 
+              className="bg-[#ED1C24] text-white hover:bg-[#c9141c] rounded-none px-6 py-6 flex items-center justify-center gap-2 mt-4 w-full shadow-none font-bold tracking-widest uppercase"
+              style={{ fontFamily: 'Outfit, sans-serif' }}
+            >
+              Start Project
             </Button>
           </div>
         </motion.div>

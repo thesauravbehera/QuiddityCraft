@@ -76,9 +76,10 @@ export function TVCShowcase() {
           <h2
             className="text-white mb-6"
             style={{
-              fontFamily: 'Instrument Serif, serif',
-              fontStyle: 'italic',
-              fontSize: 'clamp(36px, 5vw, 64px)',
+              fontFamily: 'Outfit, sans-serif',
+              fontWeight: 900,
+              textTransform: 'uppercase',
+                            fontSize: 'clamp(36px, 5vw, 64px)',
               lineHeight: '1.2',
             }}
           >

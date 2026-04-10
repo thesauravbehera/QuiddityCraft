@@ -30,9 +30,10 @@ export function ReelsCarousel() {
         <h2
           className="text-white text-center"
           style={{
-            fontFamily: 'Instrument Serif, serif',
-            fontStyle: 'italic',
-            fontSize: 'clamp(36px, 5vw, 60px)',
+            fontFamily: 'Outfit, sans-serif',
+              fontWeight: 900,
+              textTransform: 'uppercase',
+                        fontSize: 'clamp(36px, 5vw, 60px)',
             lineHeight: '1.1',
           }}
         >

@@ -36,9 +36,10 @@ export function TestimonialsSection() {
           <h2
             className="text-white mb-4"
             style={{
-              fontFamily: 'Instrument Serif, serif',
-              fontStyle: 'italic',
-              fontSize: 'clamp(32px, 4vw, 56px)',
+              fontFamily: 'Outfit, sans-serif',
+              fontWeight: 900,
+              textTransform: 'uppercase',
+                            fontSize: 'clamp(32px, 4vw, 56px)',
               lineHeight: '1.3',
               textShadow: '0 0 40px rgba(255,255,255,0.2)'
             }}
@@ -73,8 +74,7 @@ export function TestimonialsSection() {
                   fontFamily: 'Barlow, sans-serif',
                   fontSize: '16px',
                   lineHeight: '1.8',
-                  fontStyle: 'italic',
-                }}
+                                  }}
               >
                 "{testimonial.quote}"
               </p>

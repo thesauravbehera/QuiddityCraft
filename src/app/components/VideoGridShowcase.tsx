@@ -1,4 +1,77 @@
-import { motion } from 'motion/react';
+import { useRef, useEffect } from 'react';
+import { motion, useInView } from 'motion/react';
+
+function SmartVideoNode({ src, cleanTitle, delayIndex }: { src: string, cleanTitle: string, delayIndex: number }) {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  // PRELOAD ENGINE: 
+  // Triggers 1200px BEFORE the video enters the screen.
+  // This guarantees at least 3-4 videos are aggressively downloading in the background.
+  const shouldPreload = useInView(containerRef, { margin: "1200px 0px 1200px 0px" });
+
+  // PLAYBACK ENGINE:
+  // Strictly triggers only when the video actually breaching the viewport.
+  const shouldPlay = useInView(containerRef, { margin: "0px 0px 0px 0px" });
+
+  useEffect(() => {
+    if (!videoRef.current) return;
+    
+    // Manage Memory & Processing Power
+    if (shouldPlay) {
+      // It's on screen: play the video
+      videoRef.current.play().catch(e => console.log("Viewport auto-play prevented:", e));
+    } else {
+      // It fell off screen: freeze it to save CPU/GPU cycles
+      videoRef.current.pause();
+    }
+  }, [shouldPlay]);
+
+  return (
+    <motion.div
+      ref={containerRef}
+      initial={{ opacity: 0, scale: 0.95 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      viewport={{ once: true, margin: "0px 0px -50px 0px" }}
+      transition={{ duration: 0.4, delay: delayIndex * 0.05 }}
+      // Owled Box aesthetic without destroying the masonry
+      className="group relative break-inside-avoid inline-block w-full mb-3 sm:mb-4 overflow-hidden rounded-[8px] bg-[#0a0a0a] border border-white/10 cursor-pointer transform transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(255,255,255,0.05)] hover:border-white/20 hover:z-10"
+    >
+      <video 
+        ref={videoRef}
+        src={src} 
+        muted 
+        loop 
+        playsInline 
+        /* 
+          YOUTUBE INFRASTRUCTURE HACK:
+          Always load "metadata" to calculate width/height for the Masonry CSS grid flawlessly.
+          But ONLY swap to "auto" (heavy pre-download) when they scroll within striking distance.
+        */
+        preload={shouldPreload ? "auto" : "metadata"}
+        className="w-full h-auto object-cover relative z-0 transition-opacity duration-300" 
+      />
+
+      {/* Dark Vignette/Gradient overlay for text readability */}
+      <div className="absolute inset-x-0 bottom-0 top-1/2 bg-gradient-to-t from-black/95 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 pointer-events-none" />
+
+      {/* Hover Content */}
+      <div className="absolute bottom-0 left-0 right-0 p-4 transform translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 z-20 pointer-events-none">
+        <h3
+          className="text-white capitalize tracking-wide"
+          style={{
+            fontFamily: 'Barlow, sans-serif',
+            fontSize: '13px',
+            fontWeight: 600,
+            lineHeight: '1.2',
+          }}
+        >
+          {cleanTitle.length > 30 ? cleanTitle.substring(0, 30) + '...' : cleanTitle}
+        </h3>
+      </div>
+    </motion.div>
+  );
+}
 
 export function VideoGridShowcase() {
   const allVideos = [
@@ -39,25 +112,27 @@ export function VideoGridShowcase() {
   ];
 
   return (
-    <section className="py-20 bg-[#060608] min-h-screen border-t border-white/10">
+    <section className="py-24 bg-[#0a0a0a] min-h-screen border-t border-white/5">
       <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-20"
         >
+          <p className="text-[#ED1C24] text-sm md:text-base font-bold tracking-[0.2em] uppercase mb-4" style={{ fontFamily: 'Outfit, sans-serif' }}>
+            Production Library
+          </p>
           <h2
-            className="text-white mb-4"
+            className="text-white mb-4 uppercase tracking-tighter leading-none"
             style={{
-              fontFamily: 'Instrument Serif, serif',
-              fontStyle: 'italic',
-              fontSize: 'clamp(32px, 4vw, 56px)',
-              textShadow: '0 0 30px rgba(255,255,255,0.2)'
+              fontFamily: 'Outfit, sans-serif',
+              fontSize: 'clamp(48px, 6vw, 80px)',
+              fontWeight: 900
             }}
           >
-            The Motion Archive
+            The Motion <span className="bg-gradient-to-r from-[#FBB82B] via-[#E1534E] to-[#99222B] bg-clip-text text-transparent">Archive</span>
           </h2>
           <p
             className="text-white/60 max-w-2xl mx-auto"
@@ -66,7 +141,7 @@ export function VideoGridShowcase() {
               fontSize: '18px',
             }}
           >
-            A continuous scroll of our entire production and generative video registry.
+            A continuous scroll of our entire production and generative video registry. Engineered for instant playback.
           </p>
         </motion.div>
 
@@ -77,56 +152,12 @@ export function VideoGridShowcase() {
             const cleanTitle = filename.replace(/\.[^/.]+$/, '').replace(/[-_]/g, ' ').trim();
 
             return (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true, margin: "0px 0px -50px 0px" }}
-                transition={{ duration: 0.4, delay: (index % 8) * 0.05 }}
-                className="group relative break-inside-avoid inline-block w-full mb-3 sm:mb-4 overflow-hidden rounded-[16px] bg-zinc-950 border border-white/10 cursor-pointer transform transition-all duration-500 hover:scale-[1.03] hover:shadow-[0_0_30px_rgba(255,255,255,0.1)] hover:border-white/30 hover:z-10"
-              >
-                {/* 
-                  Using onMouseEnter/onMouseLeave to handle playback 
-                  instead of autoPlay to save immense processing power 
-                  since there are 30+ 4k videos on a single page.
-                */}
-                <video 
-                  src={src} 
-                  muted 
-                  loop 
-                  playsInline 
-                  preload="metadata"
-                  onMouseEnter={(e) => e.currentTarget.play()}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.pause();
-                    e.currentTarget.currentTime = 0; // Reset to frame 1 on blur
-                  }}
-                  className="w-full h-auto object-cover relative z-0 transition-opacity duration-300" 
-                />
-
-                {/* Dark Vignette/Gradient overlay for text readability */}
-                <div className="absolute inset-x-0 bottom-0 top-2/3 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 pointer-events-none" />
-
-                {/* Hover Content */}
-                <div className="absolute bottom-0 left-0 right-0 p-4 transform translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 z-20 pointer-events-none">
-                  <h3
-                    className="text-white capitalize"
-                    style={{
-                      fontFamily: 'Barlow, sans-serif',
-                      fontSize: '14px',
-                      fontWeight: 600,
-                      lineHeight: '1.2',
-                    }}
-                  >
-                    {cleanTitle.length > 30 ? cleanTitle.substring(0, 30) + '...' : cleanTitle}
-                  </h3>
-                </div>
-                
-                {/* Play Hint */}
-                <div className="absolute top-3 right-3 bg-black/60 rounded-full px-2 py-1 opacity-100 group-hover:opacity-0 transition-opacity duration-300 z-10 pointer-events-none border border-white/10">
-                  <span className="text-[10px] text-white/80 tracking-widest uppercase font-bold" style={{ fontFamily: 'Barlow' }}>Hover to Play</span>
-                </div>
-              </motion.div>
+              <SmartVideoNode 
+                key={index} 
+                src={src} 
+                cleanTitle={cleanTitle} 
+                delayIndex={index % 8} 
+              />
             );
           })}
         </div>

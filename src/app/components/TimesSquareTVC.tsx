@@ -42,7 +42,9 @@ export function TimesSquareTVC() {
             className="text-white leading-[0.9] tracking-tighter"
             style={{ 
               fontSize: 'clamp(50px, 8vw, 130px)', 
-              fontFamily: 'Instrument Serif, serif',
+              fontFamily: 'Outfit, sans-serif',
+              fontWeight: 900,
+              textTransform: 'uppercase',
               textShadow: '0 0 40px rgba(255,255,255,0.4), 0 0 80px rgba(100,150,255,0.2)'
             }}
           >

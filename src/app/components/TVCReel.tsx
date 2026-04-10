@@ -44,9 +44,10 @@ export function TVCReel() {
             <h3
               className="text-white mb-3"
               style={{
-                fontFamily: 'Instrument Serif, serif',
-                fontStyle: 'italic',
-                fontSize: 'clamp(28px, 3vw, 42px)',
+                fontFamily: 'Outfit, sans-serif',
+              fontWeight: 900,
+              textTransform: 'uppercase',
+                                fontSize: 'clamp(28px, 3vw, 42px)',
               }}
             >
               Watch Our TVC Reel
