@@ -7,8 +7,10 @@ type Category = keyof typeof categorizedAssets;
 export function WorkGrid() {
   const categories = Object.keys(categorizedAssets) as Category[];
   const [activeCategory, setActiveCategory] = useState<Category>(categories[0]);
+  const [showAll, setShowAll] = useState(false);
 
   const currentAssets = categorizedAssets[activeCategory] || [];
+  const displayedAssets = showAll ? currentAssets : currentAssets.slice(0, 12);
 
   return (
     <section className="py-20 bg-transparent min-h-screen">
@@ -52,7 +54,10 @@ export function WorkGrid() {
           {categories.map((category) => (
             <button
               key={category}
-              onClick={() => setActiveCategory(category)}
+              onClick={() => {
+                setActiveCategory(category);
+                setShowAll(false);
+              }}
               className={`px-6 py-2.5 rounded-full border text-sm uppercase tracking-wider transition-all duration-300 ${
                 activeCategory === category 
                   ? 'bg-white text-black border-white shadow-[0_0_20px_rgba(255,255,255,0.4)]' 
@@ -68,7 +73,7 @@ export function WorkGrid() {
         {/* Masonry Layout using CSS Columns */}
         <div className="columns-2 sm:columns-3 md:columns-4 lg:columns-5 xl:columns-6 gap-3 sm:gap-4 space-y-3 sm:space-y-4 transition-all duration-500 min-h-[50vh]">
           <AnimatePresence mode="popLayout">
-            {currentAssets.map((src, index) => {
+            {displayedAssets.map((src, index) => {
             // Get a clean title from the filename
             const filename = src.split('/').pop() || '';
             const cleanTitle = filename
@@ -121,6 +126,24 @@ export function WorkGrid() {
           })}
           </AnimatePresence>
         </div>
+
+        {/* View Entire Portfolio Button */}
+        {!showAll && currentAssets.length > 12 && (
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="flex justify-center mt-16"
+          >
+            <button
+              onClick={() => setShowAll(true)}
+              className="px-8 py-4 bg-white text-black text-sm uppercase tracking-widest font-bold transition-all duration-300 hover:bg-zinc-200 hover:scale-105 shadow-[0_0_20px_rgba(255,255,255,0.2)]"
+              style={{ fontFamily: 'Barlow, sans-serif' }}
+            >
+              View the entire portfolio
+            </button>
+          </motion.div>
+        )}
       </div>
     </section>
   );
