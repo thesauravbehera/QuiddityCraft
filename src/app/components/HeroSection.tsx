@@ -1,22 +1,41 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Play, ChevronDown } from 'lucide-react';
 import { Button } from './ui/button';
 
 export function HeroSection() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const heroSequence = [
+    "/LightSpeedimages/Astruanuat2.mp4",
+    "/hero_sequence/astruanuat.mp4",
+    "/hero_sequence/Astruanuat2.mp4",
+    "/hero_sequence/Astruanuat3.mp4"
+  ];
+
+  const handleVideoEnd = () => {
+    setCurrentIndex((prev) => (prev + 1) % heroSequence.length);
+  };
+
   return (
     <section className="relative h-screen w-full flex items-center justify-center overflow-hidden bg-[#02000A]">
       {/* Video Background */}
-      <div className="absolute inset-0">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover"
-        >
-          <source src="/LightSpeedimages/Astruanuat2.mp4" type="video/mp4" />
-        </video>
+      <div className="absolute inset-0 bg-black">
+        <AnimatePresence mode="wait">
+          <motion.video
+            key={currentIndex}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.8 }}
+            autoPlay
+            muted
+            playsInline
+            onEnded={handleVideoEnd}
+            src={heroSequence[currentIndex]}
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+        </AnimatePresence>
       </div>
 
       {/* Overlay for better text visibility */}
