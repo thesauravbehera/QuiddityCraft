@@ -80,6 +80,7 @@ export function HeroSection() {
               >
                 Accelerate your brand to
               </h1>
+              <h1
                 className="text-white mt-4 tracking-tighter"
                 style={{
                   fontFamily: 'Barlow, sans-serif',
