@@ -98,7 +98,7 @@ export function CTASection() {
             className="text-white/40 text-sm"
             style={{ fontFamily: 'Barlow, sans-serif' }}
           >
-            © 2026 Prepare of Light Speed. All rights reserved.
+            © 2026 Quiddity Craft. All rights reserved.
           </p>
         </motion.div>
       </div>

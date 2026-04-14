@@ -90,7 +90,7 @@ export function HeroSection() {
                   textTransform: 'uppercase'
                 }}
               >
-                Light Speed
+                Quiddity Craft
               </h1>
             </motion.div>
 
