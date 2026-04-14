@@ -89,12 +89,13 @@ export function Navigation() {
       {/* Mobile Menu */}
       {mobileMenuOpen && (
         <motion.div
-          initial={{ opacity: 0, y: -20, scale: 0.95 }}
-          animate={{ opacity: 1, y: 0, scale: 1 }}
-          exit={{ opacity: 0, y: -20, scale: 0.95 }}
-          transition={{ duration: 0.2 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.3 }}
+          className="fixed inset-0 z-40 bg-[#02000A]/95 backdrop-blur-2xl pt-28 px-6 pb-6 flex flex-col"
         >
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-4">
             {navLinks.map((link) => (
                <a
                 key={link.href}

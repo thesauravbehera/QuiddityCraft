@@ -46,7 +46,7 @@ export function HeroSection() {
       <div className="absolute bottom-0 left-0 w-full h-[25vh] bg-gradient-to-b from-transparent to-[#02000A] pointer-events-none z-10" />
 
       {/* Content Container with Corner Accents */}
-      <div className="relative z-10 max-w-5xl mx-auto px-6 text-center pb-[250px]">
+      <div className="relative z-10 max-w-5xl mx-auto px-6 text-center pt-24 pb-[150px] md:pb-[250px]">
 
         {/* Corner Accents Container */}
         <div className="relative inline-block">
@@ -85,8 +85,8 @@ export function HeroSection() {
                 style={{
                   fontFamily: 'Barlow, sans-serif',
                   fontWeight: 800,
-                  fontSize: 'clamp(60px, 10vw, 120px)',
-                  lineHeight: '1',
+                  fontSize: 'clamp(40px, 10vw, 120px)',
+                  lineHeight: '1.1',
                   textTransform: 'uppercase'
                 }}
               >
