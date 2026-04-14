@@ -128,7 +128,7 @@ export function HeroSection() {
           >
             <div className="absolute inset-0 bg-white transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out -z-10" />
             <Play className="w-4 h-4 fill-current" />
-            Initiate Sequence
+            Book a Call
           </Button>
         </motion.div>
       </div>
