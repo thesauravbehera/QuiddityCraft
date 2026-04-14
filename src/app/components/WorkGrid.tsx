@@ -123,7 +123,7 @@ export function WorkGrid() {
                       textShadow: '0 2px 4px rgba(0,0,0,0.8)'
                     }}
                   >
-                    {cleanTitle.length > 40 ? cleanTitle.substring(0, 40) + '...' : cleanTitle}
+                    Archived Visual
                   </h3>
                 </div>
               </motion.div>

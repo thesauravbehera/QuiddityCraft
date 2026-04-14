@@ -66,7 +66,7 @@ function SmartVideoNode({ src, cleanTitle, delayIndex }: { src: string, cleanTit
             lineHeight: '1.2',
           }}
         >
-          {cleanTitle.length > 30 ? cleanTitle.substring(0, 30) + '...' : cleanTitle}
+          Encrypted Transmission
         </h3>
       </div>
     </motion.div>
