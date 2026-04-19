@@ -132,7 +132,7 @@ export function ParallaxGallery() {
           {/* Column 1 */}
           <div ref={col1Ref} className="flex flex-col gap-16 md:gap-40 mt-[30vh] pointer-events-auto items-center md:items-end">
             {col1Videos.map((src, i) => {
-              const is9x16 = src.includes('AI.webm') || src.includes('Energy drinks.webm') || src.includes('TedX');
+              const is9x16 = src.includes('AI.webm') || src.includes('Fenty Beauty .webm') || src.includes('TedX');
               return (
                 <div 
                   key={`col1-${i}`} 
@@ -150,7 +150,7 @@ export function ParallaxGallery() {
           {/* Column 2 */}
           <div ref={col2Ref} className="flex flex-col gap-16 md:gap-40 mt-[80vh] pointer-events-auto items-center md:items-start">
             {col2Videos.map((src, i) => {
-              const is9x16 = src.includes('AI.webm') || src.includes('Energy drinks.webm') || src.includes('TedX');
+              const is9x16 = src.includes('AI.webm') || src.includes('Fenty Beauty .webm') || src.includes('TedX');
               return (
                 <div 
                   key={`col2-${i}`} 

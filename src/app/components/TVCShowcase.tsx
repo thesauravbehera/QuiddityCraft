@@ -32,12 +32,12 @@ export function TVCShowcase() {
       isHLS: false,
     },
     {
-      src: '/videos/Energy drinks.webm',
-      title: 'High-Octane Beverage',
-      subtitle: 'Liquid Dynamics',
-      description: 'Pulse-pounding commercial edits involving dynamic liquid simulations and adrenaline-focused color grading.',
+      src: '/videos/astruanuat.webm',
+      title: 'Cinematic Space Exploration',
+      subtitle: 'AI Generative Physics',
+      description: 'Zero-gravity physics simulations driven entirely by advanced prompt engineering and temporal coherence framing.',
       icon: Sparkles,
-      badge: 'Action Commercial',
+      badge: 'Hyperspace Edit',
       isHLS: false,
     },
   ];
