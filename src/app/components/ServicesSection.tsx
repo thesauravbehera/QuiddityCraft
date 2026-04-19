@@ -12,28 +12,22 @@ export function ServicesSection() {
 
   const services = [
     {
-      span: "col-span-1 md:col-span-7",
+      span: "col-span-1 md:col-span-12",
+      icon: Palette,
+      title: "brand positioning",
+      desc: "Architecting the core identity and digital footprint to dominate market perception.",
+    },
+    {
+      span: "col-span-1 md:col-span-6",
+      icon: Sparkles,
+      title: "ai imagery & video",
+      desc: "Deploying hyper-real generative visuals tailored for extreme conversion environments.",
+    },
+    {
+      span: "col-span-1 md:col-span-6",
       icon: Brain,
       title: "content strategy",
-      desc: "Performance-driven frameworks rooted in psychology and retention mechanics.",
-    },
-    {
-      span: "col-span-1 md:col-span-5",
-      icon: Sparkles,
-      title: "ai imagery",
-      desc: "Hyper-real generative visuals and next-gen commercial creative.",
-    },
-    {
-      span: "col-span-1 md:col-span-5",
-      icon: Film,
-      title: "cinema editing",
-      desc: "High-impact edits with unparalleled pacing and sound design.",
-    },
-    {
-      span: "col-span-1 md:col-span-7",
-      icon: Palette,
-      title: "brand identity",
-      desc: "From visual aesthetics to the underlying core quiddity of your digital footprint.",
+      desc: "Structuring performance-driven frameworks rooted in psychology and aggressive retention mechanics.",
     }
   ];
 
