@@ -31,15 +31,7 @@ export function TVCShowcase() {
       badge: 'Synthetic Output',
       isHLS: false,
     },
-    {
-      src: '/videos/astruanuat.webm',
-      title: 'Cinematic Space Exploration',
-      subtitle: 'AI Generative Physics',
-      description: 'Zero-gravity physics simulations driven entirely by advanced prompt engineering and temporal coherence framing.',
-      icon: Sparkles,
-      badge: 'Hyperspace Edit',
-      isHLS: false,
-    },
+
   ];
 
   return (

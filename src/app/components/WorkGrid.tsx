@@ -48,34 +48,7 @@ export function WorkGrid() {
           </p>
         </motion.div>
 
-        {/* Category Navigation */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 mb-16"
-        >
-          {categories.map((category) => (
-            <button
-              key={category}
-              onClick={() => {
-                setActiveCategory(category);
-                setShowAll(false);
-              }}
-              className={`px-8 py-3 rounded-full border-b-2 text-xs lowercase tracking-tight font-black transition-all duration-300 ${
-                activeCategory === category 
-                  ? 'text-white border-white' 
-                  : 'text-white/40 border-transparent hover:border-white/20 hover:text-white/80'
-              }`}
-              style={{ fontFamily: 'Outfit, sans-serif' }}
-            >
-              {category}
-            </button>
-          ))}
-        </motion.div>
-
-        {/* Masonry Layout using CSS Columns */}
+        {/* Category navigation completely purged */}        {/* Masonry Layout using CSS Columns */}
         <div className="columns-2 sm:columns-3 md:columns-4 lg:columns-5 xl:columns-6 gap-3 sm:gap-4 space-y-3 sm:space-y-4 transition-all duration-500 min-h-[50vh]">
           <AnimatePresence mode="popLayout">
             {displayedAssets.map((src, index) => {

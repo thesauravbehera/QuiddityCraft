@@ -51,7 +51,6 @@ export function ReelsCarousel() {
     { src: '/videos/AI.webm', badge: 'AI Featured' },
     { src: '/videos/Anya_FatBurner.webm', badge: 'FatBurner' },
     { src: '/videos/Clinique Video 04_04 English.webm', badge: 'Clinique TVC' },
-    { src: '/videos/astruanuat.webm', badge: 'Space Engine' },
     { src: '/videos/Fenty Beauty .webm', badge: 'Fenty Edit' },
     { src: '/videos/Founding Father (AI) 2.webm', badge: 'AI Founding' },
     { src: '/videos/GreenAmericanGuy1.webm', badge: 'Character AI' },
