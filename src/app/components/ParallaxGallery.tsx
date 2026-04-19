@@ -113,15 +113,15 @@ export function ParallaxGallery() {
         className="absolute top-0 left-0 w-full h-screen flex flex-col items-center justify-center z-0 pointer-events-none px-6"
       >
         <p 
-          className="text-white/60 text-sm uppercase font-medium mb-6 backdrop-blur-sm px-4 py-1 rounded-full bg-black/20" 
-          style={{ fontFamily: 'Barlow, sans-serif', letterSpacing: '0.4em' }}
+          className="text-white/60 text-sm lowercase font-medium mb-6 backdrop-blur-sm px-4 py-1 rounded-full bg-black/20" 
+          style={{ fontFamily: 'Outfit, sans-serif', letterSpacing: '0.4em' }}
         >
           Explorations
         </p>
         <h2 
           className="text-white text-center leading-[1.1] mb-6 drop-shadow-2xl" 
           style={{ 
-            fontFamily: 'Barlow, sans-serif', 
+            fontFamily: 'Outfit, sans-serif', 
             fontSize: 'clamp(50px, 8vw, 100px)', 
             fontWeight: 300, 
             letterSpacing: '-2px' 
@@ -142,7 +142,7 @@ export function ParallaxGallery() {
               return (
                 <div 
                   key={`col1-${i}`} 
-                  className={`group relative overflow-hidden rounded-[24px] bg-zinc-950/40 backdrop-blur-md border border-white/10 transition-all duration-700 hover:scale-[1.03] hover:shadow-[0_0_50px_rgba(255,255,255,0.1)] w-full shadow-2xl aspect-video max-w-[500px]`}
+                  className={`group relative overflow-hidden rounded-[3rem] bg-zinc-950/40 backdrop-blur-md border border-white/10 transition-all duration-700 hover:scale-[1.03] hover:shadow-[0_0_50px_rgba(255,255,255,0.1)] w-full shadow-2xl aspect-video max-w-[500px]`}
                 >
                   <PlayOnViewVideo 
                     src={src} 
@@ -160,7 +160,7 @@ export function ParallaxGallery() {
               return (
                 <div 
                   key={`col2-${i}`} 
-                  className={`group relative overflow-hidden rounded-[24px] bg-zinc-950/40 backdrop-blur-md border border-white/10 transition-all duration-700 hover:scale-[1.03] hover:shadow-[0_0_50px_rgba(255,255,255,0.1)] w-full shadow-2xl aspect-video max-w-[450px]`}
+                  className={`group relative overflow-hidden rounded-[3rem] bg-zinc-950/40 backdrop-blur-md border border-white/10 transition-all duration-700 hover:scale-[1.03] hover:shadow-[0_0_50px_rgba(255,255,255,0.1)] w-full shadow-2xl aspect-video max-w-[450px]`}
                 >
                   <PlayOnViewVideo 
                     src={src} 

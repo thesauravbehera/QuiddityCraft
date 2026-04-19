@@ -43,7 +43,7 @@ export function ProcessSection() {
           <p
             className="text-white/60 max-w-2xl mx-auto"
             style={{
-              fontFamily: 'Barlow, sans-serif',
+              fontFamily: 'Outfit, sans-serif',
               fontSize: '18px',
             }}
           >
@@ -64,7 +64,7 @@ export function ProcessSection() {
               <div
                 className="text-white/20 group-hover:text-white/40 transition-colors"
                 style={{
-                  fontFamily: 'Barlow, sans-serif',
+                  fontFamily: 'Outfit, sans-serif',
                   fontSize: 'clamp(48px, 5vw, 72px)',
                   fontWeight: 700,
                   lineHeight: '1',
@@ -76,7 +76,7 @@ export function ProcessSection() {
                 <h3
                   className="text-white mb-3"
                   style={{
-                    fontFamily: 'Barlow, sans-serif',
+                    fontFamily: 'Outfit, sans-serif',
                     fontSize: '24px',
                     fontWeight: 600,
                   }}
@@ -86,7 +86,7 @@ export function ProcessSection() {
                 <p
                   className="text-white/70"
                   style={{
-                    fontFamily: 'Barlow, sans-serif',
+                    fontFamily: 'Outfit, sans-serif',
                     fontSize: '18px',
                     lineHeight: '1.6',
                   }}

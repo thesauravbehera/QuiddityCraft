@@ -126,7 +126,15 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Barlow', sans-serif;
+    font-family: 'Outfit', sans-serif;
+    background: radial-gradient(circle at 0% 0%, #1a0833 0%, #05010f 40%, #000000 100%);
+    background-size: 200% 200%;
+    animation: liquidPurple 15s ease infinite alternate;
+  }
+
+  @keyframes liquidPurple {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 100% 100%; }
   }
 
   /**

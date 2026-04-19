@@ -46,7 +46,7 @@ export function TVCAchievements() {
                 <div
                   className="text-white mb-1"
                   style={{
-                    fontFamily: 'Barlow, sans-serif',
+                    fontFamily: 'Outfit, sans-serif',
                     fontSize: 'clamp(18px, 2vw, 24px)',
                     fontWeight: 700,
                   }}
@@ -56,9 +56,9 @@ export function TVCAchievements() {
                 <div
                   className="text-white/60"
                   style={{
-                    fontFamily: 'Barlow, sans-serif',
+                    fontFamily: 'Outfit, sans-serif',
                     fontSize: '13px',
-                    textTransform: 'uppercase',
+                    textTransform: 'lowercase',
                     letterSpacing: '0.1em',
                   }}
                 >

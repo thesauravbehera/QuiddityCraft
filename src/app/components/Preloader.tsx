@@ -33,7 +33,7 @@ export function Preloader() {
             </div>
           </div>
           
-          <div className="absolute bottom-20 text-white/50 tracking-[0.3em] uppercase text-xs animate-pulse" style={{ fontFamily: 'Barlow, sans-serif' }}>
+          <div className="absolute bottom-20 text-white/50 tracking-[0.3em] lowercase text-xs animate-pulse" style={{ fontFamily: 'Outfit, sans-serif' }}>
             Initiating Space...
           </div>
         </motion.div>

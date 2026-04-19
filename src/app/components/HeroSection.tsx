@@ -32,8 +32,8 @@ export function HeroSection() {
             >
               <Loader2 className="w-12 h-12 text-white/50 animate-spin mb-4" />
               <p
-                style={{ fontFamily: 'Barlow, sans-serif', letterSpacing: '0.3em' }}
-                className="text-white/40 text-xs uppercase"
+                style={{ fontFamily: 'Outfit, sans-serif', letterSpacing: '0.3em' }}
+                className="text-white/40 text-xs lowercase"
               >
                 Calibrating Visuals...
               </p>
@@ -96,11 +96,11 @@ export function HeroSection() {
               <h1
                 className="text-white mb-2 relative"
                 style={{
-                  fontFamily: 'Barlow, sans-serif',
+                  fontFamily: 'Outfit, sans-serif',
                   fontWeight: 500,
                   fontSize: 'clamp(14px, 2vw, 18px)',
                   letterSpacing: '0.3em',
-                  textTransform: 'uppercase',
+                  textTransform: 'lowercase',
                   color: 'rgba(255, 255, 255, 0.6)'
                 }}
               >
@@ -109,11 +109,11 @@ export function HeroSection() {
               <h1
                 className="text-white mt-4 tracking-tighter"
                 style={{
-                  fontFamily: 'Barlow, sans-serif',
+                  fontFamily: 'Outfit, sans-serif',
                   fontWeight: 800,
                   fontSize: 'clamp(40px, 10vw, 120px)',
                   lineHeight: '1.1',
-                  textTransform: 'uppercase'
+                  textTransform: 'lowercase'
                 }}
               >
                 Quiddity Craft
@@ -127,7 +127,7 @@ export function HeroSection() {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="text-white/60 max-w-2xl mx-auto mb-10 tracking-wide"
               style={{
-                fontFamily: 'Barlow, sans-serif',
+                fontFamily: 'Outfit, sans-serif',
                 fontSize: '18px',
                 fontWeight: 400,
                 lineHeight: '1.6'
@@ -149,8 +149,8 @@ export function HeroSection() {
               const tvcReelSection = document.querySelector('#tvc-reel');
               tvcReelSection?.scrollIntoView({ behavior: 'smooth' });
             }}
-            className="relative overflow-hidden bg-transparent border border-white/20 text-white hover:text-black hover:bg-white rounded-none px-10 py-7 text-sm uppercase tracking-widest font-semibold transition-all duration-500 flex items-center gap-4 mx-auto group"
-            style={{ fontFamily: 'Barlow, sans-serif' }}
+            className="relative overflow-hidden bg-transparent border border-white/20 text-white hover:text-black hover:bg-white rounded-full px-10 py-7 text-sm lowercase tracking-widest font-semibold transition-all duration-500 flex items-center gap-4 mx-auto group"
+            style={{ fontFamily: 'Outfit, sans-serif' }}
           >
             <div className="absolute inset-0 bg-white transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out -z-10" />
             <Play className="w-4 h-4 fill-current" />
@@ -174,7 +174,7 @@ export function HeroSection() {
           className="flex flex-col items-center gap-2 cursor-pointer"
           onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}
         >
-          <span className="text-white/60 text-xs uppercase tracking-wider" style={{ fontFamily: 'Barlow, sans-serif' }}>
+          <span className="text-white/60 text-xs lowercase tracking-wider" style={{ fontFamily: 'Outfit, sans-serif' }}>
             Scroll
           </span>
           <ChevronDown className="w-5 h-5 text-white/60" />

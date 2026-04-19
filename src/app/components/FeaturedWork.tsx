@@ -27,7 +27,7 @@ export function FeaturedWork() {
           <p
             className="text-white/60 max-w-2xl mx-auto"
             style={{
-              fontFamily: 'Barlow, sans-serif',
+              fontFamily: 'Outfit, sans-serif',
               fontSize: '18px',
             }}
           >
@@ -53,8 +53,8 @@ export function FeaturedWork() {
                 <div className="flex items-center gap-2 mb-3">
                   <TvMinimal className="w-5 h-5 text-white/80" />
                   <span
-                    className="text-white/60 text-sm uppercase tracking-wider"
-                    style={{ fontFamily: 'Barlow, sans-serif' }}
+                    className="text-white/60 text-sm lowercase tracking-wider"
+                    style={{ fontFamily: 'Outfit, sans-serif' }}
                   >
                     National TV Commercial
                   </span>
@@ -62,7 +62,7 @@ export function FeaturedWork() {
                 <h3
                   className="text-white mb-2"
                   style={{
-                    fontFamily: 'Barlow, sans-serif',
+                    fontFamily: 'Outfit, sans-serif',
                     fontSize: '24px',
                     fontWeight: 600,
                   }}
@@ -72,7 +72,7 @@ export function FeaturedWork() {
                 <p
                   className="text-white/70"
                   style={{
-                    fontFamily: 'Barlow, sans-serif',
+                    fontFamily: 'Outfit, sans-serif',
                     fontSize: '16px',
                     lineHeight: '1.6',
                   }}
@@ -102,8 +102,8 @@ export function FeaturedWork() {
                 <div className="flex items-center gap-2 mb-3">
                   <Award className="w-5 h-5 text-white/80" />
                   <span
-                    className="text-white/60 text-sm uppercase tracking-wider"
-                    style={{ fontFamily: 'Barlow, sans-serif' }}
+                    className="text-white/60 text-sm lowercase tracking-wider"
+                    style={{ fontFamily: 'Outfit, sans-serif' }}
                   >
                     Times Square Feature
                   </span>
@@ -111,7 +111,7 @@ export function FeaturedWork() {
                 <h3
                   className="text-white mb-2"
                   style={{
-                    fontFamily: 'Barlow, sans-serif',
+                    fontFamily: 'Outfit, sans-serif',
                     fontSize: '24px',
                     fontWeight: 600,
                   }}
@@ -121,7 +121,7 @@ export function FeaturedWork() {
                 <p
                   className="text-white/70"
                   style={{
-                    fontFamily: 'Barlow, sans-serif',
+                    fontFamily: 'Outfit, sans-serif',
                     fontSize: '16px',
                     lineHeight: '1.6',
                   }}

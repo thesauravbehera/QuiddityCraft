@@ -60,7 +60,7 @@ function SmartVideoNode({ src, cleanTitle, delayIndex }: { src: string, cleanTit
         <h3
           className="text-white capitalize tracking-wide"
           style={{
-            fontFamily: 'Barlow, sans-serif',
+            fontFamily: 'Outfit, sans-serif',
             fontSize: '14px',
             fontWeight: 600,
             lineHeight: '1.2',
@@ -135,7 +135,7 @@ export function VideoGridShowcase() {
           <p
             className="text-white/60 max-w-2xl mx-auto"
             style={{
-              fontFamily: 'Barlow, sans-serif',
+              fontFamily: 'Outfit, sans-serif',
               fontSize: '18px',
             }}
           >

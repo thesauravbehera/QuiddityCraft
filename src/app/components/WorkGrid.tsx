@@ -28,9 +28,9 @@ export function WorkGrid() {
           className="text-center mb-16"
         >
           <h2
-            className="text-white mb-6 uppercase tracking-widest"
+            className="text-white mb-6 lowercase tracking-widest"
             style={{
-              fontFamily: 'Barlow, sans-serif',
+              fontFamily: 'Outfit, sans-serif',
               fontWeight: 700,
               fontSize: 'clamp(24px, 3vw, 42px)',
             }}
@@ -40,7 +40,7 @@ export function WorkGrid() {
           <p
             className="text-white/60 max-w-2xl mx-auto"
             style={{
-              fontFamily: 'Barlow, sans-serif',
+              fontFamily: 'Outfit, sans-serif',
               fontSize: '18px',
             }}
           >
@@ -63,12 +63,12 @@ export function WorkGrid() {
                 setActiveCategory(category);
                 setShowAll(false);
               }}
-              className={`px-8 py-3 rounded-none border-b-2 text-xs uppercase tracking-[0.2em] font-medium transition-all duration-300 ${
+              className={`px-8 py-3 rounded-full border-b-2 text-xs lowercase tracking-[0.2em] font-medium transition-all duration-300 ${
                 activeCategory === category 
                   ? 'text-white border-white' 
                   : 'text-white/40 border-transparent hover:border-white/20 hover:text-white/80'
               }`}
-              style={{ fontFamily: 'Barlow, sans-serif' }}
+              style={{ fontFamily: 'Outfit, sans-serif' }}
             >
               {category}
             </button>
@@ -116,7 +116,7 @@ export function WorkGrid() {
                   <h3
                     className="text-white capitalize"
                     style={{
-                      fontFamily: 'Barlow, sans-serif',
+                      fontFamily: 'Outfit, sans-serif',
                       fontSize: '15px',
                       fontWeight: 600,
                       lineHeight: '1.3',
@@ -142,8 +142,8 @@ export function WorkGrid() {
           >
             <button
               onClick={() => setShowAll(true)}
-              className="px-10 py-5 bg-transparent border border-white/20 text-white text-xs uppercase tracking-[0.2em] font-medium transition-all duration-500 hover:bg-white hover:text-black hover:scale-105"
-              style={{ fontFamily: 'Barlow, sans-serif' }}
+              className="px-10 py-5 bg-transparent border border-white/20 text-white text-xs lowercase tracking-[0.2em] font-medium transition-all duration-500 hover:bg-white hover:text-black hover:scale-105"
+              style={{ fontFamily: 'Outfit, sans-serif' }}
             >
               Access Full Archive
             </button>

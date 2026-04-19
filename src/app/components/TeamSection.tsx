@@ -34,7 +34,7 @@ export function TeamSection() {
           transition={{ duration: 0.8 }}
           className="mb-20"
         >
-          <div className="text-white/40 text-xs uppercase tracking-widest font-sans mb-8">THE PEOPLE</div>
+          <div className="text-white/40 text-xs lowercase tracking-widest font-sans mb-8">THE PEOPLE</div>
           <h2
             className="text-white mb-6"
             style={{
@@ -67,14 +67,14 @@ export function TeamSection() {
             />
           </div>
           <div className="flex-1 text-left">
-            <div className="text-white/40 text-[11px] uppercase tracking-[0.2em] font-sans mb-4">FOUNDER</div>
+            <div className="text-white/40 text-[11px] lowercase tracking-[0.2em] font-sans mb-4">FOUNDER</div>
             <h3 
               className="text-white mb-4" 
               style={{ fontFamily: 'Instrument Serif, serif', fontSize: 'clamp(48px, 5vw, 64px)', lineHeight: '1' }}
             >
               sahil shaikh
             </h3>
-            <p className="text-white/50 text-[11px] uppercase tracking-[0.2em] font-sans mb-8 leading-relaxed">
+            <p className="text-white/50 text-[11px] lowercase tracking-[0.2em] font-sans mb-8 leading-relaxed">
               STARTED QUIDDITY CRAFT TO BUILD THE ROOM HE WISHED EXISTED
             </p>
             <div className="space-y-6 text-white/80 font-sans text-base md:text-lg" style={{ lineHeight: '1.7' }}>
@@ -98,7 +98,7 @@ export function TeamSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          <div className="text-white/40 text-[11px] uppercase tracking-[0.2em] font-sans mb-4">CORE TEAM</div>
+          <div className="text-white/40 text-[11px] lowercase tracking-[0.2em] font-sans mb-4">CORE TEAM</div>
           <p className="text-white/80 text-lg md:text-xl max-w-2xl mb-12 font-sans leading-relaxed">
             each person owns a critical part of the founder journey, from execution infrastructure to how the story gets seen by the world.
           </p>
@@ -113,7 +113,7 @@ export function TeamSection() {
                 transition={{ duration: 0.6, delay: 0.5 + (i * 0.1) }}
                 className="flex flex-col group"
               >
-                <div className="aspect-[4/5] overflow-hidden rounded-2xl mb-5">
+                <div className="aspect-[4/5] overflow-hidden rounded-[2rem] mb-5">
                   <img 
                     src={member.image} 
                     alt={member.name} 
@@ -127,7 +127,7 @@ export function TeamSection() {
                   >
                     {member.name}
                   </h4>
-                  <p className="text-white/40 text-[10px] uppercase tracking-[0.2em] font-sans mb-3">
+                  <p className="text-white/40 text-[10px] lowercase tracking-[0.2em] font-sans mb-3">
                     {member.role}
                   </p>
                   <p className="text-white/60 text-sm font-sans">

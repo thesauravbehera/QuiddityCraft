@@ -57,7 +57,7 @@ export function Navigation() {
                 className={`text-sm font-medium transition-colors relative group ${
                   location.pathname === link.href ? 'text-white' : 'text-white/60 hover:text-white'
                 }`}
-                style={{ fontFamily: 'Barlow, sans-serif' }}
+                style={{ fontFamily: 'Outfit, sans-serif' }}
               >
                 {link.label}
                 <span className={`absolute -bottom-1 left-0 h-[1px] bg-white transition-all duration-300 ${
@@ -103,7 +103,7 @@ export function Navigation() {
                   to={link.href}
                   onClick={() => setMobileMenuOpen(false)}
                   className="text-lg font-medium text-white/70 hover:text-white hover:bg-white/5 transition-all py-3 px-4 rounded-lg"
-                  style={{ fontFamily: 'Barlow, sans-serif' }}
+                  style={{ fontFamily: 'Outfit, sans-serif' }}
                 >
                   {link.label}
                 </Link>

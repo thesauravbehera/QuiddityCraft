@@ -65,8 +65,8 @@ export function TVCShowcase() {
           >
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-full px-6 py-2">
               <span
-                className="text-white/80 text-sm font-medium uppercase tracking-wider"
-                style={{ fontFamily: 'Barlow, sans-serif' }}
+                className="text-white/80 text-sm font-medium lowercase tracking-wider"
+                style={{ fontFamily: 'Outfit, sans-serif' }}
               >
                 ⭐ Galactic Quality Operations
               </span>
@@ -87,7 +87,7 @@ export function TVCShowcase() {
           <p
             className="text-white/70 max-w-3xl mx-auto"
             style={{
-              fontFamily: 'Barlow, sans-serif',
+              fontFamily: 'Outfit, sans-serif',
               fontSize: '20px',
               lineHeight: '1.6',
             }}
@@ -130,8 +130,8 @@ export function TVCShowcase() {
                     <div className="absolute top-4 right-4">
                       <div className="bg-white/90 backdrop-blur-sm rounded-full px-4 py-2">
                         <span
-                          className="text-black text-xs font-bold uppercase tracking-wider"
-                          style={{ fontFamily: 'Barlow, sans-serif' }}
+                          className="text-black text-xs font-bold lowercase tracking-wider"
+                          style={{ fontFamily: 'Outfit, sans-serif' }}
                         >
                           {project.badge}
                         </span>
@@ -157,8 +157,8 @@ export function TVCShowcase() {
                         <Icon className="w-6 h-6 text-white" />
                       </div>
                       <span
-                        className="text-white/60 text-sm uppercase tracking-wider"
-                        style={{ fontFamily: 'Barlow, sans-serif' }}
+                        className="text-white/60 text-sm lowercase tracking-wider"
+                        style={{ fontFamily: 'Outfit, sans-serif' }}
                       >
                         {project.subtitle}
                       </span>
@@ -167,7 +167,7 @@ export function TVCShowcase() {
                     <h3
                       className="text-white mb-4"
                       style={{
-                        fontFamily: 'Barlow, sans-serif',
+                        fontFamily: 'Outfit, sans-serif',
                         fontSize: 'clamp(24px, 3vw, 36px)',
                         fontWeight: 700,
                         lineHeight: '1.2',
@@ -179,7 +179,7 @@ export function TVCShowcase() {
                     <p
                       className="text-white/70"
                       style={{
-                        fontFamily: 'Barlow, sans-serif',
+                        fontFamily: 'Outfit, sans-serif',
                         fontSize: '18px',
                         lineHeight: '1.8',
                       }}
@@ -192,13 +192,13 @@ export function TVCShowcase() {
                       <div>
                         <div
                           className="text-white text-2xl font-bold mb-1"
-                          style={{ fontFamily: 'Barlow, sans-serif' }}
+                          style={{ fontFamily: 'Outfit, sans-serif' }}
                         >
                           100M+
                         </div>
                         <div
                           className="text-white/60 text-sm"
-                          style={{ fontFamily: 'Barlow, sans-serif' }}
+                          style={{ fontFamily: 'Outfit, sans-serif' }}
                         >
                           Impressions
                         </div>
@@ -206,13 +206,13 @@ export function TVCShowcase() {
                       <div>
                         <div
                           className="text-white text-2xl font-bold mb-1"
-                          style={{ fontFamily: 'Barlow, sans-serif' }}
+                          style={{ fontFamily: 'Outfit, sans-serif' }}
                         >
                           AI-Powered
                         </div>
                         <div
                           className="text-white/60 text-sm"
-                          style={{ fontFamily: 'Barlow, sans-serif' }}
+                          style={{ fontFamily: 'Outfit, sans-serif' }}
                         >
                           Production
                         </div>

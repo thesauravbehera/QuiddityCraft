@@ -29,7 +29,7 @@ export function AboutSection() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="space-y-6 text-white/80"
             style={{
-              fontFamily: 'Barlow, sans-serif',
+              fontFamily: 'Outfit, sans-serif',
               fontSize: '18px',
               lineHeight: '1.8',
               fontWeight: 400,

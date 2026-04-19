@@ -8,8 +8,8 @@ export function SectionSpacer() {
       <div className="w-full overflow-hidden flex items-center gap-8 px-6 relative z-10 opacity-50">
         <div className="h-[1px] flex-1 bg-gradient-to-r from-transparent via-white to-transparent shadow-[0_0_15px_rgba(255,255,255,0.5)]" />
         <span 
-          className="text-white text-xs sm:text-sm tracking-[0.6em] uppercase whitespace-nowrap" 
-          style={{ fontFamily: 'Barlow, sans-serif' }}
+          className="text-white text-xs sm:text-sm tracking-[0.6em] lowercase whitespace-nowrap" 
+          style={{ fontFamily: 'Outfit, sans-serif' }}
         >
           Visual Engineering
         </span>

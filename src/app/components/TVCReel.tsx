@@ -54,7 +54,7 @@ export function TVCReel() {
             <p
               className="text-white/60"
               style={{
-                fontFamily: 'Barlow, sans-serif',
+                fontFamily: 'Outfit, sans-serif',
                 fontSize: '16px',
               }}
             >
@@ -97,7 +97,7 @@ export function TVCReel() {
                       <h4
                         className="text-white"
                         style={{
-                          fontFamily: 'Barlow, sans-serif',
+                          fontFamily: 'Outfit, sans-serif',
                           fontSize: '18px',
                           fontWeight: 600,
                         }}
@@ -106,7 +106,7 @@ export function TVCReel() {
                       </h4>
                       <span
                         className="text-white/80 text-sm"
-                        style={{ fontFamily: 'Barlow, sans-serif' }}
+                        style={{ fontFamily: 'Outfit, sans-serif' }}
                       >
                         {reel.duration}
                       </span>
@@ -156,7 +156,7 @@ export function TVCReel() {
                 <h3
                   className="text-white text-xl"
                   style={{
-                    fontFamily: 'Barlow, sans-serif',
+                    fontFamily: 'Outfit, sans-serif',
                     fontWeight: 600,
                   }}
                 >

@@ -18,7 +18,7 @@ export function TimesSquareTVC() {
         >
           {/* Adihuman style tiny meta-header */}
           <div className="mb-6">
-            <span className="text-[10px] tracking-[0.25em] text-blue-500 uppercase font-bold" style={{ fontFamily: 'Barlow, sans-serif' }}>
+            <span className="text-[10px] tracking-[0.25em] text-blue-500 lowercase font-bold" style={{ fontFamily: 'Outfit, sans-serif' }}>
               Galactic Milestone
             </span>
           </div>
@@ -27,7 +27,7 @@ export function TimesSquareTVC() {
             className="text-white tracking-tight leading-[1.1] mb-8"
             style={{ 
               fontSize: 'clamp(40px, 5vw, 64px)', 
-              fontFamily: 'Barlow, sans-serif',
+              fontFamily: 'Outfit, sans-serif',
               fontWeight: 400
             }}
           >
@@ -37,7 +37,7 @@ export function TimesSquareTVC() {
 
           <p 
             className="text-white/60 text-lg leading-relaxed max-w-xl"
-            style={{ fontFamily: 'Barlow, sans-serif', fontWeight: 400 }}
+            style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 400 }}
           >
             Broadcasting our core philosophy from the central hub of the world. Demonstrating the unprecedented scale of artificial intelligence through galactic transmission to millions of viewers daily.
           </p>
@@ -49,7 +49,7 @@ export function TimesSquareTVC() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="relative w-full aspect-video sm:aspect-[4/3] lg:aspect-square overflow-hidden rounded-2xl bg-zinc-950 border border-white/10 shadow-2xl group"
+          className="relative w-full aspect-video sm:aspect-[4/3] lg:aspect-square overflow-hidden rounded-[2rem] bg-zinc-950 border border-white/10 shadow-2xl group"
         >
           {/* Adihuman style data strip */}
           <div className="absolute top-0 left-0 w-32 h-[2px] bg-blue-500 z-20" />
@@ -61,7 +61,7 @@ export function TimesSquareTVC() {
                 <div className="w-2 h-2 rounded-full bg-white/20" />
                 <div className="w-2 h-2 rounded-full bg-white/20" />
              </div>
-             <span className="ml-4 text-[10px] text-white/40 font-mono tracking-widest uppercase">Location: NY_10036</span>
+             <span className="ml-4 text-[10px] text-white/40 font-mono tracking-widest lowercase">Location: NY_10036</span>
           </div>
 
           <video
@@ -71,7 +71,7 @@ export function TimesSquareTVC() {
             muted
             playsInline
             preload="metadata"
-            className="w-full h-full object-cover opacity-90 transition-opacity duration-500 group-hover:opacity-100 will-change-transform transform-gpu pt-10 p-2 rounded-[24px]"
+            className="w-full h-full object-cover opacity-90 transition-opacity duration-500 group-hover:opacity-100 will-change-transform transform-gpu pt-10 p-2 rounded-[3rem]"
           />
         </motion.div>
 

@@ -89,7 +89,7 @@ export function ProjectsSection() {
           <p
             className="text-white/60 max-w-2xl mx-auto"
             style={{
-              fontFamily: 'Barlow, sans-serif',
+              fontFamily: 'Outfit, sans-serif',
               fontSize: '18px',
             }}
           >
@@ -155,8 +155,8 @@ export function ProjectsSection() {
                       >
                         <div className="bg-gradient-to-r from-yellow-400/90 to-orange-400/90 backdrop-blur-sm border border-white/30 rounded-full px-4 py-2 shadow-lg">
                           <span
-                            className="text-black text-xs font-bold uppercase tracking-wider flex items-center gap-1"
-                            style={{ fontFamily: 'Barlow, sans-serif' }}
+                            className="text-black text-xs font-bold lowercase tracking-wider flex items-center gap-1"
+                            style={{ fontFamily: 'Outfit, sans-serif' }}
                           >
                             ⭐ Featured TVC
                           </span>
@@ -167,15 +167,15 @@ export function ProjectsSection() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       <div className="absolute bottom-0 left-0 right-0 p-6">
                         <p
-                          className="text-white/60 text-sm mb-2 uppercase tracking-wider"
-                          style={{ fontFamily: 'Barlow, sans-serif' }}
+                          className="text-white/60 text-sm mb-2 lowercase tracking-wider"
+                          style={{ fontFamily: 'Outfit, sans-serif' }}
                         >
                           {project.category}
                         </p>
                         <h3
                           className="text-white"
                           style={{
-                            fontFamily: 'Barlow, sans-serif',
+                            fontFamily: 'Outfit, sans-serif',
                             fontSize: '18px',
                             fontWeight: 600,
                           }}

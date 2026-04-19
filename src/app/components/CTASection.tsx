@@ -32,7 +32,7 @@ export function CTASection() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-white/70 text-lg mb-12 max-w-2xl mx-auto"
             style={{
-              fontFamily: 'Barlow, sans-serif',
+              fontFamily: 'Outfit, sans-serif',
               fontSize: '20px',
               lineHeight: '1.6',
             }}
@@ -51,7 +51,7 @@ export function CTASection() {
               href="tel:7218676127"
               className="flex items-center gap-3 text-white/80 hover:text-white transition-colors"
               style={{
-                fontFamily: 'Barlow, sans-serif',
+                fontFamily: 'Outfit, sans-serif',
                 fontSize: '18px',
               }}
             >
@@ -62,7 +62,7 @@ export function CTASection() {
               href="mailto:comms@prepareoflightspeed.com"
               className="flex items-center gap-3 text-white/80 hover:text-white transition-colors"
               style={{
-                fontFamily: 'Barlow, sans-serif',
+                fontFamily: 'Outfit, sans-serif',
                 fontSize: '18px',
               }}
             >
@@ -79,7 +79,7 @@ export function CTASection() {
           >
             <Button
               className="bg-white text-black hover:bg-white/90 rounded-[2px] px-10 py-6 text-lg font-medium transition-all shadow-[0_0_20px_rgba(0,255,255,0.5)]"
-              style={{ fontFamily: 'Barlow, sans-serif' }}
+              style={{ fontFamily: 'Outfit, sans-serif' }}
             >
               Open Comms Channel
             </Button>
@@ -96,7 +96,7 @@ export function CTASection() {
         >
           <p
             className="text-white/40 text-sm"
-            style={{ fontFamily: 'Barlow, sans-serif' }}
+            style={{ fontFamily: 'Outfit, sans-serif' }}
           >
             © 2026 Quiddity Craft. All rights reserved.
           </p>

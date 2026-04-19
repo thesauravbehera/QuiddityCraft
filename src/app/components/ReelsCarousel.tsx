@@ -8,7 +8,7 @@ function ReelVideoNode({ video }: { video: { src: string; badge: string } }) {
   return (
     <div
       ref={containerRef}
-      className="relative w-[180px] sm:w-[220px] aspect-[9/16] rounded-2xl overflow-hidden shrink-0 snap-center group shadow-2xl bg-zinc-950 border border-white/10 will-change-transform transform-gpu"
+      className="relative w-[180px] sm:w-[220px] aspect-[9/16] rounded-[2rem] overflow-hidden shrink-0 snap-center group shadow-2xl bg-zinc-950 border border-white/10 will-change-transform transform-gpu"
     >
       <video
         src={shouldPreload ? video.src : undefined}
@@ -31,12 +31,12 @@ function ReelVideoNode({ video }: { video: { src: string; badge: string } }) {
 
       {/* Play Hint */}
       <div className="absolute inset-0 flex items-center justify-center opacity-100 group-hover:opacity-0 transition-opacity duration-300 pointer-events-none z-10 text-white/50">
-        <span className="bg-black/50 backdrop-blur-md px-3 py-1.5 rounded-full text-[10px] tracking-widest uppercase font-bold" style={{ fontFamily: 'Barlow' }}>Hover to Play</span>
+        <span className="bg-black/50 backdrop-blur-md px-3 py-1.5 rounded-full text-[10px] tracking-widest lowercase font-bold" style={{ fontFamily: 'Barlow' }}>Hover to Play</span>
       </div>
 
       {/* Yellow Badge */}
       <div className="absolute top-3 left-3 z-10 pointer-events-none">
-        <div className="bg-[#ffaa00] text-black px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider shadow-lg flex items-center gap-1.5">
+        <div className="bg-[#ffaa00] text-black px-3 py-1 rounded-full text-[10px] font-bold lowercase tracking-wider shadow-lg flex items-center gap-1.5">
           <span>⭐</span> {video.badge}
         </div>
       </div>
@@ -83,7 +83,7 @@ export function ReelsCarousel() {
         </h2>
         <p
           className="text-white/60 text-center mt-3 tracking-wide"
-          style={{ fontFamily: 'Barlow, sans-serif', fontSize: '16px' }}
+          style={{ fontFamily: 'Outfit, sans-serif', fontSize: '16px' }}
         >
           High-retention, hyper-optimized vertical broadcasts built entirely for the modern feed.
         </p>

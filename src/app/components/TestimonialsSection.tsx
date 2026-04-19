@@ -48,7 +48,7 @@ export function TestimonialsSection() {
           <p
             className="text-white/60 max-w-2xl mx-auto"
             style={{
-              fontFamily: 'Barlow, sans-serif',
+              fontFamily: 'Outfit, sans-serif',
               fontSize: '18px',
             }}
           >
@@ -70,7 +70,7 @@ export function TestimonialsSection() {
               <p
                 className="text-white/80 mb-6"
                 style={{
-                  fontFamily: 'Barlow, sans-serif',
+                  fontFamily: 'Outfit, sans-serif',
                   fontSize: '16px',
                   lineHeight: '1.8',
                   fontStyle: 'italic',
@@ -82,7 +82,7 @@ export function TestimonialsSection() {
                 <p
                   className="text-white font-medium"
                   style={{
-                    fontFamily: 'Barlow, sans-serif',
+                    fontFamily: 'Outfit, sans-serif',
                     fontSize: '16px',
                   }}
                 >
@@ -91,7 +91,7 @@ export function TestimonialsSection() {
                 <p
                   className="text-white/60"
                   style={{
-                    fontFamily: 'Barlow, sans-serif',
+                    fontFamily: 'Outfit, sans-serif',
                     fontSize: '14px',
                   }}
                 >

@@ -48,7 +48,7 @@ export function StatsSection() {
                 <div
                   className="text-white mb-2"
                   style={{
-                    fontFamily: 'Barlow, sans-serif',
+                    fontFamily: 'Outfit, sans-serif',
                     fontSize: 'clamp(32px, 4vw, 48px)',
                     fontWeight: 700,
                   }}
@@ -58,9 +58,9 @@ export function StatsSection() {
                 <div
                   className="text-white/60"
                   style={{
-                    fontFamily: 'Barlow, sans-serif',
+                    fontFamily: 'Outfit, sans-serif',
                     fontSize: '14px',
-                    textTransform: 'uppercase',
+                    textTransform: 'lowercase',
                     letterSpacing: '0.1em',
                   }}
                 >

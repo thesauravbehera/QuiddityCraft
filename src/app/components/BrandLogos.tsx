@@ -16,7 +16,7 @@ export function BrandLogos() {
            transition={{ duration: 0.8 }}
            className="text-center mb-10 flex flex-col items-center px-6"
         >
-          <p className="text-[#00ffff] text-base font-semibold uppercase tracking-[0.25em] drop-shadow-[0_0_8px_rgba(0,255,255,0.6)]" style={{ fontFamily: 'Barlow, sans-serif' }}>
+          <p className="text-[#00ffff] text-base font-semibold lowercase tracking-[0.25em] drop-shadow-[0_0_8px_rgba(0,255,255,0.6)]" style={{ fontFamily: 'Outfit, sans-serif' }}>
             Trusted across the galaxy
           </p>
         </motion.div>
@@ -50,7 +50,7 @@ export function BrandLogos() {
                   <img 
                     src={src} 
                     alt="Brand Logo Client" 
-                    className={`max-w-full max-h-full object-contain filter grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500 hover:scale-110 hover:drop-shadow-[0_0_20px_rgba(255,255,255,0.8)] ${src.includes('BetterAlt Logo 98_98.webp') ? 'bg-white p-1.5 rounded-md' : ''}`}
+                    className="max-w-full max-h-full object-contain filter grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500 hover:scale-110 hover:drop-shadow-[0_0_20px_rgba(255,255,255,0.8)] bg-white p-3 rounded-2xl"
                     loading="lazy"
                   />
                </div>
