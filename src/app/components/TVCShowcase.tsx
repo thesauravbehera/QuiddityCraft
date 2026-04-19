@@ -5,15 +5,6 @@ import { VideoPlayer } from './VideoPlayer';
 export function TVCShowcase() {
   const tvcProjects = [
     {
-      src: '/videos/Fenty Beauty .webm',
-      title: 'Fenty Beauty Campaign',
-      subtitle: 'Luxury Cosmetics Edit',
-      description: 'High-end cosmetic advertising featuring extreme physics-based motion graphics and seamless compositing.',
-      icon: Sparkles,
-      badge: 'Beauty TVC',
-      isHLS: false,
-    },
-    {
       src: '/videos/AI AVATAR_TedX 9x16.webm',
       title: 'TedX AI Experience',
       subtitle: 'Avatars in Broadcast',
