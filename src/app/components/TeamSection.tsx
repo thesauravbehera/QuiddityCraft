@@ -3,22 +3,22 @@ import { motion } from 'motion/react';
 export function TeamSection() {
   const coreTeam = [
     {
-      name: "ved sanap",
-      role: "OPERATIONS",
-      desc: "turns chaos into systems",
-      image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=800&auto=format&fit=crop&grayscale=true"
+      name: "Nakul Pacholi",
+      role: "HEAD OF OPERATIONS & BUSINESS",
+      desc: "Engineering scalable execution infrastructure and driving relentless business expansion.",
+      image: "/images/nakul.jpg"
     },
     {
-      name: "aaryan saiyed",
-      role: "BUILDER EXPERIENCE",
-      desc: "keeps founders unblocked",
-      image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=800&auto=format&fit=crop&grayscale=true"
+      name: "Saurav Behera",
+      role: "HEAD OF PARTNERSHIPS",
+      desc: "Architecting high-stakes alliances and accelerating elite network expansion.",
+      image: "/images/saurav.jpg"
     },
     {
-      name: "hridya jejurkar",
-      role: "COMMUNITY",
-      desc: "holds culture and accountability",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop&grayscale=true"
+      name: "Rishiabhishek Sharma",
+      role: "HEAD OF SALES",
+      desc: "Architecting aggressive acquisition pipelines and driving enterprise-level growth.",
+      image: "/images/rishi.jpg"
     }
   ];
 
@@ -34,14 +34,14 @@ export function TeamSection() {
           transition={{ duration: 0.8 }}
           className="mb-20"
         >
-          <div className="text-white/40 text-xs lowercase tracking-widest font-sans mb-8">THE PEOPLE</div>
+          <div className="text-white/40 text-xs lowercase tracking-tight font-sans mb-8">THE PEOPLE</div>
           <h2
             className="text-white mb-6"
             style={{
-              fontFamily: 'Instrument Serif, serif',
+              fontFamily: 'Outfit, sans-serif',
               fontSize: 'clamp(48px, 6vw, 80px)',
               lineHeight: '1.1',
-              letterSpacing: '-0.02em',
+              letterSpacing: '-0.05em',
             }}
           >
             the team behind quiddity craft.
@@ -61,31 +61,28 @@ export function TeamSection() {
         >
           <div className="w-full md:w-2/5 aspect-[3/4] relative rounded-xl overflow-hidden shrink-0">
             <img 
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop&grayscale=true" 
+              src="/images/sahil-founder.jpg" 
               alt="Sahil Shaikh"
               className="absolute inset-0 w-full h-full object-cover grayscale contrast-125"
             />
           </div>
           <div className="flex-1 text-left">
-            <div className="text-white/40 text-[11px] lowercase tracking-[0.2em] font-sans mb-4">FOUNDER</div>
+            <div className="text-white/40 text-[11px] lowercase tracking-tight font-sans mb-4">FOUNDER - CREATIVE DIRECTOR</div>
             <h3 
-              className="text-white mb-4" 
-              style={{ fontFamily: 'Instrument Serif, serif', fontSize: 'clamp(48px, 5vw, 64px)', lineHeight: '1' }}
+              className="text-white mb-4 uppercase" 
+              style={{ fontFamily: 'Outfit, sans-serif', fontSize: 'clamp(48px, 5vw, 64px)', lineHeight: '1', fontWeight: 900 }}
             >
-              sahil shaikh
+              Sahil
             </h3>
-            <p className="text-white/50 text-[11px] lowercase tracking-[0.2em] font-sans mb-8 leading-relaxed">
-              STARTED QUIDDITY CRAFT TO BUILD THE ROOM HE WISHED EXISTED
+            <p className="text-white/50 text-[11px] uppercase tracking-widest font-bold mb-8 leading-relaxed" style={{ fontFamily: 'Outfit, sans-serif' }}>
+              Architect of Digital Domination
             </p>
-            <div className="space-y-6 text-white/80 font-sans text-base md:text-lg" style={{ lineHeight: '1.7' }}>
+            <div className="space-y-6 text-white/80 text-base md:text-lg" style={{ lineHeight: '1.7', fontFamily: 'Outfit, sans-serif' }}>
               <p>
-                quiddity craft started with one stubborn belief: exceptional storytelling does better in an environment that demands execution, not performance.
+                Quiddity Craft was built on a single, uncompromising principle: exceptional storytelling demands violent execution, not passive observation.
               </p>
               <p>
-                sahil built that environment by designing for pressure, accountability, and velocity so brands leave with real outcomes—with light-years of experience navigating the digital cosmos and 100M+ views generated.
-              </p>
-              <p className="text-[#00ffff] italic font-serif text-xl" style={{ fontFamily: 'Instrument Serif, serif', textShadow: '0 0 20px rgba(0,255,255,0.4)', letterSpacing: '0.05em' }}>
-                Forging cosmic visuals that resonate beyond the stratosphere.
+                With over 100M+ views engineered across global campaigns, Sahil architected this agency to operate purely on pressure, extreme accountability, and visual velocity. We don't just make things look good—we build systems that convert attention into equity.
               </p>
             </div>
           </div>
@@ -98,7 +95,7 @@ export function TeamSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          <div className="text-white/40 text-[11px] lowercase tracking-[0.2em] font-sans mb-4">CORE TEAM</div>
+          <div className="text-white/40 text-[11px] lowercase tracking-tight font-sans mb-4">CORE TEAM</div>
           <p className="text-white/80 text-lg md:text-xl max-w-2xl mb-12 font-sans leading-relaxed">
             each person owns a critical part of the founder journey, from execution infrastructure to how the story gets seen by the world.
           </p>
@@ -123,11 +120,11 @@ export function TeamSection() {
                 <div>
                   <h4 
                     className="text-white mb-2" 
-                    style={{ fontFamily: 'Instrument Serif, serif', fontSize: '32px' }}
+                    style={{ fontFamily: 'Outfit, sans-serif', fontSize: '32px' }}
                   >
                     {member.name}
                   </h4>
-                  <p className="text-white/40 text-[10px] lowercase tracking-[0.2em] font-sans mb-3">
+                  <p className="text-white/40 text-[10px] lowercase tracking-tight font-sans mb-3">
                     {member.role}
                   </p>
                   <p className="text-white/60 text-sm font-sans">

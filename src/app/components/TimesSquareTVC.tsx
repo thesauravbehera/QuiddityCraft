@@ -18,7 +18,7 @@ export function TimesSquareTVC() {
         >
           {/* Adihuman style tiny meta-header */}
           <div className="mb-6">
-            <span className="text-[10px] tracking-[0.25em] text-blue-500 lowercase font-bold" style={{ fontFamily: 'Outfit, sans-serif' }}>
+            <span className="text-[10px] tracking-tight text-blue-500 lowercase font-bold" style={{ fontFamily: 'Outfit, sans-serif' }}>
               Galactic Milestone
             </span>
           </div>
@@ -28,7 +28,7 @@ export function TimesSquareTVC() {
             style={{ 
               fontSize: 'clamp(40px, 5vw, 64px)', 
               fontFamily: 'Outfit, sans-serif',
-              fontWeight: 400
+              fontWeight: 800
             }}
           >
             Featured On <br />
@@ -37,7 +37,7 @@ export function TimesSquareTVC() {
 
           <p 
             className="text-white/60 text-lg leading-relaxed max-w-xl"
-            style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 400 }}
+            style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800 }}
           >
             Broadcasting our core philosophy from the central hub of the world. Demonstrating the unprecedented scale of artificial intelligence through galactic transmission to millions of viewers daily.
           </p>
@@ -61,7 +61,7 @@ export function TimesSquareTVC() {
                 <div className="w-2 h-2 rounded-full bg-white/20" />
                 <div className="w-2 h-2 rounded-full bg-white/20" />
              </div>
-             <span className="ml-4 text-[10px] text-white/40 font-mono tracking-widest lowercase">Location: NY_10036</span>
+             <span className="ml-4 text-[10px] text-white/40 font-mono tracking-tight lowercase">Location: NY_10036</span>
           </div>
 
           <video

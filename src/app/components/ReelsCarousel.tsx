@@ -31,7 +31,7 @@ function ReelVideoNode({ video }: { video: { src: string; badge: string } }) {
 
       {/* Play Hint */}
       <div className="absolute inset-0 flex items-center justify-center opacity-100 group-hover:opacity-0 transition-opacity duration-300 pointer-events-none z-10 text-white/50">
-        <span className="bg-black/50 backdrop-blur-md px-3 py-1.5 rounded-full text-[10px] tracking-widest lowercase font-bold" style={{ fontFamily: 'Barlow' }}>Hover to Play</span>
+        <span className="bg-black/50 backdrop-blur-md px-3 py-1.5 rounded-full text-[10px] tracking-tight lowercase font-bold" style={{ fontFamily: 'Barlow' }}>Hover to Play</span>
       </div>
 
       {/* Yellow Badge */}
@@ -73,7 +73,7 @@ export function ReelsCarousel() {
         <h2
           className="text-white text-center"
           style={{
-            fontFamily: 'Instrument Serif, serif',
+            fontFamily: 'Outfit, sans-serif',
             fontStyle: 'italic',
             fontSize: 'clamp(36px, 5vw, 60px)',
             lineHeight: '1.1',

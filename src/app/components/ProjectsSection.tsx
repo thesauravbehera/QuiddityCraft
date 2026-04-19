@@ -44,13 +44,6 @@ export function ProjectsSection() {
     },
     {
       type: 'video',
-      src: '/videos/Astruanuat2.webm',
-      title: 'Cinematic Space Journey',
-      category: 'AI Visual Production',
-      isHLS: false,
-    },
-    {
-      type: 'video',
       src: '/videos/Firefighter.webm',
       title: 'Action Sequence',
       category: 'AI Generated',
@@ -78,7 +71,7 @@ export function ProjectsSection() {
           <h2
             className="text-white mb-4"
             style={{
-              fontFamily: 'Instrument Serif, serif',
+              fontFamily: 'Outfit, sans-serif',
               fontStyle: 'italic',
               fontSize: 'clamp(32px, 4vw, 56px)',
               lineHeight: '1.3',

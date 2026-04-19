@@ -65,7 +65,7 @@ export function TVCShowcase() {
           >
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-full px-6 py-2">
               <span
-                className="text-white/80 text-sm font-medium lowercase tracking-wider"
+                className="text-white/80 text-sm font-black lowercase tracking-wider"
                 style={{ fontFamily: 'Outfit, sans-serif' }}
               >
                 ⭐ Galactic Quality Operations
@@ -76,7 +76,7 @@ export function TVCShowcase() {
           <h2
             className="text-white mb-6"
             style={{
-              fontFamily: 'Instrument Serif, serif',
+              fontFamily: 'Outfit, sans-serif',
               fontStyle: 'italic',
               fontSize: 'clamp(36px, 5vw, 64px)',
               lineHeight: '1.2',

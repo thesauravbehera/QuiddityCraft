@@ -37,14 +37,14 @@ export function Navigation() {
         <div
           className={`px-6 py-4 flex flex-wrap items-center justify-between transition-all duration-500 rounded-[16px] pointer-events-auto ${
             scrolled 
-              ? 'bg-[#02000A]/60 backdrop-blur-xl border border-white/10 shadow-[0_8px_32px_rgba(0,255,255,0.15)]' 
+              ? 'bg-[#0a0a0a]/80 backdrop-blur-xl border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.8)]' 
               : 'bg-transparent border border-transparent'
           }`}
         >
           {/* Logo */}
           <div className="flex items-center">
             <Link to="/">
-              <span className="text-xl font-bold text-white tracking-widest drop-shadow-[0_0_15px_rgba(0,255,255,0.8)]">QUIDDITY CRAFT</span>
+              <span className="text-xl font-bold text-white tracking-tight">QUIDDITY CRAFT</span>
             </Link>
           </div>
 
@@ -54,7 +54,7 @@ export function Navigation() {
               <Link
                 key={link.href}
                 to={link.href}
-                className={`text-sm font-medium transition-colors relative group ${
+                className={`text-sm font-black transition-colors relative group ${
                   location.pathname === link.href ? 'text-white' : 'text-white/60 hover:text-white'
                 }`}
                 style={{ fontFamily: 'Outfit, sans-serif' }}
@@ -68,8 +68,8 @@ export function Navigation() {
           </div>
 
           {/* Desktop CTA Button */}
-          <Button className="hidden md:flex bg-white text-black hover:bg-white/90 rounded-[8px] px-6 py-2 items-center gap-2 transition-transform hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(0,255,255,0.4)]">
-            Initiate Launch Module
+          <Button className="hidden md:flex bg-white text-black hover:bg-neutral-200 rounded-[8px] px-6 py-2 items-center gap-2 transition-transform hover:scale-105 active:scale-95 shadow-xl">
+            Book a Call
             <div className="w-5 h-5 rounded-full bg-black/10 flex items-center justify-center">
               <ArrowUpRight className="w-3 h-3" />
             </div>
@@ -102,14 +102,14 @@ export function Navigation() {
                   key={link.href}
                   to={link.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="text-lg font-medium text-white/70 hover:text-white hover:bg-white/5 transition-all py-3 px-4 rounded-lg"
+                  className="text-lg font-black text-white/70 hover:text-white hover:bg-white/5 transition-all py-3 px-4 rounded-lg"
                   style={{ fontFamily: 'Outfit, sans-serif' }}
                 >
                   {link.label}
                 </Link>
               ))}
-              <Button className="bg-white text-black hover:bg-white/90 rounded-[8px] px-6 py-4 flex items-center justify-center gap-2 mt-4 shadow-[0_0_20px_rgba(0,255,255,0.4)] w-full">
-                Initiate Launch Module
+              <Button className="bg-white text-black hover:bg-neutral-200 rounded-[8px] px-6 py-4 flex items-center justify-center gap-2 mt-4 w-full shadow-xl">
+                Book a Call
                 <ArrowUpRight className="w-4 h-4" />
               </Button>
             </div>

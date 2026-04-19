@@ -54,18 +54,12 @@ export function ParallaxGallery() {
 
   const galleryVideos = [
     "/videos/astruanuat.webm",
-    "/videos/Astruanuat2.webm",
     "/videos/Astruanuat3.webm",
     "/videos/Firefighter.webm",
     "/videos/Firefighter2.webm",
     "/videos/granny 2.webm",
     "/videos/Granny.webm",
-    "/videos/Mountain 1.webm",
-    "/videos/Mountain2.webm",
-    "/videos/Party 2.webm",
-    "/videos/Party 3.webm",
-    "/videos/Party wide angle .webm",
-    "/videos/Party1.webm"
+    "/videos/Mountain 1.webm"
   ];
 
   const mid = Math.ceil(galleryVideos.length / 2);
@@ -113,8 +107,8 @@ export function ParallaxGallery() {
         className="absolute top-0 left-0 w-full h-screen flex flex-col items-center justify-center z-0 pointer-events-none px-6"
       >
         <p 
-          className="text-white/60 text-sm lowercase font-medium mb-6 backdrop-blur-sm px-4 py-1 rounded-full bg-black/20" 
-          style={{ fontFamily: 'Outfit, sans-serif', letterSpacing: '0.4em' }}
+          className="text-white/60 text-sm lowercase font-black mb-6 backdrop-blur-sm px-4 py-1 rounded-full bg-black/20" 
+          style={{ fontFamily: 'Outfit, sans-serif', letterSpacing: '-0.05em' }}
         >
           Explorations
         </p>
@@ -123,11 +117,11 @@ export function ParallaxGallery() {
           style={{ 
             fontFamily: 'Outfit, sans-serif', 
             fontSize: 'clamp(50px, 8vw, 100px)', 
-            fontWeight: 300, 
-            letterSpacing: '-2px' 
+            fontWeight: 800, 
+            letterSpacing: '-0.05em' 
           }}
         >
-          Visual <span style={{ fontFamily: 'Instrument Serif, serif', fontStyle: 'italic', fontWeight: 400, color: 'rgba(255,255,255,0.9)' }}>playground</span>
+          Visual <span style={{ fontFamily: 'Outfit, sans-serif', fontStyle: 'italic', fontWeight: 800, color: 'rgba(255,255,255,0.9)' }}>playground</span>
         </h2>
       </div>
 

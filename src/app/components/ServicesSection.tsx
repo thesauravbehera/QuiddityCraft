@@ -1,112 +1,117 @@
+import { useRef } from 'react';
 import { motion } from 'motion/react';
-import { Brain, Sparkles, Film, Camera, Palette } from 'lucide-react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useGSAP } from '@gsap/react';
+import { Brain, Sparkles, Film, Palette } from 'lucide-react';
+
+gsap.registerPlugin(ScrollTrigger);
 
 export function ServicesSection() {
+  const sectionRef = useRef<HTMLDivElement>(null);
+
   const services = [
     {
+      span: "col-span-1 md:col-span-7",
       icon: Brain,
-      title: 'Content Planning & Strategy',
-      description:
-        'Performance-driven content frameworks rooted in storytelling, psychology, and brand voice.',
+      title: "content strategy",
+      desc: "Performance-driven frameworks rooted in psychology and retention mechanics.",
     },
     {
+      span: "col-span-1 md:col-span-5",
       icon: Sparkles,
-      title: 'AI Imagery & AI Videos',
-      description:
-        'Hyper-real visuals, AI commercials, and next-gen creatives powered by expert prompt engineering.',
+      title: "ai imagery",
+      desc: "Hyper-real generative visuals and next-gen commercial creative.",
     },
     {
+      span: "col-span-1 md:col-span-5",
       icon: Film,
-      title: 'Video Editing',
-      description:
-        'High-impact edits with cinematic pacing, sound design, motion graphics, and retention-focused structure.',
+      title: "cinema editing",
+      desc: "High-impact edits with unparalleled pacing and sound design.",
     },
     {
-      icon: Camera,
-      title: 'Cinematography & Photo Editing',
-      description:
-        'From shoot to grade — premium visuals built for emotion, clarity, and conversion.',
-    },
-    {
+      span: "col-span-1 md:col-span-7",
       icon: Palette,
-      title: 'Branding',
-      description:
-        'Visual identity, creative direction, and brand storytelling for the digital era.',
-    },
+      title: "brand identity",
+      desc: "From visual aesthetics to the underlying core quiddity of your digital footprint.",
+    }
   ];
 
+  useGSAP(() => {
+    // Stagger in the bento boxes
+    const boxes = gsap.utils.toArray('.bento-box');
+    gsap.from(boxes, {
+      y: 100,
+      opacity: 0,
+      duration: 1,
+      stagger: 0.15,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: sectionRef.current,
+        start: "top 75%",
+      }
+    });
+  }, { scope: sectionRef });
+
   return (
-    <section id="services" className="py-32 bg-transparent">
-      <div className="max-w-7xl mx-auto px-6">
+    <section ref={sectionRef} id="services" className="py-24 bg-transparent relative z-10 w-full overflow-hidden">
+      <div className="max-w-[1400px] mx-auto px-6 md:px-12">
+        
+        {/* Header GSAP/Motion style */}
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+           initial={{ opacity: 0, scale: 0.95 }}
+           whileInView={{ opacity: 1, scale: 1 }}
+           viewport={{ once: true, margin: "-100px" }}
+           transition={{ duration: 0.8 }}
+           className="mb-16 md:mb-24 flex flex-col md:flex-row items-start md:items-end justify-between gap-8"
         >
-          <h2
-            className="text-white mb-4"
-            style={{
-              fontFamily: 'Instrument Serif, serif',
-              fontStyle: 'italic',
-              fontSize: 'clamp(32px, 4vw, 56px)',
-              lineHeight: '1.3',
-              textShadow: '0 0 40px rgba(255,255,255,0.2)'
-            }}
-          >
-            Our Craft
-          </h2>
-          <p
-            className="text-white/60 max-w-2xl mx-auto"
-            style={{
-              fontFamily: 'Outfit, sans-serif',
-              fontSize: '18px',
-            }}
-          >
-            End-to-end creative infrastructure driven by next-generation technology and expert human direction.
+          <div>
+            <div className="flex items-center gap-4 mb-4">
+               <div className="w-8 h-px bg-white/20" />
+               <p className="text-white/50 text-xs lowercase font-bold tracking-tight">
+                  Selected Work
+               </p>
+            </div>
+            <h2 className="text-white text-5xl md:text-7xl font-black lowercase tracking-tight leading-none bg-clip-text">
+              our core<br />competencies
+            </h2>
+          </div>
+          <p className="text-white/60 lowercase text-lg max-w-sm">
+             A highly concentrated selection of specialized infrastructure we deploy for modern brands.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => {
-            const Icon = service.icon;
-            return (
-              <motion.div
-                key={service.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-8 hover:bg-white/10 hover:border-white/20 transition-all duration-300"
-              >
-                <div className="mb-6">
-                  <Icon className="w-10 h-10 text-white/80 group-hover:text-white transition-colors" />
-                </div>
-                <h3
-                  className="text-white mb-3"
-                  style={{
-                    fontFamily: 'Outfit, sans-serif',
-                    fontSize: '20px',
-                    fontWeight: 600,
-                  }}
-                >
-                  {service.title}
-                </h3>
-                <p
-                  className="text-white/70"
-                  style={{
-                    fontFamily: 'Outfit, sans-serif',
-                    fontSize: '16px',
-                    lineHeight: '1.6',
-                  }}
-                >
-                  {service.description}
-                </p>
-              </motion.div>
-            );
-          })}
+        {/* Bento Grid 7/5/5/7 layout */}
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-5 md:gap-6">
+           {services.map((svc, i) => {
+              const Icon = svc.icon;
+              return (
+                 <div 
+                   key={i} 
+                   className={`bento-box ${svc.span} group relative min-h-[350px] md:min-h-[450px] bg-black/40 backdrop-blur-md border border-white/10 rounded-[3rem] overflow-hidden flex flex-col justify-end p-8 md:p-12 hover:bg-white/5 transition-colors duration-500`}
+                 >
+                    {/* Halftone Overlay Background Map (GSAP prompt request) */}
+                    <div className="absolute inset-0 pointer-events-none opacity-20 group-hover:opacity-10 transition-opacity duration-700 mix-blend-multiply" 
+                         style={{ backgroundImage: 'radial-gradient(circle, #fff 1px, transparent 1px)', backgroundSize: '4px 4px' }} 
+                    />
+                    
+                    {/* Content */}
+                    <div className="relative z-10">
+                       <div className="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center mb-8 group-hover:scale-110 group-hover:bg-white transition-all duration-500">
+                          <Icon className="w-8 h-8 text-white group-hover:text-black transition-colors" />
+                       </div>
+                       <h3 className="text-3xl md:text-5xl font-black lowercase text-white tracking-tight mb-4 group-hover:-translate-y-2 transition-transform duration-500">
+                          {svc.title}
+                       </h3>
+                       <p className="text-white/60 text-lg lowercase opacity-0 -translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 max-w-md">
+                          {svc.desc}
+                       </p>
+                    </div>
+                 </div>
+              )
+           })}
         </div>
+
       </div>
     </section>
   );

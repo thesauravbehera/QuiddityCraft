@@ -16,7 +16,7 @@ export function FeaturedWork() {
           <h2
             className="text-white mb-4"
             style={{
-              fontFamily: 'Instrument Serif, serif',
+              fontFamily: 'Outfit, sans-serif',
               fontStyle: 'italic',
               fontSize: 'clamp(32px, 4vw, 56px)',
               lineHeight: '1.3',

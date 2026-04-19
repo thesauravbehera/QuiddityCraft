@@ -61,7 +61,7 @@ export function StatsSection() {
                     fontFamily: 'Outfit, sans-serif',
                     fontSize: '14px',
                     textTransform: 'lowercase',
-                    letterSpacing: '0.1em',
+                    letterSpacing: '-0.05em',
                   }}
                 >
                   {stat.label}

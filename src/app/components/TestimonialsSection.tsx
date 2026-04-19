@@ -36,7 +36,7 @@ export function TestimonialsSection() {
           <h2
             className="text-white mb-4"
             style={{
-              fontFamily: 'Instrument Serif, serif',
+              fontFamily: 'Outfit, sans-serif',
               fontStyle: 'italic',
               fontSize: 'clamp(32px, 4vw, 56px)',
               lineHeight: '1.3',
@@ -80,7 +80,7 @@ export function TestimonialsSection() {
               </p>
               <div>
                 <p
-                  className="text-white font-medium"
+                  className="text-white font-black"
                   style={{
                     fontFamily: 'Outfit, sans-serif',
                     fontSize: '16px',

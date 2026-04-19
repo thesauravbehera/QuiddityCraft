@@ -28,7 +28,7 @@ export function WorkGrid() {
           className="text-center mb-16"
         >
           <h2
-            className="text-white mb-6 lowercase tracking-widest"
+            className="text-white mb-6 lowercase tracking-tight"
             style={{
               fontFamily: 'Outfit, sans-serif',
               fontWeight: 700,
@@ -63,7 +63,7 @@ export function WorkGrid() {
                 setActiveCategory(category);
                 setShowAll(false);
               }}
-              className={`px-8 py-3 rounded-full border-b-2 text-xs lowercase tracking-[0.2em] font-medium transition-all duration-300 ${
+              className={`px-8 py-3 rounded-full border-b-2 text-xs lowercase tracking-tight font-black transition-all duration-300 ${
                 activeCategory === category 
                   ? 'text-white border-white' 
                   : 'text-white/40 border-transparent hover:border-white/20 hover:text-white/80'
@@ -142,7 +142,7 @@ export function WorkGrid() {
           >
             <button
               onClick={() => setShowAll(true)}
-              className="px-10 py-5 bg-transparent border border-white/20 text-white text-xs lowercase tracking-[0.2em] font-medium transition-all duration-500 hover:bg-white hover:text-black hover:scale-105"
+              className="px-10 py-5 bg-transparent border border-white/20 text-white text-xs lowercase tracking-tight font-black transition-all duration-500 hover:bg-white hover:text-black hover:scale-105"
               style={{ fontFamily: 'Outfit, sans-serif' }}
             >
               Access Full Archive

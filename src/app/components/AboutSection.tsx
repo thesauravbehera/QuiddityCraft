@@ -2,74 +2,72 @@ import { motion } from 'motion/react';
 
 export function AboutSection() {
   return (
-    <section id="about" className="py-32 bg-transparent">
+    <section id="about" className="py-32 bg-[#0a0a0a]">
       <div className="max-w-7xl mx-auto px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-        >
-          <h2
-            className="text-white mb-8"
-            style={{
-              fontFamily: 'Instrument Serif, serif',
-              fontStyle: 'italic',
-              fontSize: 'clamp(32px, 4vw, 56px)',
-              lineHeight: '1.3',
-            }}
-          >
-            I am Sahil Shaikh, Commander of Visuals.
-          </h2>
-
+        <div className="flex flex-col md:flex-row gap-16 items-center">
+          
+          {/* Left Side: Moody Portrait */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="space-y-6 text-white/80"
-            style={{
-              fontFamily: 'Outfit, sans-serif',
-              fontSize: '18px',
-              lineHeight: '1.8',
-              fontWeight: 400,
-            }}
+            transition={{ duration: 0.8, ease: [0.25, 1, 0.5, 1] }}
+            className="w-full md:w-1/2"
           >
-            <p>
-              I command visuals that break the gravitational pull of ordinary content.
-            </p>
-
-            <p>
-              With light-years of experience navigating the digital cosmos and 100M+ views generated
-              across the galaxy, I blend stellar AI with human creativity to build
-              content that performs and connects.
-            </p>
-
-            <p>
-              My journey began orbiting as a video editor working with incredible brands, but what truly excites me
-              today is how I've integrated AI into my creative process. It allows me to bring
-              ambitious ideas to life — the kind that once required massive budgets and timelines —
-              without losing the emotional core of storytelling.
-            </p>
-
-            <p>
-              Alongside editing, I work hands-on with cinematography and photography, which lets me
-              shape stories from the ground up — from concept to final frame. Whether I'm crafting a
-              reel that gives you goosebumps or building a content strategy that actually converts,
-              I'm focused on one thing:
-            </p>
-
-            <p className="text-[#00ffff] text-xl italic" style={{ fontFamily: 'Instrument Serif, serif', textShadow: '0 0 20px rgba(0,255,255,0.4)' }}>
-              Forging cosmic visuals that resonate beyond the stratosphere.
-            </p>
-
-            <p>
-              Today, I operate as your Creative Navigator, handling everything across pre-production,
-              production, and post-production — your creative strategist, storyteller, and execution
-              partner in one.
+            <div className="aspect-[3/4] overflow-hidden rounded-none shadow-2xl relative">
+              <div className="absolute inset-0 bg-black/20 z-10 mix-blend-multiply" />
+              <img 
+                src="/images/sahil-founder.jpg" 
+                alt="Sahil - Quiddity Craft Founder"
+                className="w-full h-full object-cover grayscale contrast-[1.2] brightness-90 hover:scale-105 transition-transform duration-1000"
+              />
+            </div>
+            {/* Minimal label underneath image */}
+            <p className="text-white/40 text-xs uppercase tracking-[0.2em] mt-4 font-bold" style={{ fontFamily: 'Outfit, sans-serif' }}>
+              Sahil • Founder, Creative Director
             </p>
           </motion.div>
-        </motion.div>
+
+          {/* Right Side: Manifesto Text */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: [0.25, 1, 0.5, 1], delay: 0.2 }}
+            className="w-full md:w-1/2 space-y-8"
+          >
+             <h2 className="text-white text-xs uppercase tracking-[0.3em] font-black" style={{ fontFamily: 'Outfit, sans-serif' }}>
+                Manifesto
+             </h2>
+             
+             <h3 
+               className="text-white tracking-tighter leading-[1.1] uppercase font-black"
+               style={{
+                 fontFamily: 'Outfit, sans-serif',
+                 fontSize: 'clamp(40px, 5vw, 64px)'
+               }}
+             >
+               The absolute essence of your brand, brought to life.
+             </h3>
+
+             <div 
+               className="text-white/80 font-medium"
+               style={{
+                 fontFamily: 'Outfit, sans-serif',
+                 fontSize: 'clamp(18px, 2vw, 24px)',
+                 lineHeight: '1.6'
+               }}
+             >
+               <p className="mb-6">
+                 Attention is the most expensive asset on the internet. We don't just capture it; we convert it.
+               </p>
+               <p>
+                 We blend elite AI prompt engineering with human-led cinematic storytelling to build creatives that scale effortlessly in the modern digital economy.
+               </p>
+             </div>
+
+          </motion.div>
+        </div>
       </div>
     </section>
   );

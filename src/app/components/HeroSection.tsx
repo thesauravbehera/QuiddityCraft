@@ -8,6 +8,7 @@ export function HeroSection() {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
 
   const heroSequence = [
+    "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260406_133058_0504132a-0cf3-4450-a370-8ea3b05c95d4.mp4",
     "/videos/AI.webm",
     "/videos/Energy drinks.webm",
     "/videos/Fenty Beauty .webm"
@@ -32,7 +33,7 @@ export function HeroSection() {
             >
               <Loader2 className="w-12 h-12 text-white/50 animate-spin mb-4" />
               <p
-                style={{ fontFamily: 'Outfit, sans-serif', letterSpacing: '0.3em' }}
+                style={{ fontFamily: 'Outfit, sans-serif', letterSpacing: '-0.05em' }}
                 className="text-white/40 text-xs lowercase"
               >
                 Calibrating Visuals...
@@ -64,108 +65,69 @@ export function HeroSection() {
         </AnimatePresence>
       </div>
 
-      {/* Overlay for better text visibility */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/60" />
-      <div className="absolute inset-0 bg-black/20" />
+      {/* Overlay for core text visibility and cinematic depth */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/80 via-[#0a0a0a]/60 to-[#0a0a0a]/90 z-0 mix-blend-multiply" />
+      <div className="absolute inset-0 bg-black/40 z-0" />
       
-      {/* Ramp Effect to blend into layout */}
-      <div className="absolute bottom-0 left-0 w-full h-[25vh] bg-gradient-to-b from-transparent to-[#02000A] pointer-events-none z-10" />
+      {/* Ramp Effect to seamlessly blend the video into the black DOM */}
+      <div className="absolute bottom-0 left-0 w-full h-[30vh] bg-gradient-to-b from-transparent to-[#0a0a0a] pointer-events-none z-10" />
 
-      {/* Content Container with Corner Accents */}
-      <div className="relative z-[20] max-w-5xl mx-auto px-6 text-center pt-36 sm:pt-40 md:pt-24 pb-[150px] md:pb-[250px]">
-
-        {/* Corner Accents Container */}
-        <div className="relative inline-block">
-          {/* Top-left corner */}
-          <div className="absolute -top-4 -left-4 w-[7px] h-[7px] bg-white" />
-          {/* Top-right corner */}
-          <div className="absolute -top-4 -right-4 w-[7px] h-[7px] bg-white" />
-          {/* Bottom-left corner */}
-          <div className="absolute -bottom-4 -left-4 w-[7px] h-[7px] bg-white" />
-          {/* Bottom-right corner */}
-          <div className="absolute -bottom-4 -right-4 w-[7px] h-[7px] bg-white" />
-
-          <div className="p-8">
-            {/* Headline */}
-            <motion.div
-              initial={{ y: 50, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="mb-6"
-            >
-              <h1
-                className="text-white mb-2 relative"
-                style={{
-                  fontFamily: 'Outfit, sans-serif',
-                  fontWeight: 500,
-                  fontSize: 'clamp(14px, 2vw, 18px)',
-                  letterSpacing: '0.3em',
-                  textTransform: 'lowercase',
-                  color: 'rgba(255, 255, 255, 0.6)'
-                }}
-              >
-                Distill the Essence. Scale the Vision.
-              </h1>
-              <h1
-                className="text-white mt-4 tracking-tighter"
-                style={{
-                  fontFamily: 'Outfit, sans-serif',
-                  fontWeight: 800,
-                  fontSize: 'clamp(40px, 10vw, 120px)',
-                  lineHeight: '1.1',
-                  textTransform: 'lowercase'
-                }}
-              >
-                Quiddity Craft
-              </h1>
-            </motion.div>
-
-            {/* Subheading */}
-            <motion.p
-              initial={{ y: 50, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              className="text-white/60 max-w-2xl mx-auto mb-10 tracking-wide"
-              style={{
-                fontFamily: 'Outfit, sans-serif',
-                fontSize: '18px',
-                fontWeight: 400,
-                lineHeight: '1.6'
-              }}
-            >
-              Unlocking the true quiddity of your brand through AI-driven cinema and high-velocity content architectures.
-            </motion.p>
-          </div>
-        </div>
-
-        {/* CTA Button */}
+      {/* Content Container */}
+      <div className="relative z-[20] w-full max-w-7xl mx-auto px-6 flex flex-col items-start justify-center pt-32 pb-40 min-h-screen">
+        
         <motion.div
-          initial={{ y: 50, opacity: 0 }}
+          initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
+          transition={{ duration: 0.4, ease: [0.25, 1, 0.5, 1], delay: 0.2 }}
+          className="max-w-4xl"
         >
+          {/* Headline */}
+          <h1
+            className="text-white leading-[1.1] tracking-tight mb-6"
+            style={{
+              fontFamily: 'Outfit, sans-serif',
+              fontWeight: 900,
+              fontSize: 'clamp(40px, 6vw, 84px)',
+              textTransform: 'uppercase'
+            }}
+          >
+            Where Imagination Meets Intent
+          </h1>
+
+          {/* Subheadline */}
+          <p
+            className="text-white/70 max-w-2xl mb-12 font-medium"
+            style={{
+              fontFamily: 'Outfit, sans-serif',
+              fontSize: 'clamp(18px, 1.5vw, 22px)',
+              lineHeight: '1.6',
+              letterSpacing: '0.02em'
+            }}
+          >
+            Crafting Your Brand's Essence
+          </p>
+
+          {/* CTA Button */}
           <Button
             onClick={() => {
-              const tvcReelSection = document.querySelector('#tvc-reel');
-              tvcReelSection?.scrollIntoView({ behavior: 'smooth' });
+              // Direct them to the calendar or contact
             }}
-            className="relative overflow-hidden bg-transparent border border-white/20 text-white hover:text-black hover:bg-white rounded-full px-10 py-7 text-sm lowercase tracking-widest font-semibold transition-all duration-500 flex items-center gap-4 mx-auto group"
+            className="group relative overflow-hidden bg-white text-black rounded-none px-8 py-6 text-sm uppercase tracking-[0.15em] font-black transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] flex items-center gap-4 border border-white"
             style={{ fontFamily: 'Outfit, sans-serif' }}
           >
-            <div className="absolute inset-0 bg-white transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out -z-10" />
-            <Play className="w-4 h-4 fill-current" />
-            Initiate Project
+            <div className="absolute inset-0 bg-neutral-200 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out z-0" />
+            <span className="relative z-10 flex items-center gap-3">
+              Book a Strategy Call <Play className="w-4 h-4 fill-current" />
+            </span>
           </Button>
         </motion.div>
       </div>
-
-
 
       {/* Scroll Indicator */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 1.2 }}
+        transition={{ duration: 0.5, delay: 0.8 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10"
       >
         <motion.div

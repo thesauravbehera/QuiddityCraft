@@ -44,7 +44,7 @@ export function TVCReel() {
             <h3
               className="text-white mb-3"
               style={{
-                fontFamily: 'Instrument Serif, serif',
+                fontFamily: 'Outfit, sans-serif',
                 fontStyle: 'italic',
                 fontSize: 'clamp(28px, 3vw, 42px)',
               }}

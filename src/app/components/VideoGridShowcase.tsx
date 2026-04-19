@@ -1,164 +1,116 @@
-import { useRef, useEffect } from 'react';
-import { motion, useInView } from 'motion/react';
+import { useRef } from 'react';
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+import { motion } from 'motion/react';
 
-function SmartVideoNode({ src, cleanTitle, delayIndex }: { src: string, cleanTitle: string, delayIndex: number }) {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const videoRef = useRef<HTMLVideoElement>(null);
+gsap.registerPlugin(ScrollTrigger);
 
-  // PRELOAD ENGINE: 
-  // Triggers 1200px BEFORE the video enters the screen.
-  // This guarantees at least 3-4 videos are aggressively downloading in the background.
-  const shouldPreload = useInView(containerRef, { margin: "1200px 0px 1200px 0px" });
-
-  // PLAYBACK ENGINE:
-  // Strictly triggers only when the video actually breaching the viewport.
-  const shouldPlay = useInView(containerRef, { margin: "0px 0px 0px 0px" });
-
-  useEffect(() => {
-    if (!videoRef.current) return;
-    
-    // Manage Memory & Processing Power
-    if (shouldPlay) {
-      // It's on screen: play the video
-      videoRef.current.play().catch(e => console.log("Viewport auto-play prevented:", e));
-    } else {
-      // It fell off screen: freeze it to save CPU/GPU cycles
-      videoRef.current.pause();
-    }
-  }, [shouldPlay]);
-
-  return (
-    <motion.div
-      ref={containerRef}
-      initial={{ opacity: 0, scale: 0.95 }}
-      whileInView={{ opacity: 1, scale: 1 }}
-      viewport={{ once: true, margin: "0px 0px -50px 0px" }}
-      transition={{ duration: 0.4, delay: delayIndex * 0.05 }}
-      // Keeping the classic Masonry aesthetic geometry
-      className="group relative break-inside-avoid inline-block w-full mb-3 sm:mb-4 overflow-hidden rounded-[16px] bg-zinc-950 border border-white/10 cursor-pointer transform transition-all duration-500 hover:scale-[1.03] hover:shadow-[0_0_30px_rgba(255,255,255,0.1)] hover:border-white/30 hover:z-10"
-    >
-      <video 
-        ref={videoRef}
-        src={shouldPreload ? src : undefined} 
-        muted 
-        loop 
-        playsInline 
-        /* 
-          OPTIMIZED MEDIA INFRASTRUCTURE:
-          We use metadata to fetch dimensions for Masonry layout but strictly
-          block auto-downloading huge webm chunks until shouldPlay triggers.
-        */
-        preload="metadata"
-        className="w-full h-auto object-cover relative z-0 transition-opacity duration-300 will-change-transform transform-gpu" 
-      />
-
-      {/* Dark Vignette/Gradient overlay for text readability */}
-      <div className="absolute inset-x-0 bottom-0 top-1/2 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 pointer-events-none" />
-
-      {/* Hover Content */}
-      <div className="absolute bottom-0 left-0 right-0 p-4 transform translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 z-20 pointer-events-none">
-        <h3
-          className="text-white capitalize tracking-wide"
-          style={{
-            fontFamily: 'Outfit, sans-serif',
-            fontSize: '14px',
-            fontWeight: 600,
-            lineHeight: '1.2',
-          }}
-        >
-          Encrypted Transmission
-        </h3>
-      </div>
-    </motion.div>
-  );
-}
+const PARALLAX_VIDEOS = [
+  '/videos/Kaboom Reel.webm',
+  '/videos/Sharan.webm',
+  '/videos/astruanuat.webm',
+  '/videos/Firefighter.webm',
+  '/videos/Mountain 1.webm',
+  '/videos/Clinique Video 04_04 English.webm',
+  '/videos/Motion graphics.webm'
+];
 
 export function VideoGridShowcase() {
-  const allVideos = [
-    '/videos/Kaboom Reel.webm',
-    '/videos/Sharan.webm',
-    '/videos/astruanuat.webm',
-    '/videos/Astruanuat2.webm',
-    '/videos/Astruanuat3.webm',
-    '/videos/Firefighter.webm',
-    '/videos/Firefighter2.webm',
-    '/videos/granny 2.webm',
-    '/videos/Granny.webm',
-    '/videos/Mountain 1.webm',
-    '/videos/Mountain2.webm',
-    '/videos/Party 2.webm',
-    '/videos/Party 3.webm',
-    '/videos/Party wide angle .webm',
-    '/videos/Party1.webm',
-    '/videos/Clinique Video 04_04 English.webm',
-    '/videos/Motion graphics.webm',
-    '/videos/AI Cat Edits 2.webm',
-    '/videos/AI_Turmeric Sticks_002.webm',
-    '/videos/AI.webm',
-    '/videos/Anya_FatBurner.webm',
-    '/videos/Energy drinks.webm',
-    '/videos/Fenty Beauty .webm',
-    '/videos/Founding Father (AI) 2.webm',
-    '/videos/GreenAmericanGuy1.webm',
-    '/videos/Keyframe .webm',
-    '/videos/Mumbai 2.webm',
-    '/videos/NAC TVC AI Video 03.webm',
-    '/videos/Ornam (1st reel).webm',
-    '/videos/Player Montage Edit (Mohamed Salah).webm',
-    '/videos/REEL.webm',
-    '/videos/Sam_Podcast.webm',
-    '/videos/AI AVATAR_TedX 9x16.webm',
-    '/videos/AI Capsules 1.webm',
-  ];
+  const containerRef = useRef<HTMLDivElement>(null);
+  const leftColRef = useRef<HTMLDivElement>(null);
+  const rightColRef = useRef<HTMLDivElement>(null);
+
+  useGSAP(() => {
+    // Pin the entire container for the duration of the scroll (min-h-[300vh])
+    ScrollTrigger.create({
+      trigger: containerRef.current,
+      start: "top top",
+      end: "bottom bottom",
+      pin: false, // The section itself is 300vh, we pin the inner wrapper using sticky instead.
+    });
+
+    // Parallax logic: Column 1 moves UP exceptionally fast, Column 2 moves UP slightly slower.
+    gsap.to(leftColRef.current, {
+      y: "-50%", // moves up 
+      ease: "none",
+      scrollTrigger: {
+        trigger: containerRef.current,
+        start: "top top",
+        end: "bottom bottom",
+        scrub: 1, // Smooth scrubbing
+      }
+    });
+
+    gsap.to(rightColRef.current, {
+      y: "-30%", // moves up but less, creating the parallax disparity
+      ease: "none",
+      scrollTrigger: {
+        trigger: containerRef.current,
+        start: "top top",
+        end: "bottom bottom",
+        scrub: 1.5,
+      }
+    });
+
+  }, { scope: containerRef });
 
   return (
-    <section className="py-20 bg-[#02000A] min-h-screen border-t border-white/10">
-      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-           initial={{ opacity: 0, y: 30 }}
-           whileInView={{ opacity: 1, y: 0 }}
-           viewport={{ once: true }}
-           transition={{ duration: 0.8 }}
-           className="text-center mb-16"
-        >
-          <h2
-            className="text-white mb-4"
-            style={{
-              fontFamily: 'Instrument Serif, serif',
-              fontStyle: 'italic',
-              fontSize: 'clamp(32px, 4vw, 56px)',
-              textShadow: '0 0 30px rgba(255,255,255,0.2)'
-            }}
-          >
-            The Visual Archive
-          </h2>
-          <p
-            className="text-white/60 max-w-2xl mx-auto"
-            style={{
-              fontFamily: 'Outfit, sans-serif',
-              fontSize: '18px',
-            }}
-          >
-            A continuous feed of our generative experiments and polished commercial deployments.
-          </p>
-        </motion.div>
-
-        {/* Masonry Layout using CSS Columns */}
-        <div className="columns-2 sm:columns-3 md:columns-4 lg:columns-5 gap-3 sm:gap-4 pb-10">
-          {allVideos.map((src, index) => {
-            const filename = src.split('/').pop() || '';
-            const cleanTitle = filename.replace(/\.[^/.]+$/, '').replace(/[-_]/g, ' ').trim();
-
-            return (
-              <SmartVideoNode 
-                key={index} 
-                src={src} 
-                cleanTitle={cleanTitle} 
-                delayIndex={index % 8} 
-              />
-            );
-          })}
+    <section ref={containerRef} className="relative w-full min-h-[300vh] bg-transparent overflow-hidden">
+      
+      {/* Sticky Checkpoint Container */}
+      <div className="sticky top-0 h-screen w-full flex flex-col md:flex-row items-center justify-between px-8 md:px-16 overflow-hidden pointer-events-none">
+        
+        {/* Pinned Title Layer */}
+        <div className="relative z-30 w-full md:w-1/3 flex flex-col justify-center pointer-events-auto mt-20 md:mt-0">
+           <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1 }}
+           >
+              <div className="flex items-center gap-4 mb-4">
+                 <div className="w-12 h-px bg-white/20" />
+                 <p className="text-white/50 text-xs lowercase tracking-tight font-bold font-['Outfit']">
+                    Explorations
+                 </p>
+              </div>
+              <h2 className="text-white text-5xl md:text-7xl font-black lowercase tracking-tight leading-[1.0] mb-6 shadow-xl">
+                 visual<br />playground
+              </h2>
+              <p className="text-white/60 font-['Outfit'] lowercase text-base max-w-sm mb-10 bg-[#0a0a0a]/80 backdrop-blur-md p-4 rounded-xl border border-white/5">
+                 An expanding archive of our generative experiments and polished commercial deployments.
+              </p>
+           </motion.div>
         </div>
+
+        {/* Parallax Grid Columns Layer */}
+        <div className="relative z-20 w-full md:w-2/3 h-full flex items-start justify-end gap-4 md:gap-8 pointer-events-auto">
+           {/* Left Moving Column */}
+           <div ref={leftColRef} className="flex flex-col gap-4 md:gap-8 pt-[10vh] w-1/2 will-change-transform">
+              {PARALLAX_VIDEOS.slice(0, 5).map((src, i) => (
+                 <video 
+                   key={i} 
+                   src={src} 
+                   autoPlay muted loop playsInline 
+                   className="w-full aspect-[4/5] object-cover rounded-[1rem] md:rounded-[2rem] border border-white/10 shadow-2xl opacity-80 hover:opacity-100 transition-all duration-500 hover:scale-[1.02]" 
+                 />
+              ))}
+           </div>
+           
+           {/* Right Moving Column */}
+           <div ref={rightColRef} className="flex flex-col gap-4 md:gap-8 pt-[20vh] w-1/2 will-change-transform">
+              {PARALLAX_VIDEOS.slice(5, 10).map((src, i) => (
+                 <video 
+                   key={i} 
+                   src={src} 
+                   autoPlay muted loop playsInline 
+                   className="w-full aspect-[4/5] object-cover rounded-[1rem] md:rounded-[2rem] border border-white/10 shadow-2xl opacity-80 hover:opacity-100 transition-all duration-500 hover:scale-[1.02]" 
+                 />
+              ))}
+           </div>
+        </div>
+        
       </div>
     </section>
   );

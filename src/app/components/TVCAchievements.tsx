@@ -59,7 +59,7 @@ export function TVCAchievements() {
                     fontFamily: 'Outfit, sans-serif',
                     fontSize: '13px',
                     textTransform: 'lowercase',
-                    letterSpacing: '0.1em',
+                    letterSpacing: '-0.05em',
                   }}
                 >
                   {achievement.label}
