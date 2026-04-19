@@ -1,5 +1,48 @@
 import { useRef } from 'react';
-import { motion, useScroll, useTransform } from 'motion/react';
+import { motion, useInView } from 'motion/react';
+
+function ReelVideoNode({ video }: { video: { src: string; badge: string } }) {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const shouldPreload = useInView(containerRef, { margin: "800px 800px 800px 800px" });
+
+  return (
+    <div
+      ref={containerRef}
+      className="relative w-[180px] sm:w-[220px] aspect-[9/16] rounded-2xl overflow-hidden shrink-0 snap-center group shadow-2xl bg-zinc-950 border border-white/10 will-change-transform transform-gpu"
+    >
+      <video
+        src={shouldPreload ? video.src : undefined}
+        muted
+        loop
+        playsInline
+        preload="none"
+        onMouseEnter={(e) => {
+          e.currentTarget.play();
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.pause();
+          e.currentTarget.currentTime = 0;
+        }}
+        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 will-change-transform transform-gpu"
+      />
+
+      {/* Gradient Overlay for better contrast */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent pointer-events-none opacity-80" />
+
+      {/* Play Hint */}
+      <div className="absolute inset-0 flex items-center justify-center opacity-100 group-hover:opacity-0 transition-opacity duration-300 pointer-events-none z-10 text-white/50">
+        <span className="bg-black/50 backdrop-blur-md px-3 py-1.5 rounded-full text-[10px] tracking-widest uppercase font-bold" style={{ fontFamily: 'Barlow' }}>Hover to Play</span>
+      </div>
+
+      {/* Yellow Badge */}
+      <div className="absolute top-3 left-3 z-10 pointer-events-none">
+        <div className="bg-[#ffaa00] text-black px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider shadow-lg flex items-center gap-1.5">
+          <span>⭐</span> {video.badge}
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export function ReelsCarousel() {
   const allVideos = [
@@ -36,13 +79,13 @@ export function ReelsCarousel() {
             lineHeight: '1.1',
           }}
         >
-          Cinematic Reels
+          Vertical Mastery
         </h2>
         <p
           className="text-white/60 text-center mt-3 tracking-wide"
           style={{ fontFamily: 'Barlow, sans-serif', fontSize: '16px' }}
         >
-          Scroll naturally through our expansive library of vertical broadcast MVPs.
+          High-retention, hyper-optimized vertical broadcasts built entirely for the modern feed.
         </p>
       </div>
 
@@ -52,39 +95,7 @@ export function ReelsCarousel() {
           style={{ scrollbarWidth: 'none', WebkitOverflowScrolling: 'touch' }}
         >
           {allVideos.map((video, idx) => (
-            <div
-              key={idx}
-              className="relative w-[180px] sm:w-[220px] aspect-[9/16] rounded-2xl overflow-hidden shrink-0 snap-center group shadow-2xl bg-black border border-white/10"
-            >
-              <video
-                src={video.src}
-                muted
-                loop
-                playsInline
-                preload="metadata"
-                onMouseEnter={(e) => e.currentTarget.play()}
-                onMouseLeave={(e) => {
-                  e.currentTarget.pause();
-                  e.currentTarget.currentTime = 0;
-                }}
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-              />
-
-              {/* Gradient Overlay for better contrast */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent pointer-events-none opacity-80" />
-
-              {/* Play Hint */}
-              <div className="absolute inset-0 flex items-center justify-center opacity-100 group-hover:opacity-0 transition-opacity duration-300 pointer-events-none z-10 text-white/50">
-                <span className="bg-black/50 backdrop-blur-md px-3 py-1.5 rounded-full text-[10px] tracking-widest uppercase font-bold" style={{ fontFamily: 'Barlow' }}>Hover to Play</span>
-              </div>
-
-              {/* Yellow Badge */}
-              <div className="absolute top-3 left-3 z-10 pointer-events-none">
-                <div className="bg-[#ffaa00] text-black px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider shadow-lg flex items-center gap-1.5">
-                  <span>⭐</span> {video.badge}
-                </div>
-              </div>
-            </div>
+            <ReelVideoNode key={idx} video={video} />
           ))}
         </div>
         

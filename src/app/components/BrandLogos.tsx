@@ -50,7 +50,7 @@ export function BrandLogos() {
                   <img 
                     src={src} 
                     alt="Brand Logo Client" 
-                    className="max-w-full max-h-full object-contain filter grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500 hover:scale-110 hover:drop-shadow-[0_0_20px_rgba(255,255,255,0.8)]"
+                    className={`max-w-full max-h-full object-contain filter grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500 hover:scale-110 hover:drop-shadow-[0_0_20px_rgba(255,255,255,0.8)] ${src.includes('BetterAlt Logo 98_98.webp') ? 'bg-white p-1.5 rounded-md' : ''}`}
                     loading="lazy"
                   />
                </div>

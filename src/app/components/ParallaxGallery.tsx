@@ -1,12 +1,15 @@
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
+import { useInView } from 'motion/react';
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 function PlayOnViewVideo({ src, className }: { src: string, className?: string }) {
+  const containerRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
+  const shouldPreload = useInView(containerRef, { margin: "1000px 0px 1000px 0px" });
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -26,18 +29,20 @@ function PlayOnViewVideo({ src, className }: { src: string, className?: string }
       observer.observe(videoRef.current);
     }
     return () => observer.disconnect();
-  }, [src]);
+  }, [shouldPreload]);
 
   return (
-    <video
-      ref={videoRef}
-      src={src}
-      muted
-      loop
-      playsInline
-      preload="metadata"
-      className={className}
-    />
+    <div ref={containerRef} className="w-full h-full">
+      <video
+        ref={videoRef}
+        src={shouldPreload ? src : undefined}
+        muted
+        loop
+        playsInline
+        preload="none"
+        className={`${className} will-change-transform transform-gpu`}
+      />
+    </div>
   );
 }
 

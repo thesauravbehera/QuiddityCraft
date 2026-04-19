@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { motion } from 'motion/react';
+import { motion, AnimatePresence } from 'motion/react';
 import { ArrowUpRight, Menu, X } from 'lucide-react';
 import { Button } from './ui/button';
 import { Link, useLocation } from 'react-router';
@@ -30,12 +30,12 @@ export function Navigation() {
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-        className={`fixed top-4 left-1/2 -translate-x-1/2 z-50 transition-all duration-500 ease-out ${
-          scrolled ? 'w-[98%] md:w-[80%] max-w-5xl mt-2' : 'w-[100%] max-w-7xl pt-4'
+        className={`fixed top-4 left-1/2 -translate-x-1/2 z-[100] transition-all duration-500 ease-out pointer-events-none ${
+          scrolled ? 'w-[98%] md:w-[80%] max-w-5xl mt-2' : 'w-full max-w-7xl pt-4'
         }`}
       >
         <div
-          className={`px-6 py-4 flex flex-wrap items-center justify-between transition-all duration-500 rounded-[16px] ${
+          className={`px-6 py-4 flex flex-wrap items-center justify-between transition-all duration-500 rounded-[16px] pointer-events-auto ${
             scrolled 
               ? 'bg-[#02000A]/60 backdrop-blur-xl border border-white/10 shadow-[0_8px_32px_rgba(0,255,255,0.15)]' 
               : 'bg-transparent border border-transparent'
@@ -87,33 +87,35 @@ export function Navigation() {
       </motion.nav>
 
       {/* Mobile Menu */}
-      {mobileMenuOpen && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.3 }}
-          className="fixed inset-0 z-40 bg-[#02000A]/95 backdrop-blur-2xl pt-28 px-6 pb-6 flex flex-col"
-        >
-          <div className="flex flex-col gap-4">
-            {navLinks.map((link) => (
-               <a
-                key={link.href}
-                href={link.href}
-                onClick={() => setMobileMenuOpen(false)}
-                className="text-lg font-medium text-white/70 hover:text-white hover:bg-white/5 transition-all py-3 px-4 rounded-lg"
-                style={{ fontFamily: 'Barlow, sans-serif' }}
-              >
-                {link.label}
-              </a>
-            ))}
-            <Button className="bg-white text-black hover:bg-white/90 rounded-[8px] px-6 py-4 flex items-center justify-center gap-2 mt-4 shadow-[0_0_20px_rgba(0,255,255,0.4)] w-full">
-              Initiate Launch Module
-              <ArrowUpRight className="w-4 h-4" />
-            </Button>
-          </div>
-        </motion.div>
-      )}
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="fixed inset-0 z-[90] bg-[#02000A]/95 backdrop-blur-2xl pt-28 px-6 pb-6 flex flex-col pointer-events-auto"
+          >
+            <div className="flex flex-col gap-4">
+              {navLinks.map((link) => (
+                 <Link
+                  key={link.href}
+                  to={link.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="text-lg font-medium text-white/70 hover:text-white hover:bg-white/5 transition-all py-3 px-4 rounded-lg"
+                  style={{ fontFamily: 'Barlow, sans-serif' }}
+                >
+                  {link.label}
+                </Link>
+              ))}
+              <Button className="bg-white text-black hover:bg-white/90 rounded-[8px] px-6 py-4 flex items-center justify-center gap-2 mt-4 shadow-[0_0_20px_rgba(0,255,255,0.4)] w-full">
+                Initiate Launch Module
+                <ArrowUpRight className="w-4 h-4" />
+              </Button>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 }

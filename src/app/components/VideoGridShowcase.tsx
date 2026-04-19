@@ -39,17 +39,17 @@ function SmartVideoNode({ src, cleanTitle, delayIndex }: { src: string, cleanTit
     >
       <video 
         ref={videoRef}
-        src={src} 
+        src={shouldPreload ? src : undefined} 
         muted 
         loop 
         playsInline 
         /* 
-          YOUTUBE INFRASTRUCTURE HACK:
-          Always load "metadata" to calculate width/height for the Masonry CSS grid flawlessly.
-          But ONLY swap to "auto" (heavy pre-download) when they scroll within striking distance.
+          OPTIMIZED MEDIA INFRASTRUCTURE:
+          We use metadata to fetch dimensions for Masonry layout but strictly
+          block auto-downloading huge webm chunks until shouldPlay triggers.
         */
-        preload={shouldPreload ? "auto" : "metadata"}
-        className="w-full h-auto object-cover relative z-0 transition-opacity duration-300" 
+        preload="metadata"
+        className="w-full h-auto object-cover relative z-0 transition-opacity duration-300 will-change-transform transform-gpu" 
       />
 
       {/* Dark Vignette/Gradient overlay for text readability */}
@@ -130,7 +130,7 @@ export function VideoGridShowcase() {
               textShadow: '0 0 30px rgba(255,255,255,0.2)'
             }}
           >
-            Archived Operations
+            The Visual Archive
           </h2>
           <p
             className="text-white/60 max-w-2xl mx-auto"
@@ -139,7 +139,7 @@ export function VideoGridShowcase() {
               fontSize: '18px',
             }}
           >
-            A continuous warp scroll of our entire generative transmission registry.
+            A continuous feed of our generative experiments and polished commercial deployments.
           </p>
         </motion.div>
 

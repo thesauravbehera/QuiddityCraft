@@ -1,16 +1,16 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Play, ChevronDown } from 'lucide-react';
+import { Play, ChevronDown, Loader2 } from 'lucide-react';
 import { Button } from './ui/button';
 
 export function HeroSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
 
   const heroSequence = [
-    "/LightSpeedimages/Astruanuat2.mp4",
-    "/hero_sequence/astruanuat.mp4",
-    "/hero_sequence/Astruanuat2.mp4",
-    "/hero_sequence/Astruanuat3.mp4"
+    "/videos/AI.webm",
+    "/videos/Energy drinks.webm",
+    "/videos/Fenty Beauty .webm"
   ];
 
   const handleVideoEnd = () => {
@@ -21,20 +21,46 @@ export function HeroSection() {
     <section className="relative h-screen w-full flex items-center justify-center overflow-hidden bg-[#02000A]">
       {/* Video Background */}
       <div className="absolute inset-0 bg-black">
+        {/* Loader Overlay */}
+        <AnimatePresence>
+          {!isVideoLoaded && (
+            <motion.div
+              initial={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 1 }}
+              className="absolute inset-0 z-10 flex flex-col items-center justify-center bg-[#02000A]"
+            >
+              <Loader2 className="w-12 h-12 text-white/50 animate-spin mb-4" />
+              <p
+                style={{ fontFamily: 'Barlow, sans-serif', letterSpacing: '0.3em' }}
+                className="text-white/40 text-xs uppercase"
+              >
+                Calibrating Visuals...
+              </p>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
         <AnimatePresence mode="wait">
-          <motion.video
-            key={currentIndex}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.8 }}
-            autoPlay
-            muted
-            playsInline
-            onEnded={handleVideoEnd}
-            src={heroSequence[currentIndex]}
-            className="absolute inset-0 w-full h-full object-cover"
-          />
+          {heroSequence.map((src, index) => (
+            <motion.video
+              key={src}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: isVideoLoaded && currentIndex === index ? 1 : 0 }}
+              transition={{ duration: 1.2, ease: "easeInOut" }}
+              autoPlay={currentIndex === index}
+              muted
+              playsInline
+              preload={index === 0 ? "auto" : "metadata"}
+              onCanPlay={() => {
+                if (index === 0) setIsVideoLoaded(true);
+              }}
+              onEnded={handleVideoEnd}
+              src={src}
+              className="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none"
+              style={{ zIndex: currentIndex === index ? 1 : 0 }}
+            />
+          ))}
         </AnimatePresence>
       </div>
 
@@ -46,7 +72,7 @@ export function HeroSection() {
       <div className="absolute bottom-0 left-0 w-full h-[25vh] bg-gradient-to-b from-transparent to-[#02000A] pointer-events-none z-10" />
 
       {/* Content Container with Corner Accents */}
-      <div className="relative z-10 max-w-5xl mx-auto px-6 text-center pt-24 pb-[150px] md:pb-[250px]">
+      <div className="relative z-[20] max-w-5xl mx-auto px-6 text-center pt-36 sm:pt-40 md:pt-24 pb-[150px] md:pb-[250px]">
 
         {/* Corner Accents Container */}
         <div className="relative inline-block">
@@ -78,7 +104,7 @@ export function HeroSection() {
                   color: 'rgba(255, 255, 255, 0.6)'
                 }}
               >
-                Accelerate your brand to
+                Distill the Essence. Scale the Vision.
               </h1>
               <h1
                 className="text-white mt-4 tracking-tighter"
@@ -107,7 +133,7 @@ export function HeroSection() {
                 lineHeight: '1.6'
               }}
             >
-              Cosmic-scale Content, AI-Powered Visuals & High-Velocity Campaigns for Brands Worldwide
+              Unlocking the true quiddity of your brand through AI-driven cinema and high-velocity content architectures.
             </motion.p>
           </div>
         </div>
@@ -128,7 +154,7 @@ export function HeroSection() {
           >
             <div className="absolute inset-0 bg-white transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out -z-10" />
             <Play className="w-4 h-4 fill-current" />
-            Book a Call
+            Initiate Project
           </Button>
         </motion.div>
       </div>
@@ -157,3 +183,4 @@ export function HeroSection() {
     </section>
   );
 }
+
