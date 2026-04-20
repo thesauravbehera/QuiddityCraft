@@ -6,19 +6,19 @@ export function TeamSection() {
       name: "Nakul Pacholi",
       role: "HEAD OF OPERATIONS & BUSINESS",
       desc: "Engineering scalable execution infrastructure and driving relentless business expansion.",
-      image: "/images/nakul.jpg"
+      image: "/images/nakul.avif"
     },
     {
       name: "Saurav Behera",
-      role: "HEAD OF PARTNERSHIPS",
-      desc: "Architecting high-stakes alliances and accelerating elite network expansion.",
-      image: "/images/saurav.jpg"
+      role: "HEAD OF CREATIVES",
+      desc: "Architecting visual systems and orchestrating elite cinematic strategy.",
+      image: "/images/saurav.avif"
     },
     {
       name: "Rishiabhishek Sharma",
       role: "HEAD OF SALES",
       desc: "Architecting aggressive acquisition pipelines and driving enterprise-level growth.",
-      image: "/images/rishi.jpg"
+      image: "/images/rishi.avif"
     }
   ];
 
@@ -61,7 +61,7 @@ export function TeamSection() {
         >
           <div className="w-full md:w-2/5 aspect-[3/4] relative rounded-xl overflow-hidden shrink-0">
             <img 
-              src="/images/sahil-founder.jpg" 
+              src="/images/sahil-founder.avif" 
               alt="Sahil Shaikh"
               className="absolute inset-0 w-full h-full object-cover grayscale contrast-125"
             />

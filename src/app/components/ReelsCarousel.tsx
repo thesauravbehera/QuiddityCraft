@@ -50,7 +50,6 @@ export function ReelsCarousel() {
     { src: '/videos/AI_Turmeric Sticks_002.webm', badge: 'Turmeric AD' },
     { src: '/videos/AI.webm', badge: 'AI Featured' },
     { src: '/videos/Anya_FatBurner.webm', badge: 'FatBurner' },
-    { src: '/videos/Clinique Video 04_04 English.webm', badge: 'Clinique TVC' },
     { src: '/videos/Founding Father (AI) 2.webm', badge: 'AI Founding' },
     { src: '/videos/GreenAmericanGuy1.webm', badge: 'Character AI' },
     { src: '/videos/Keyframe .webm', badge: 'Keyframe' },

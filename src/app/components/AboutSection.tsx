@@ -17,7 +17,7 @@ export function AboutSection() {
             <div className="aspect-[3/4] overflow-hidden rounded-none shadow-2xl relative">
               <div className="absolute inset-0 bg-black/20 z-10 mix-blend-multiply" />
               <img 
-                src="/images/sahil-founder.jpg" 
+                src="/images/sahil-founder.avif" 
                 alt="Sahil - Quiddity Craft Founder"
                 className="w-full h-full object-cover grayscale contrast-[1.2] brightness-90 hover:scale-105 transition-transform duration-1000"
               />

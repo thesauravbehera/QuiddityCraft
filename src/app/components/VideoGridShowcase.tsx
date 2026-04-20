@@ -12,7 +12,6 @@ const PARALLAX_VIDEOS = [
   '/videos/astruanuat.webm',
   '/videos/Firefighter.webm',
   '/videos/Mountain 1.webm',
-  '/videos/Clinique Video 04_04 English.webm',
   '/videos/Motion graphics.webm'
 ];
 
