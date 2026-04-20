@@ -42,7 +42,7 @@ export function ProcessSection() {
             style={{
               fontFamily: 'Outfit, sans-serif',
               fontWeight: 900,
-              fontSize: 'clamp(48px, 6vw, 84px)',
+              fontSize: 'clamp(36px, 8vw, 84px)',
               lineHeight: '1.0',
             }}
           >
@@ -67,7 +67,7 @@ export function ProcessSection() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
-              className="group flex flex-col md:flex-row items-start md:items-center gap-8 bg-black/40 backdrop-blur-3xl border border-white/10 rounded-[3rem] p-8 md:p-12 hover:border-white/30 hover:bg-white/5 hover:shadow-[0_0_50px_rgba(255,255,255,0.05)] transition-all duration-500 hover:-translate-y-1 relative overflow-hidden"
+              className="group flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-8 bg-black/40 backdrop-blur-3xl border border-white/10 rounded-[2.5rem] md:rounded-[3rem] p-6 md:p-12 hover:border-white/30 hover:bg-white/5 hover:shadow-[0_0_50px_rgba(255,255,255,0.05)] transition-all duration-500 hover:-translate-y-1 relative overflow-hidden"
             >
               {/* Ambient Hover glow */}
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out pointer-events-none" />
@@ -76,7 +76,7 @@ export function ProcessSection() {
                 className="text-white/20 group-hover:text-white/60 transition-colors drop-shadow-lg"
                 style={{
                   fontFamily: 'Outfit, sans-serif',
-                  fontSize: 'clamp(64px, 8vw, 96px)',
+                  fontSize: 'clamp(48px, 10vw, 96px)',
                   fontWeight: 900,
                   lineHeight: '1',
                 }}
@@ -85,7 +85,7 @@ export function ProcessSection() {
               </div>
               <div className="flex-1 md:pt-4">
                 <h3
-                  className="text-white mb-3 capitalize font-black text-3xl md:text-5xl tracking-tight group-hover:text-white transition-colors"
+                  className="text-white mb-2 md:mb-3 capitalize font-black text-2xl md:text-5xl tracking-tight group-hover:text-white transition-colors"
                   style={{
                     fontFamily: 'Outfit, sans-serif',
                   }}
@@ -93,7 +93,7 @@ export function ProcessSection() {
                   {step.title}
                 </h3>
                 <p
-                  className="text-white/70 font-medium text-lg max-w-xl group-hover:text-white/90 transition-colors"
+                  className="text-white/70 font-medium text-base md:text-lg max-w-xl group-hover:text-white/90 transition-colors"
                   style={{
                     fontFamily: 'Outfit, sans-serif',
                     lineHeight: '1.6',

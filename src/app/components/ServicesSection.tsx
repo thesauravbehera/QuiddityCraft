@@ -53,11 +53,11 @@ export function ServicesSection() {
                   Our Arsenal
                </p>
             </div>
-            <h2 className="text-white text-5xl md:text-7xl font-black capitalize tracking-tight leading-[0.9]" style={{ fontFamily: 'Outfit, sans-serif' }}>
+            <h2 className="text-white text-4xl md:text-5xl lg:text-7xl font-black capitalize tracking-tight leading-[0.9]" style={{ fontFamily: 'Outfit, sans-serif' }}>
               Our Core<br />Competencies
             </h2>
           </div>
-          <p className="text-white/60 text-lg max-w-sm font-medium" style={{ fontFamily: 'Outfit, sans-serif' }}>
+          <p className="text-white/60 text-base md:text-lg max-w-sm font-medium" style={{ fontFamily: 'Outfit, sans-serif' }}>
              A highly concentrated selection of specialized infrastructure we deploy for modern brands.
           </p>
         </motion.div>
@@ -73,7 +73,7 @@ export function ServicesSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: i * 0.1 }}
-                    className={`bento-box ${svc.span} group relative min-h-[350px] md:min-h-[450px] bg-black/40 backdrop-blur-xl border border-white/10 rounded-[3rem] overflow-hidden flex flex-col justify-end p-8 md:p-12 transition-all duration-500 hover:shadow-[0_0_50px_rgba(255,255,255,0.05)] hover:border-white/30`}
+                    className={`bento-box ${svc.span} group relative min-h-[300px] md:min-h-[450px] bg-black/40 backdrop-blur-xl border border-white/10 rounded-[2.5rem] md:rounded-[3rem] overflow-hidden flex flex-col justify-end p-6 md:p-12 transition-all duration-500 hover:shadow-[0_0_50px_rgba(255,255,255,0.05)] hover:border-white/30`}
                   >
                     {/* Hover Video Reveal */}
                     <video 
@@ -95,17 +95,17 @@ export function ServicesSection() {
                     
                     {/* Content */}
                     <div className="relative z-10 transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
-                       <div className="w-16 h-16 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center mb-8 border border-white/10 group-hover:scale-110 group-hover:bg-white group-hover:border-transparent transition-all duration-500">
-                          <Icon className="w-8 h-8 text-white group-hover:text-black transition-colors" />
+                       <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center mb-6 md:mb-8 border border-white/10 group-hover:scale-110 group-hover:bg-white group-hover:border-transparent transition-all duration-500">
+                          <Icon className="w-6 h-6 md:w-8 md:h-8 text-white group-hover:text-black transition-colors" />
                        </div>
                        <h3 
-                         className="text-3xl md:text-5xl font-black capitalize text-white tracking-tight mb-4 group-hover:-translate-y-1 transition-transform duration-500"
+                         className="text-2xl md:text-5xl font-black capitalize text-white tracking-tight mb-3 md:mb-4 group-hover:-translate-y-1 transition-transform duration-500"
                          style={{ fontFamily: 'Outfit, sans-serif' }}
                        >
                           {svc.title}
                        </h3>
                        <p 
-                         className="text-white/70 text-lg opacity-0 group-hover:opacity-100 transition-all duration-500 max-w-md font-medium leading-relaxed delay-100"
+                         className="text-white/70 text-base md:text-lg opacity-0 group-hover:opacity-100 transition-all duration-500 max-w-md font-medium leading-relaxed delay-100"
                          style={{ fontFamily: 'Outfit, sans-serif' }}
                        >
                           {svc.desc}

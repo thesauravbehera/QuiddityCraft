@@ -90,7 +90,7 @@ export function HeroSection() {
               style={{
                 fontFamily: 'Outfit, sans-serif',
                 fontWeight: 900,
-                fontSize: 'clamp(40px, 6vw, 84px)',
+                fontSize: 'clamp(36px, 10vw, 84px)',
                 textTransform: 'uppercase'
               }}
             >
@@ -102,7 +102,7 @@ export function HeroSection() {
               className="text-white/90 max-w-2xl mb-12 font-medium drop-shadow-[0_4px_10px_rgba(0,0,0,0.9)]"
               style={{
                 fontFamily: 'Outfit, sans-serif',
-                fontSize: 'clamp(18px, 1.5vw, 22px)',
+                fontSize: 'clamp(16px, 4vw, 22px)',
                 lineHeight: '1.6',
                 letterSpacing: '0.02em'
               }}

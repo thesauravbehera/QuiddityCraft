@@ -48,9 +48,9 @@ export function BrandLogos() {
                const requiresInversion = ['GNC Live Well', 'AKIKI London', 'Rubans'].includes(brand.name);
 
                return (
-                 <div key={index} className="relative shrink-0 w-[220px] md:w-[280px] h-[120px] flex items-center justify-center mx-4 group">
+                 <div key={index} className="relative shrink-0 w-[140px] md:w-[280px] h-[80px] md:h-[120px] mx-2 md:mx-4 flex items-center justify-center group">
                     {/* Consistent White Rounded Rectangle Background */}
-                    <div className="absolute inset-0 bg-white rounded-3xl group-hover:scale-105 transition-all duration-500 shadow-xl border border-black/5" />
+                    <div className="absolute inset-0 bg-white rounded-2xl md:rounded-3xl group-hover:scale-105 transition-all duration-500 shadow-xl border border-black/5" />
                     
                     <div className="relative z-10 w-full h-full p-2 flex flex-col items-center justify-center pointer-events-none">
                       {brand.src && (

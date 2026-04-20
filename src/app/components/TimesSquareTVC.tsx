@@ -24,9 +24,9 @@ export function TimesSquareTVC() {
           </div>
 
           <h2 
-            className="text-white tracking-tight leading-[1.0] mb-8 capitalize drop-shadow-[0_4px_15px_rgba(0,0,0,0.8)]"
+            className="text-white tracking-tight leading-[1.0] mb-6 md:mb-8 capitalize drop-shadow-[0_4px_15px_rgba(0,0,0,0.8)]"
             style={{ 
-              fontSize: 'clamp(48px, 6vw, 84px)', 
+              fontSize: 'clamp(36px, 8vw, 84px)', 
               fontFamily: 'Outfit, sans-serif',
               fontWeight: 900
             }}
@@ -36,7 +36,7 @@ export function TimesSquareTVC() {
           </h2>
 
           <p 
-            className="text-white/80 text-xl leading-relaxed max-w-xl font-medium drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]"
+            className="text-white/80 text-base md:text-xl leading-relaxed max-w-xl font-medium drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]"
             style={{ fontFamily: 'Outfit, sans-serif' }}
           >
             Broadcasting our definitive philosophy from the central hub of the world. Demonstrating the unprecedented scale of artificial intelligence through high-impact transmission to millions.

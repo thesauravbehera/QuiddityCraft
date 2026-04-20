@@ -44,7 +44,7 @@ export function AboutSection() {
                className="text-white tracking-tighter leading-[1.0] uppercase font-black"
                style={{
                  fontFamily: 'Outfit, sans-serif',
-                 fontSize: 'clamp(48px, 6vw, 84px)'
+                 fontSize: 'clamp(32px, 8vw, 84px)'
                }}
              >
                The absolute essence of your brand, brought to life.
@@ -54,7 +54,7 @@ export function AboutSection() {
                className="text-white/90 font-medium"
                style={{
                  fontFamily: 'Outfit, sans-serif',
-                 fontSize: 'clamp(22px, 3vw, 32px)',
+                 fontSize: 'clamp(18px, 4vw, 32px)',
                  lineHeight: '1.5'
                }}
              >
