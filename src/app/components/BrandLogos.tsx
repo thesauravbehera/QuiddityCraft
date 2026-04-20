@@ -9,7 +9,8 @@ const officialBrands = [
   { name: "BetterAlt", src: "/logos/BetterAlt Logo 98_98.webp" },
   { name: "SKINN", src: "/logos/download (1).webp" },
   { name: "YARDLEY LONDON", src: "/logos/1752487524187.webp" },
-  { name: "LAVIE WORLD", src: "/logos/Picture_1.avif" }
+  { name: "LAVIE WORLD", src: "/logos/Picture_1.avif" },
+  { name: "Rubans", src: "/logos/Logo.webp" }
 ];
 
 export function BrandLogos() {
@@ -32,49 +33,42 @@ export function BrandLogos() {
           </p>
         </motion.div>
 
-        {/* Outer Marquee Track Container */}
-        <div className="relative flex overflow-hidden w-full border-t border-b border-white/10 group bg-black py-4">
+        {/* Returning to Marquee Track with Bright Rounded Capsules */}
+        <div className="relative flex overflow-hidden w-full border-t border-b border-white/5 group py-12 mt-8 bg-black/40">
           
-          {/* Subtle Fading edges for depth */}
-          <div className="absolute top-0 left-0 bottom-0 w-16 md:w-48 bg-gradient-to-r from-[#0a0a0a] to-transparent z-10 pointer-events-none" />
-          <div className="absolute top-0 right-0 bottom-0 w-16 md:w-48 bg-gradient-to-l from-[#0a0a0a] to-transparent z-10 pointer-events-none" />
+          <div className="absolute top-0 left-0 bottom-0 w-24 md:w-64 bg-gradient-to-r from-[#02000A] to-transparent z-10 pointer-events-none" />
+          <div className="absolute top-0 right-0 bottom-0 w-24 md:w-64 bg-gradient-to-l from-[#02000A] to-transparent z-10 pointer-events-none" />
 
-          {/* Scrolling Motion Div containing the rigid boxes */}
           <motion.div
             animate={{ x: ["0%", "-50%"] }}
-            transition={{ 
-              repeat: Infinity, 
-              ease: "linear", 
-              duration: 40 
-            }}
+            transition={{ repeat: Infinity, ease: "linear", duration: 35 }}
             className="flex items-center w-max shrink-0"
           >
-            {duplicatedLogos.map((brand, index) => (
-               <div 
-                 key={index} 
-                 className="relative border-r border-white/10 shrink-0 w-[200px] md:w-[250px] h-[120px] flex items-center justify-center p-8 group-hover:bg-white/5 transition-colors duration-500"
-               >
-                  {/* Left Side Rigid Crosshairs */}
-                  <div className="absolute top-0 left-0 -translate-x-1/2 -translate-y-1/2 text-white/50 text-xs font-mono font-bold pointer-events-none select-none">+</div>
-                  <div className="absolute bottom-0 left-0 -translate-x-1/2 translate-y-1/2 text-white/50 text-xs font-mono font-bold pointer-events-none select-none">+</div>
-                  
-                  {brand.src ? (
-                    <img 
-                      src={brand.src} 
-                      alt={`${brand.name} Logo`}
-                      className="max-w-full max-h-full object-contain filter grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500 hover:scale-110"
-                      loading="lazy"
-                    />
-                  ) : (
-                    <span 
-                      className="text-white/60 font-black tracking-tight text-xl text-center group-hover:text-white transition-colors uppercase"
-                      style={{ fontFamily: 'Outfit, sans-serif' }}
-                    >
-                      {brand.name}
-                    </span>
-                  )}
-               </div>
-            ))}
+            {duplicatedLogos.map((brand, index) => {
+               const requiresInversion = ['GNC Live Well', 'AKIKI London', 'Rubans'].includes(brand.name);
+
+               return (
+                 <div key={index} className="relative shrink-0 w-[220px] md:w-[280px] h-[120px] flex items-center justify-center mx-4 group">
+                    {/* Consistent White Rounded Rectangle Background */}
+                    <div className="absolute inset-0 bg-white rounded-3xl group-hover:scale-105 transition-all duration-500 shadow-xl border border-black/5" />
+                    
+                    <div className="relative z-10 w-full h-full p-2 flex flex-col items-center justify-center pointer-events-none">
+                      {brand.src && (
+                        <img 
+                          src={brand.src} 
+                          alt={`${brand.name} Logo`}
+                          className="w-[85%] h-[85%] object-contain group-hover:scale-110 transition-transform duration-500" 
+                          style={{
+                             filter: requiresInversion ? 'invert(1) grayscale(1) contrast(300%)' : 'none',
+                             mixBlendMode: requiresInversion ? 'multiply' : 'darken'
+                          }}
+                          loading="lazy"
+                        />
+                      )}
+                    </div>
+                 </div>
+               )
+            })}
           </motion.div>
         </div>
       </div>

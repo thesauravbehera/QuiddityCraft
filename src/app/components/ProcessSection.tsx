@@ -4,18 +4,18 @@ export function ProcessSection() {
   const steps = [
     {
       number: '01',
-      title: 'Align Coordinates',
-      description: 'We align on goals, orbit, and creative direction.',
+      title: 'Define the Essence',
+      description: "We align on your brand's core identity, aesthetic goals, and unique beauty.",
     },
     {
       number: '02',
-      title: 'Transmit Brief',
-      description: 'You transmit your brief — I map and execute the cosmic flow.',
+      title: 'Artisan Crafting',
+      description: 'We sculpt and refine your visual narrative, bringing your concepts to vibrant life.',
     },
     {
       number: '03',
-      title: 'Payload Deployed',
-      description: 'You receive polished, performance-ready content — at warp speed.',
+      title: 'Radiant Delivery',
+      description: 'You receive flawless, breathtaking assets that captivate and resonate.',
     },
   ];
 
@@ -29,25 +29,33 @@ export function ProcessSection() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
+          <div className="flex items-center justify-center gap-4 mb-4">
+             <div className="w-12 h-px bg-white/20" />
+             <span className="text-xs tracking-[0.2em] text-white/50 uppercase font-bold" style={{ fontFamily: 'Outfit, sans-serif' }}>
+               Process
+             </span>
+             <div className="w-12 h-px bg-white/20" />
+          </div>
+          
           <h2
-            className="text-white mb-4"
+            className="text-white mb-4 capitalize drop-shadow-[0_4px_10px_rgba(0,0,0,0.8)]"
             style={{
               fontFamily: 'Outfit, sans-serif',
-              fontStyle: 'italic',
-              fontSize: 'clamp(32px, 4vw, 56px)',
-              lineHeight: '1.3',
+              fontWeight: 900,
+              fontSize: 'clamp(48px, 6vw, 84px)',
+              lineHeight: '1.0',
             }}
           >
-            Launch Sequence
+            Aesthetic Workflow
           </h2>
           <p
-            className="text-white/60 max-w-2xl mx-auto"
+            className="text-white/80 max-w-2xl mx-auto font-medium"
             style={{
               fontFamily: 'Outfit, sans-serif',
-              fontSize: '18px',
+              fontSize: '22px',
             }}
           >
-            A stellar progression from concept to hyperdrive
+            A meticulous progression cultivating your core essence.
           </p>
         </motion.div>
 
@@ -59,35 +67,35 @@ export function ProcessSection() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
-              className="group flex items-start gap-8 bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-8 hover:bg-white/10 hover:border-white/20 transition-all duration-300"
+              className="group flex flex-col md:flex-row items-start md:items-center gap-8 bg-black/40 backdrop-blur-3xl border border-white/10 rounded-[3rem] p-8 md:p-12 hover:border-white/30 hover:bg-white/5 hover:shadow-[0_0_50px_rgba(255,255,255,0.05)] transition-all duration-500 hover:-translate-y-1 relative overflow-hidden"
             >
+              {/* Ambient Hover glow */}
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out pointer-events-none" />
+
               <div
-                className="text-white/20 group-hover:text-white/40 transition-colors"
+                className="text-white/20 group-hover:text-white/60 transition-colors drop-shadow-lg"
                 style={{
                   fontFamily: 'Outfit, sans-serif',
-                  fontSize: 'clamp(48px, 5vw, 72px)',
-                  fontWeight: 700,
+                  fontSize: 'clamp(64px, 8vw, 96px)',
+                  fontWeight: 900,
                   lineHeight: '1',
                 }}
               >
                 {step.number}
               </div>
-              <div className="flex-1 pt-4">
+              <div className="flex-1 md:pt-4">
                 <h3
-                  className="text-white mb-3"
+                  className="text-white mb-3 capitalize font-black text-3xl md:text-5xl tracking-tight group-hover:text-white transition-colors"
                   style={{
                     fontFamily: 'Outfit, sans-serif',
-                    fontSize: '24px',
-                    fontWeight: 600,
                   }}
                 >
                   {step.title}
                 </h3>
                 <p
-                  className="text-white/70"
+                  className="text-white/70 font-medium text-lg max-w-xl group-hover:text-white/90 transition-colors"
                   style={{
                     fontFamily: 'Outfit, sans-serif',
-                    fontSize: '18px',
                     lineHeight: '1.6',
                   }}
                 >

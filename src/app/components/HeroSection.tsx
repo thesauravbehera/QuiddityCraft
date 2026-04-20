@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Play, ChevronDown, Loader2 } from 'lucide-react';
 import { Button } from './ui/button';
@@ -8,13 +8,17 @@ export function HeroSection() {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
 
   const heroSequence = [
-    "/videos/Fenty Beauty .mov",
-    "/videos/astruanuat.mp4"
+    "/videos/Fenty Beauty .webm",
+    "/videos/astruanuat.webm"
   ];
 
-  const handleVideoEnd = () => {
-    setCurrentIndex((prev) => (prev + 1) % heroSequence.length);
-  };
+  useEffect(() => {
+    // Cycle the background video seamlessly every 10 seconds
+    const timer = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % heroSequence.length);
+    }, 10000);
+    return () => clearInterval(timer);
+  }, [heroSequence.length]);
 
   return (
     <section className="relative h-screen w-full flex items-center justify-center overflow-hidden bg-[#02000A]">
@@ -46,15 +50,15 @@ export function HeroSection() {
               key={src}
               initial={{ opacity: 0 }}
               animate={{ opacity: isVideoLoaded && currentIndex === index ? 1 : 0 }}
-              transition={{ duration: 1.2, ease: "easeInOut" }}
-              autoPlay={currentIndex === index}
+              transition={{ duration: 1.5, ease: "easeInOut" }}
+              autoPlay
+              loop
               muted
               playsInline
               preload={index === 0 ? "auto" : "metadata"}
               onCanPlay={() => {
                 if (index === 0) setIsVideoLoaded(true);
               }}
-              onEnded={handleVideoEnd}
               src={src}
               className="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none"
               style={{ zIndex: currentIndex === index ? 1 : 0 }}
@@ -79,45 +83,47 @@ export function HeroSection() {
           transition={{ duration: 0.4, ease: [0.25, 1, 0.5, 1], delay: 0.2 }}
           className="max-w-4xl"
         >
-          {/* Headline */}
-          <h1
-            className="text-white leading-[1.1] tracking-tight mb-6"
-            style={{
-              fontFamily: 'Outfit, sans-serif',
-              fontWeight: 900,
-              fontSize: 'clamp(40px, 6vw, 84px)',
-              textTransform: 'uppercase'
-            }}
-          >
-            Where Imagination Meets Intent
-          </h1>
+          <div className="relative z-10">
+            {/* Headline */}
+            <h1
+              className="text-white leading-[1.1] tracking-tight mb-6 drop-shadow-[0_8px_15px_rgba(0,0,0,0.9)] "
+              style={{
+                fontFamily: 'Outfit, sans-serif',
+                fontWeight: 900,
+                fontSize: 'clamp(40px, 6vw, 84px)',
+                textTransform: 'uppercase'
+              }}
+            >
+              Where Imagination Meets Intent
+            </h1>
 
-          {/* Subheadline */}
-          <p
-            className="text-white/70 max-w-2xl mb-12 font-medium"
-            style={{
-              fontFamily: 'Outfit, sans-serif',
-              fontSize: 'clamp(18px, 1.5vw, 22px)',
-              lineHeight: '1.6',
-              letterSpacing: '0.02em'
-            }}
-          >
-            Crafting Your Brand's Essence
-          </p>
+            {/* Subheadline */}
+            <p
+              className="text-white/90 max-w-2xl mb-12 font-medium drop-shadow-[0_4px_10px_rgba(0,0,0,0.9)]"
+              style={{
+                fontFamily: 'Outfit, sans-serif',
+                fontSize: 'clamp(18px, 1.5vw, 22px)',
+                lineHeight: '1.6',
+                letterSpacing: '0.02em'
+              }}
+            >
+              Crafting Your Brand's Essence
+            </p>
 
-          {/* CTA Button */}
-          <Button
-            onClick={() => {
-              // Direct them to the calendar or contact
-            }}
-            className="group relative overflow-hidden bg-white text-black rounded-none px-8 py-6 text-sm uppercase tracking-[0.15em] font-black transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] flex items-center gap-4 border border-white"
-            style={{ fontFamily: 'Outfit, sans-serif' }}
-          >
-            <div className="absolute inset-0 bg-neutral-200 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out z-0" />
-            <span className="relative z-10 flex items-center gap-3">
-              Book a Strategy Call <Play className="w-4 h-4 fill-current" />
-            </span>
-          </Button>
+            {/* CTA Button */}
+            <Button
+              onClick={() => {
+                // Direct them to the calendar or contact
+              }}
+              className="group relative overflow-hidden bg-white text-black rounded-none px-8 py-6 text-sm uppercase tracking-[0.15em] font-black transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] flex items-center gap-4 border border-white w-fit"
+              style={{ fontFamily: 'Outfit, sans-serif' }}
+            >
+              <div className="absolute inset-0 bg-neutral-200 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out z-0" />
+              <span className="relative z-10 flex items-center gap-3">
+                Book a Strategy Call <Play className="w-4 h-4 fill-current" />
+              </span>
+            </Button>
+          </div>
         </motion.div>
       </div>
 

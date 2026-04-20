@@ -15,11 +15,11 @@ export function AboutSection() {
             className="w-full md:w-1/2"
           >
             <div className="aspect-[3/4] overflow-hidden rounded-none shadow-2xl relative">
-              <div className="absolute inset-0 bg-black/20 z-10 mix-blend-multiply" />
+              <div className="absolute inset-0 bg-transparent z-10" />
               <img 
-                src="/images/sahil-founder.avif" 
+                src="/images/Sahil-Color.webp" 
                 alt="Sahil - Quiddity Craft Founder"
-                className="w-full h-full object-cover grayscale contrast-[1.2] brightness-90 hover:scale-105 transition-transform duration-1000"
+                className="w-full h-full object-cover shadow-[0_0_50px_rgba(255,255,255,0.1)] hover:scale-105 transition-transform duration-1000"
               />
             </div>
             {/* Minimal label underneath image */}
@@ -41,21 +41,21 @@ export function AboutSection() {
              </h2>
              
              <h3 
-               className="text-white tracking-tighter leading-[1.1] uppercase font-black"
+               className="text-white tracking-tighter leading-[1.0] uppercase font-black"
                style={{
                  fontFamily: 'Outfit, sans-serif',
-                 fontSize: 'clamp(40px, 5vw, 64px)'
+                 fontSize: 'clamp(48px, 6vw, 84px)'
                }}
              >
                The absolute essence of your brand, brought to life.
              </h3>
 
              <div 
-               className="text-white/80 font-medium"
+               className="text-white/90 font-medium"
                style={{
                  fontFamily: 'Outfit, sans-serif',
-                 fontSize: 'clamp(18px, 2vw, 24px)',
-                 lineHeight: '1.6'
+                 fontSize: 'clamp(22px, 3vw, 32px)',
+                 lineHeight: '1.5'
                }}
              >
                <p className="mb-6">

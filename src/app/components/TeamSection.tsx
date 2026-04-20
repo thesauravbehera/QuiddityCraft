@@ -5,20 +5,17 @@ export function TeamSection() {
     {
       name: "Nakul Pacholi",
       role: "HEAD OF OPERATIONS & BUSINESS",
-      desc: "Engineering scalable execution infrastructure and driving relentless business expansion.",
-      image: "/images/nakul.avif"
+      image: "/images/Nakul.webp"
     },
     {
       name: "Saurav Behera",
       role: "HEAD OF CREATIVES",
-      desc: "Architecting visual systems and orchestrating elite cinematic strategy.",
-      image: "/images/saurav.avif"
+      image: "/images/saurv.webp"
     },
     {
       name: "Rishiabhishek Sharma",
       role: "HEAD OF SALES",
-      desc: "Architecting aggressive acquisition pipelines and driving enterprise-level growth.",
-      image: "/images/rishi.avif"
+      image: "/images/Rishi.webp"
     }
   ];
 
@@ -59,11 +56,11 @@ export function TeamSection() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="border border-white/10 rounded-[2rem] p-6 md:p-12 mb-32 bg-[#050510] flex flex-col md:flex-row gap-10 md:gap-16 items-center"
         >
-          <div className="w-full md:w-2/5 aspect-[3/4] relative rounded-xl overflow-hidden shrink-0">
+          <div className="w-full md:w-2/5 aspect-[3/4] relative rounded-xl overflow-hidden shrink-0 shadow-[0_0_40px_rgba(255,255,255,0.05)]">
             <img 
-              src="/images/sahil-founder.avif" 
+              src="/images/Sahil-Color.webp" 
               alt="Sahil Shaikh"
-              className="absolute inset-0 w-full h-full object-cover grayscale contrast-125"
+              className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-105"
             />
           </div>
           <div className="flex-1 text-left">
