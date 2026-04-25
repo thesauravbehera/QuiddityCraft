@@ -8,8 +8,7 @@ export function HeroSection() {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
 
   const heroSequence = [
-    "/videos/Fenty Beauty .webm",
-    "/videos/astruanuat.webm"
+    "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260406_133058_0504132a-0cf3-4450-a370-8ea3b05c95d4.mp4"
   ];
 
   useEffect(() => {

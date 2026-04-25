@@ -1,36 +1,10 @@
-import { useRef } from 'react';
 import { motion } from 'motion/react';
 import { Button } from './ui/button';
 import { Phone, Mail } from 'lucide-react';
-import { gsap } from 'gsap';
-import { useGSAP } from '@gsap/react';
 
 export function CTASection() {
-  const marqueeRef = useRef<HTMLDivElement>(null);
-
-  useGSAP(() => {
-    // Infinite GSAP marquee
-    gsap.to(marqueeRef.current, {
-      xPercent: -50,
-      duration: 30,
-      ease: "none",
-      repeat: -1,
-    });
-  }, { scope: marqueeRef });
-
   return (
     <section className="pt-24 bg-transparent relative overflow-hidden border-t border-white/5">
-      
-      {/* Heavy GSAP Marquee Strip */}
-      <div className="w-full overflow-hidden bg-black/40 py-6 border-y border-white/5 shadow-2xl mb-20 flex whitespace-nowrap">
-         <div ref={marqueeRef} className="flex items-center gap-10 opacity-70">
-            {Array.from({ length: 15 }).map((_, i) => (
-              <span key={i} className="text-white font-black text-6xl md:text-8xl lowercase tracking-tight shrink-0">
-                 quiddity craft • true essence •
-              </span>
-            ))}
-         </div>
-      </div>
 
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center pb-20">
         <motion.div
