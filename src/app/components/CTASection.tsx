@@ -1,8 +1,17 @@
+import { useEffect } from 'react';
 import { motion } from 'motion/react';
 import { Button } from './ui/button';
 import { Phone, Mail } from 'lucide-react';
+import { getCalApi } from '@calcom/embed-react';
 
 export function CTASection() {
+  useEffect(() => {
+    (async function () {
+      const cal = await getCalApi({});
+      cal("ui", {"theme":"dark"});
+    })();
+  }, []);
+
   return (
     <section className="pt-24 bg-transparent relative overflow-hidden border-t border-white/5">
 
@@ -33,7 +42,11 @@ export function CTASection() {
             </a>
           </div>
 
-          <Button className="bg-white text-black hover:bg-neutral-200 rounded-none px-10 py-7 text-sm font-black uppercase tracking-widest transition-all">
+          <Button 
+            data-cal-link="saurav/30min"
+            data-cal-config='{"layout":"month_view"}'
+            className="bg-white text-black hover:bg-neutral-200 rounded-none px-10 py-7 text-sm font-black uppercase tracking-widest transition-all"
+          >
             Book a Strategy Call
           </Button>
         </motion.div>

@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { ArrowUpRight, Menu, X } from 'lucide-react';
 import { Button } from './ui/button';
 import { Link, useLocation } from 'react-router';
+import { getCalApi } from '@calcom/embed-react';
 
 export function Navigation() {
   const [scrolled, setScrolled] = useState(false);
@@ -10,6 +11,11 @@ export function Navigation() {
   const location = useLocation();
 
   useEffect(() => {
+    (async function () {
+      const cal = await getCalApi({});
+      cal("ui", {"theme":"dark"});
+    })();
+
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
     };
@@ -70,6 +76,8 @@ export function Navigation() {
 
           {/* Desktop CTA Button */}
           <Button 
+            data-cal-link="saurav/30min"
+            data-cal-config='{"layout":"month_view"}'
             className="hidden md:flex bg-white text-black hover:bg-neutral-200 h-auto font-bold items-center transition-transform hover:scale-105 active:scale-95 shadow-xl"
             style={{ 
               borderRadius: 'clamp(16px, 1.5vw, 40px)', 
@@ -120,7 +128,11 @@ export function Navigation() {
                   {link.label}
                 </Link>
               ))}
-              <Button className="bg-white text-black hover:bg-neutral-200 rounded-[8px] px-6 py-4 flex items-center justify-center gap-2 mt-4 w-full shadow-xl">
+              <Button 
+                data-cal-link="saurav/30min"
+                data-cal-config='{"layout":"month_view"}'
+                className="bg-white text-black hover:bg-neutral-200 rounded-[8px] px-6 py-4 flex items-center justify-center gap-2 mt-4 w-full shadow-xl"
+              >
                 Book a Call
                 <ArrowUpRight className="w-4 h-4" />
               </Button>
