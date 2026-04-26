@@ -3,6 +3,7 @@ import { Layout } from './pages/Layout';
 import { HomePage } from './pages/HomePage';
 import { AboutPage } from './pages/AboutPage';
 import { ServicesPage } from './pages/ServicesPage';
+import { ClientShowcasePage } from './pages/ClientShowcasePage';
 
 export default function App() {
   return (
@@ -12,6 +13,9 @@ export default function App() {
           <Route index element={<HomePage />} />
           <Route path="about" element={<AboutPage />} />
           <Route path="services" element={<ServicesPage />} />
+          
+          {/* Hidden Client Routes */}
+          <Route path="100pops" element={<ClientShowcasePage />} />
         </Route>
       </Routes>
     </BrowserRouter>
