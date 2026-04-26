@@ -43,6 +43,7 @@ export function CTASection() {
           </div>
 
           <Button 
+            data-cal-namespace=""
             data-cal-link="saurav/30min"
             data-cal-config='{"layout":"month_view"}'
             className="bg-white text-black hover:bg-neutral-200 rounded-none px-10 py-7 text-sm font-black uppercase tracking-widest transition-all"

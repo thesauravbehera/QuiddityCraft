@@ -75,6 +75,7 @@ export function Navigation() {
 
           {/* Desktop CTA Button */}
           <Button 
+            data-cal-namespace=""
             data-cal-link="saurav/30min"
             data-cal-config='{"layout":"month_view"}'
             className="hidden md:flex bg-white text-black hover:bg-neutral-200 h-auto rounded-[14px] px-8 py-4 text-lg font-bold items-center gap-4 transition-transform hover:scale-105 active:scale-95 shadow-xl"
@@ -119,6 +120,7 @@ export function Navigation() {
                 </Link>
               ))}
               <Button 
+                data-cal-namespace=""
                 data-cal-link="saurav/30min"
                 data-cal-config='{"layout":"month_view"}'
                 className="bg-white text-black hover:bg-neutral-200 rounded-[8px] px-6 py-4 flex items-center justify-center gap-2 mt-4 w-full shadow-xl"

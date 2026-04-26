@@ -117,6 +117,7 @@ export function HeroSection() {
 
             {/* CTA Button */}
             <Button
+              data-cal-namespace=""
               data-cal-link="saurav/30min"
               data-cal-config='{"layout":"month_view"}'
               className="group relative overflow-hidden bg-white text-black rounded-none px-8 py-6 text-sm uppercase tracking-[0.15em] font-black transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] flex items-center gap-4 border border-white w-fit"
