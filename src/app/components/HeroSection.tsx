@@ -18,11 +18,23 @@ export function HeroSection() {
       cal("ui", {"theme":"dark"});
     })();
 
-    // Cycle the background video seamlessly every 10 seconds
-    const timer = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % heroSequence.length);
-    }, 10000);
-    return () => clearInterval(timer);
+    // Force the loader to disappear after 1.5 seconds to prevent indefinite hanging
+    const fallbackTimer = setTimeout(() => {
+      setIsVideoLoaded(true);
+    }, 1500);
+
+    // Only set an interval if there are multiple videos to cycle through
+    let timer: NodeJS.Timeout;
+    if (heroSequence.length > 1) {
+      timer = setInterval(() => {
+        setCurrentIndex((prev) => (prev + 1) % heroSequence.length);
+      }, 10000);
+    }
+
+    return () => {
+      clearTimeout(fallbackTimer);
+      if (timer) clearInterval(timer);
+    };
   }, [heroSequence.length]);
 
   return (
@@ -61,7 +73,7 @@ export function HeroSection() {
               muted
               playsInline
               preload={index === 0 ? "auto" : "metadata"}
-              onCanPlay={() => {
+              onLoadedData={() => {
                 if (index === 0) setIsVideoLoaded(true);
               }}
               src={src}
