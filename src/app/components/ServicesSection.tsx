@@ -3,7 +3,7 @@ import { motion } from 'motion/react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
-import { Brain, Sparkles, Film, Palette } from 'lucide-react';
+import { Brain, Sparkles, Film, Palette, Camera } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -19,14 +19,21 @@ export function ServicesSection() {
       video: "/videos/Fenty Beauty .mov"
     },
     {
-      span: "col-span-1 md:col-span-6",
+      span: "col-span-1 md:col-span-4",
       icon: Sparkles,
-      title: "ai imagery & video",
+      title: "AI accelerated video",
       desc: "Deploying hyper-real generative visuals tailored for extreme conversion environments.",
       video: "/videos/AI.webm"
     },
     {
-      span: "col-span-1 md:col-span-6",
+      span: "col-span-1 md:col-span-4",
+      icon: Camera,
+      title: "shooting & commercials",
+      desc: "End-to-end commercial shooting and elite post-production editing engineered for maximum impact.",
+      video: "/videos/REEL.mp4"
+    },
+    {
+      span: "col-span-1 md:col-span-4",
       icon: Brain,
       title: "content strategy",
       desc: "Structuring performance-driven frameworks rooted in psychology and aggressive retention mechanics.",
