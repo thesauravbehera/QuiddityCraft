@@ -37,34 +37,33 @@ export function Navigation() {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         className={`fixed top-4 left-1/2 -translate-x-1/2 z-[100] transition-all duration-500 ease-out pointer-events-none ${
-          scrolled ? 'w-[98%] mt-2' : 'w-full px-6 pt-4'
+          scrolled ? 'w-[98%] md:w-[90%] max-w-[1400px] mt-2' : 'w-full max-w-[1600px] px-8 pt-6'
         }`}
       >
         <div
-          className={`flex flex-wrap items-center justify-between transition-all duration-500 rounded-[32px] pointer-events-auto ${
+          className={`px-10 py-5 flex flex-wrap items-center justify-between transition-all duration-500 rounded-[28px] pointer-events-auto ${
             scrolled 
               ? 'bg-[#0a0a0a]/80 backdrop-blur-xl border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.8)]' 
               : 'bg-transparent border border-transparent'
           }`}
-          style={{ padding: 'clamp(24px, 2vw, 60px) clamp(40px, 4vw, 120px)' }}
         >
           {/* Logo */}
           <div className="flex items-center">
             <Link to="/">
-              <span className="font-bold text-white tracking-tight" style={{ fontSize: 'clamp(36px, 4vw, 100px)' }}>QUIDDITY CRAFT</span>
+              <span className="text-3xl font-bold text-white tracking-tight">QUIDDITY CRAFT</span>
             </Link>
           </div>
 
           {/* Desktop Navigation Links */}
-          <div className="hidden md:flex items-center" style={{ gap: 'clamp(40px, 4vw, 120px)' }}>
+          <div className="hidden md:flex items-center gap-14">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 to={link.href}
-                className={`font-black transition-colors relative group ${
+                className={`text-xl font-black transition-colors relative group ${
                   location.pathname === link.href ? 'text-white' : 'text-white/60 hover:text-white'
                 }`}
-                style={{ fontFamily: 'Outfit, sans-serif', fontSize: 'clamp(24px, 2vw, 60px)' }}
+                style={{ fontFamily: 'Outfit, sans-serif' }}
               >
                 {link.label}
                 <span className={`absolute -bottom-1 left-0 h-[1px] bg-white transition-all duration-300 ${
@@ -78,20 +77,11 @@ export function Navigation() {
           <Button 
             data-cal-link="saurav/30min"
             data-cal-config='{"layout":"month_view"}'
-            className="hidden md:flex bg-white text-black hover:bg-neutral-200 h-auto font-bold items-center transition-transform hover:scale-105 active:scale-95 shadow-xl"
-            style={{ 
-              borderRadius: 'clamp(16px, 1.5vw, 40px)', 
-              padding: 'clamp(20px, 2vw, 60px) clamp(40px, 4vw, 120px)',
-              fontSize: 'clamp(24px, 2vw, 60px)',
-              gap: 'clamp(16px, 1.5vw, 40px)'
-            }}
+            className="hidden md:flex bg-white text-black hover:bg-neutral-200 h-auto rounded-[14px] px-8 py-4 text-lg font-bold items-center gap-4 transition-transform hover:scale-105 active:scale-95 shadow-xl"
           >
             Book a Call
-            <div 
-              className="rounded-full bg-black/10 flex items-center justify-center"
-              style={{ width: 'clamp(40px, 3.5vw, 100px)', height: 'clamp(40px, 3.5vw, 100px)' }}
-            >
-              <ArrowUpRight style={{ width: 'clamp(24px, 2vw, 60px)', height: 'clamp(24px, 2vw, 60px)' }} />
+            <div className="rounded-full bg-black/10 flex items-center justify-center w-8 h-8">
+              <ArrowUpRight className="w-4 h-4" />
             </div>
           </Button>
 

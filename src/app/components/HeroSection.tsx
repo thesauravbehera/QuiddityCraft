@@ -80,7 +80,7 @@ export function HeroSection() {
       <div className="absolute bottom-0 left-0 w-full h-[30vh] bg-gradient-to-b from-transparent to-[#0a0a0a] pointer-events-none z-10" />
 
       {/* Content Container */}
-      <div className="relative z-[20] w-full max-w-7xl mx-auto px-6 flex flex-col items-start justify-center pt-32 pb-40 min-h-screen">
+      <div className="relative z-[20] w-full max-w-7xl mx-auto px-6 flex flex-col items-start justify-center pt-56 pb-40 min-h-screen">
         
         <motion.div
           initial={{ y: 20, opacity: 0 }}
