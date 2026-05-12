@@ -4,10 +4,8 @@ const officialBrands = [
   { name: "GNC Live Well", src: "/logos/GNC-white-logo.webp" },
   { name: "AKIKI London", src: "/logos/Akiki_London_White_Logo.webp" },
   { name: "ORNAM", src: "/logos/Ornam_logo_page-0001.webp" },
-  { name: "CLINIQUE", src: "/logos/download.webp" }, 
   { name: "HOUSE of TOOTH", src: "/logos/Web_logo_1_500x.webp" },
   { name: "BetterAlt", src: "/logos/BetterAlt Logo 98_98.webp" },
-  { name: "SKINN", src: "/logos/download (1).webp" },
   { name: "Rubans", src: "/logos/Logo.webp" }
 ];
 
