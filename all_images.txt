@@ -93,11 +93,9 @@ public/LightSpeedimages/Studio Campaigns/freepik__replace-the-product-on-her-bac
 public/LightSpeedimages/Studio Campaigns/1.webp
 public/LightSpeedimages/Studio Campaigns/freepik__an-elegant-highend-product-image-of-a-romantic-flo__96738.webp
 public/LightSpeedimages/Studio Campaigns/freepik__a-photorealistic-composite-product-imageuse-the-eg__76806.webp
-public/LightSpeedimages/Studio Campaigns/IMG_6271.webp
 public/LightSpeedimages/Studio Campaigns/cf6086c8-0b58-4fae-9d23-732dbf73a175.webp
 public/LightSpeedimages/Studio Campaigns/freepik__-subject-betteralt-shelajit-gummies-pouch-strawber__58822.webp
 public/LightSpeedimages/Studio Campaigns/freepik__create-a-dynamic-pour-shot-of-a-betteralt-peach-po__82556.webp
-public/LightSpeedimages/Studio Campaigns/freepik__without-changing-anything-in-this-img-change-the-e__48374.webp
 public/LightSpeedimages/Studio Campaigns/freepik__a-professional-sportsthemed-product-photo-set-on-a__59870.webp
 public/LightSpeedimages/Studio Campaigns/freepik__replcae-the-can-in-img1-with-the-can-in-img2__99684.webp
 public/LightSpeedimages/Studio Campaigns/freepik__a-hyperrealistic-product-photograph-featuring-the-__66349.webp
@@ -139,7 +137,6 @@ public/LightSpeedimages/Studio Campaigns/freepik__replace-the-product-in-her-han
 public/LightSpeedimages/Studio Campaigns/freepik__ultrarealistic-luxury-skincare-product-photography__35930.webp
 public/LightSpeedimages/Studio Campaigns/4(1).webp
 public/LightSpeedimages/Studio Campaigns/freepik__create-a-hyperrealistic-gym-image-based-on-the-cre__58717.webp
-public/LightSpeedimages/Studio Campaigns/freepik__ultrarealistic-luxury-product-photographytwo-ind-w__93954.webp
 public/LightSpeedimages/Studio Campaigns/20250804_1816_Energy Drink Billboard_remix_01k1thmxtpf13tb05tyjea6rqv.webp
 public/LightSpeedimages/Studio Campaigns/516694da-72e1-4eb2-98b9-ba841ba9f042.webp
 public/LightSpeedimages/Studio Campaigns/freepik__ake-the-honey-drip-from-the-stick-to-her-lips-and-__95845.webp
@@ -278,14 +275,12 @@ public/LightSpeedimages/Cosmetics/skin_enhancer_faithful_13_1769845058.webp
 public/LightSpeedimages/Cosmetics/freepik__a-highend-aesthetic-summer-product-flatlay-photogr__11161.webp
 public/LightSpeedimages/Cosmetics/freepik__enhance__29924.webp
 public/LightSpeedimages/Cosmetics/1.webp
-public/LightSpeedimages/Cosmetics/freepik__without-changing-anything-in-this-img-change-the-e__48374.webp
 public/LightSpeedimages/Cosmetics/freepik__create-a-hyperrealistic-luxury-cosmetic-product-st__29926.webp
 public/LightSpeedimages/Cosmetics/freepik__enhance__37304.webp
 public/LightSpeedimages/Cosmetics/15.1.webp
 public/LightSpeedimages/Cosmetics/freepik__enhance__99110.webp
 public/LightSpeedimages/Cosmetics/freepik__create-a-hyperrealistic-luxury-beauty-campaign-ima__99121.webp
 public/LightSpeedimages/Cosmetics/freepik__-prompt-create-an-ultrarealistic-luxury-beauty-cam__37201.webp
-public/LightSpeedimages/Cosmetics/freepik__ultrarealistic-luxury-product-photographytwo-ind-w__93954.webp
 public/LightSpeedimages/Personal care/5.webp
 public/LightSpeedimages/Personal care/4.webp
 public/LightSpeedimages/Personal care/12.webp
@@ -303,7 +298,6 @@ public/LightSpeedimages/Lifestyle Fashion/freepik__without-changing-anything-in-
 public/LightSpeedimages/Lifestyle Fashion/freepik__use-the-provided-reference-image-of-the-yardley-lo__52275.webp
 public/LightSpeedimages/Lifestyle Fashion/freepik__create-a-hyperrealistic-lifestyle-fitness-photogra__22029.webp
 public/LightSpeedimages/Lifestyle Fashion/freepik__create-an-ultrarealistic-luxury-flat-lay-product-p__620.webp
-public/LightSpeedimages/Lifestyle Fashion/IMG_6271.webp
 public/LightSpeedimages/Lifestyle Fashion/freepik__without-changing-anything-make-her-outfit-grey-but__40834.webp
 public/LightSpeedimages/Lifestyle Fashion/freepik__create-an-ultrarealistic-luxury-fragrance-campaign__621.webp
 public/images/freepik__enhance__99112.webp
@@ -425,11 +419,9 @@ public/images/freepik__an-elegant-highend-product-image-of-a-romantic-flo__96738
 public/images/urvish07_12268_Full-body_cinematic_portrait_of_a_beautiful_fe_2805ae08-94b3-45f5-8891-4914072e63bd_1.webp
 public/images/freepik__a-photorealistic-composite-product-imageuse-the-eg__76806.webp
 public/images/Granny closeup.webp
-public/images/IMG_6271.webp
 public/images/cf6086c8-0b58-4fae-9d23-732dbf73a175.webp
 public/images/freepik__-subject-betteralt-shelajit-gummies-pouch-strawber__58822.webp
 public/images/freepik__create-a-dynamic-pour-shot-of-a-betteralt-peach-po__82556.webp
-public/images/freepik__without-changing-anything-in-this-img-change-the-e__48374.webp
 public/images/download (1).webp
 public/images/freepik__a-professional-sportsthemed-product-photo-set-on-a__59870.webp
 public/images/Sahil.webp
@@ -482,7 +474,6 @@ public/images/freepik__replace-the-product-in-her-hands-with-the-betteral__29126
 public/images/freepik__ultrarealistic-luxury-skincare-product-photography__35930.webp
 public/images/4(1).webp
 public/images/freepik__create-a-hyperrealistic-gym-image-based-on-the-cre__58717.webp
-public/images/freepik__ultrarealistic-luxury-product-photographytwo-ind-w__93954.webp
 public/images/20250804_1816_Energy Drink Billboard_remix_01k1thmxtpf13tb05tyjea6rqv.webp
 public/images/516694da-72e1-4eb2-98b9-ba841ba9f042.webp
 public/images/freepik__ake-the-honey-drip-from-the-stick-to-her-lips-and-__95845.webp
