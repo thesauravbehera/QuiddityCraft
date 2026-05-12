@@ -54,15 +54,8 @@ export function TeamSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="border border-white/10 rounded-[2rem] p-6 md:p-12 mb-32 bg-[#050510] flex flex-col md:flex-row gap-10 md:gap-16 items-center"
+          className="border border-white/10 rounded-[2rem] p-6 md:p-12 mb-32 bg-[#050510] flex flex-col gap-10 items-start"
         >
-          <div className="w-full md:w-2/5 aspect-[3/4] relative rounded-xl overflow-hidden shrink-0 shadow-[0_0_40px_rgba(255,255,255,0.05)]">
-            <img 
-              src="/images/Sahil-Color.webp" 
-              alt="Sahil Shaikh"
-              className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-105"
-            />
-          </div>
           <div className="flex-1 text-left">
             <div className="text-white/40 text-[11px] lowercase tracking-tight font-sans mb-4">FOUNDER - CREATIVE DIRECTOR</div>
             <h3 
@@ -105,15 +98,8 @@ export function TeamSection() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.5 + (i * 0.1) }}
-                className="flex flex-col group"
+                className="flex flex-col group p-6 border border-white/10 rounded-[2rem] bg-white/5 hover:bg-white/10 transition-colors duration-300"
               >
-                <div className="aspect-[4/5] overflow-hidden rounded-[2rem] mb-5">
-                  <img 
-                    src={member.image} 
-                    alt={member.name} 
-                    className="w-full h-full object-cover grayscale contrast-125 transition-transform duration-700 group-hover:scale-105"
-                  />
-                </div>
                 <div>
                   <h4 
                     className="text-white mb-2" 
