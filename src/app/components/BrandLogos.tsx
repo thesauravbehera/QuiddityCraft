@@ -8,8 +8,6 @@ const officialBrands = [
   { name: "HOUSE of TOOTH", src: "/logos/Web_logo_1_500x.webp" },
   { name: "BetterAlt", src: "/logos/BetterAlt Logo 98_98.webp" },
   { name: "SKINN", src: "/logos/download (1).webp" },
-  { name: "YARDLEY LONDON", src: "/logos/1752487524187.webp" },
-  { name: "LAVIE WORLD", src: "/logos/Picture_1.avif" },
   { name: "Rubans", src: "/logos/Logo.webp" }
 ];
 

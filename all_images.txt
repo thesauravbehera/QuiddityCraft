@@ -9,7 +9,6 @@ public/LightSpeedimages/Studio Campaigns/freepik__-projecttype-ultrarealistic-co
 public/LightSpeedimages/Studio Campaigns/freepik__img1-a-hyperrealistic-product-photograph-featuring__66354.webp
 public/LightSpeedimages/Studio Campaigns/ .webp
 public/LightSpeedimages/Studio Campaigns/freepik__replace-the-can-in-img1-with-the-can-in-img2__99685.webp
-public/LightSpeedimages/Studio Campaigns/freepik__use-the-provided-reference-image-of-the-yardley-lo__626.webp
 public/LightSpeedimages/Studio Campaigns/5.webp
 public/LightSpeedimages/Studio Campaigns/freepik__a-stylish-editorial-shot-of-a-woman-sitting-inside__59875.webp
 public/LightSpeedimages/Studio Campaigns/freepik__hyperrealistic-closeup-studio-fashion-photograph-o__18174.webp
@@ -22,7 +21,6 @@ public/LightSpeedimages/Studio Campaigns/freepik__replace-the-product-in-her-han
 public/LightSpeedimages/Studio Campaigns/freepik__eyelevel-straight-frontview-product-photography-of__70863.webp
 public/LightSpeedimages/Studio Campaigns/freepik__ultrarealistic-luxury-product-shot-place-a-sealed-__50046.webp
 public/LightSpeedimages/Studio Campaigns/freepik__replace-the-blue-drink-can-in-the-womans-hands-wit__88092.webp
-public/LightSpeedimages/Studio Campaigns/freepik__use-the-provided-reference-image-of-the-yardley-lo__52275.webp
 public/LightSpeedimages/Studio Campaigns/freepik__a-stunning-ultrarealistic-lifestyle-portrait-of-a-__19009.webp
 public/LightSpeedimages/Studio Campaigns/ChatGPT Image Aug 6, 2025, 01_02_52 PM.webp
 public/LightSpeedimages/Studio Campaigns/freepik__closeup-product-photography-of-a-slim-elegant-fema__14505.webp
@@ -292,10 +290,8 @@ public/LightSpeedimages/Personal care/freepik__ultrarealistic-luxury-skincare-pr
 public/LightSpeedimages/Personal care/4(1).webp
 public/LightSpeedimages/Personal care/6.webp
 public/LightSpeedimages/Lifestyle Fashion/freepik__without-changing-anything-in-this-img1-make-the-sp__36487.webp
-public/LightSpeedimages/Lifestyle Fashion/freepik__use-the-provided-reference-image-of-the-yardley-lo__626.webp
 public/LightSpeedimages/Lifestyle Fashion/freepik__hyperrealistic-closeup-studio-fashion-photograph-o__18174.webp
 public/LightSpeedimages/Lifestyle Fashion/freepik__without-changing-anything-in-this-img1-also-keep-t__14708.webp
-public/LightSpeedimages/Lifestyle Fashion/freepik__use-the-provided-reference-image-of-the-yardley-lo__52275.webp
 public/LightSpeedimages/Lifestyle Fashion/freepik__create-a-hyperrealistic-lifestyle-fitness-photogra__22029.webp
 public/LightSpeedimages/Lifestyle Fashion/freepik__create-an-ultrarealistic-luxury-flat-lay-product-p__620.webp
 public/LightSpeedimages/Lifestyle Fashion/freepik__without-changing-anything-make-her-outfit-grey-but__40834.webp
@@ -312,7 +308,6 @@ public/images/freepik__-projecttype-ultrarealistic-commercial-beverage-sp__24352
 public/images/freepik__img1-a-hyperrealistic-product-photograph-featuring__66354.webp
 public/images/ .webp
 public/images/freepik__replace-the-can-in-img1-with-the-can-in-img2__99685.webp
-public/images/freepik__use-the-provided-reference-image-of-the-yardley-lo__626.webp
 public/images/Granny  copy.webp
 public/images/5.webp
 public/images/freepik__a-stylish-editorial-shot-of-a-woman-sitting-inside__59875.webp
@@ -327,7 +322,6 @@ public/images/Web_logo_1_500x.webp
 public/images/freepik__eyelevel-straight-frontview-product-photography-of__70863.webp
 public/images/freepik__ultrarealistic-luxury-product-shot-place-a-sealed-__50046.webp
 public/images/freepik__replace-the-blue-drink-can-in-the-womans-hands-wit__88092.webp
-public/images/freepik__use-the-provided-reference-image-of-the-yardley-lo__52275.webp
 public/images/freepik__a-stunning-ultrarealistic-lifestyle-portrait-of-a-__19009.webp
 public/images/ChatGPT Image Aug 6, 2025, 01_02_52 PM.webp
 public/images/freepik__closeup-product-photography-of-a-slim-elegant-fema__14505.webp
@@ -395,7 +389,6 @@ public/images/12.webp
 public/images/freepik__-prompt-ultrarealistic-luxury-skincare-advertiseme__81114.webp
 public/images/freepik__a-hyperrealistic-premium-studio-photograph-of-a-fe__12185.webp
 public/images/freepik__product-photography-of-two-cylindrical-containers-__46252.webp
-public/images/1752487524187.webp
 public/images/b6e1516f-120b-494f-836e-6aad06c362ff.webp
 public/images/ChatGPT Image Aug 6, 2025, 12_19_39 PM.webp
 public/images/Party wide shot  copy 2.webp

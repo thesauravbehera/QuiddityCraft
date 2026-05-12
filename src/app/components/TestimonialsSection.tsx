@@ -14,13 +14,7 @@ export function TestimonialsSection() {
         'Working with Sahil was a game-changer for our brand. His understanding of visual narrative and attention to detail brought our vision to life.',
       author: 'Creative Lead',
       company: 'AKIKI',
-    },
-    {
-      quote:
-        'The level of professionalism and creativity Sahil brings is rare. Every frame is crafted with purpose and every edit drives engagement.',
-      author: 'Brand Manager',
-      company: 'Lavie World',
-    },
+    }
   ];
 
   return (
