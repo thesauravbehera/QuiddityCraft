@@ -6,12 +6,12 @@ type Category = keyof typeof categorizedAssets;
 
 export function WorkGrid() {
   const baseCategories = Object.keys(categorizedAssets) as Category[];
-  const categories = ['All', ...baseCategories] as const;
-  const [activeCategory, setActiveCategory] = useState<string>('All');
+  const categories = ['All Files', ...baseCategories] as const;
+  const [activeCategory, setActiveCategory] = useState<string>('All Files');
   const [showAll, setShowAll] = useState(false);
 
-  // If 'All' is selected, merge all arrays. Otherwise, fetch the specific category array.
-  const currentAssets = activeCategory === 'All' 
+  // If 'All Files' is selected, merge all arrays. Otherwise, fetch the specific category array.
+  const currentAssets = activeCategory === 'All Files' 
     ? Object.values(categorizedAssets).flat() 
     : categorizedAssets[activeCategory as Category] || [];
     
@@ -85,6 +85,8 @@ export function WorkGrid() {
               .replace(/[-_]/g, ' ')
               .trim();
 
+            const isVideo = src.endsWith('.mp4') || src.endsWith('.webm') || src.endsWith('.mov');
+
             return (
               <motion.div
                 key={src}
@@ -95,12 +97,23 @@ export function WorkGrid() {
                 transition={{ duration: 0.4, delay: (index % 10) * 0.05 }}
                 className="group relative break-inside-avoid overflow-hidden rounded-[16px] bg-zinc-950/40 backdrop-blur-md border border-white/10 cursor-pointer transform transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(255,255,255,0.05)] hover:border-white/20"
               >
-                <img 
-                  src={src} 
-                  alt={cleanTitle || 'Creative Visual'} 
-                  loading="lazy"
-                  className="w-full h-auto object-cover relative z-0" 
-                />
+                {isVideo ? (
+                  <video 
+                    src={src}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    className="w-full h-auto object-cover relative z-0"
+                  />
+                ) : (
+                  <img 
+                    src={src} 
+                    alt={cleanTitle || 'Creative Visual'} 
+                    loading="lazy"
+                    className="w-full h-auto object-cover relative z-0" 
+                  />
+                )}
 
                 {/* Overlays removed to keep imagery purely visual */}
               </motion.div>
