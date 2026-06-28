@@ -8,12 +8,6 @@ export function TestimonialsSection() {
         "Sahil's ability to blend AI with creative storytelling is unmatched. He delivered a campaign that not only looked stunning but drove real results.",
       author: 'Marketing Director',
       company: 'BetterAlt',
-    },
-    {
-      quote:
-        'Working with Sahil was a game-changer for our brand. His understanding of visual narrative and attention to detail brought our vision to life.',
-      author: 'Creative Lead',
-      company: 'AKIKI',
     }
   ];
 

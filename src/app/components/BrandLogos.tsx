@@ -2,11 +2,8 @@ import { motion } from 'motion/react';
 
 const officialBrands = [
   { name: "GNC Live Well", src: "/logos/GNC-white-logo.webp" },
-  { name: "AKIKI London", src: "/logos/Akiki_London_White_Logo.webp" },
   { name: "ORNAM", src: "/logos/Ornam_logo_page-0001.webp" },
-  { name: "HOUSE of TOOTH", src: "/logos/Web_logo_1_500x.webp" },
-  { name: "BetterAlt", src: "/logos/BetterAlt Logo 98_98.webp" },
-  { name: "Rubans", src: "/logos/Logo.webp" }
+  { name: "BetterAlt", src: "/logos/BetterAlt Logo 98_98.webp" }
 ];
 
 export function BrandLogos() {
@@ -23,7 +20,7 @@ export function BrandLogos() {
            viewport={{ once: true }}
            transition={{ duration: 0.8 }}
            className="text-center mb-10 flex flex-col items-center px-6"
-        >
+         >
           <p className="text-[#ffffff] text-base font-bold lowercase tracking-tight" style={{ fontFamily: 'Outfit, sans-serif' }}>
             Trusted by global visionaries
           </p>
@@ -41,7 +38,7 @@ export function BrandLogos() {
             className="flex items-center w-max shrink-0"
           >
             {duplicatedLogos.map((brand, index) => {
-               const requiresInversion = ['GNC Live Well', 'AKIKI London', 'Rubans'].includes(brand.name);
+               const requiresInversion = ['GNC Live Well'].includes(brand.name);
 
                return (
                  <div key={index} className="relative shrink-0 w-[140px] md:w-[280px] h-[80px] md:h-[120px] mx-2 md:mx-4 flex items-center justify-center group">
