@@ -279,16 +279,16 @@ public/LightSpeedimages/Cosmetics/15.1.webp
 public/LightSpeedimages/Cosmetics/freepik__enhance__99110.webp
 public/LightSpeedimages/Cosmetics/freepik__create-a-hyperrealistic-luxury-beauty-campaign-ima__99121.webp
 public/LightSpeedimages/Cosmetics/freepik__-prompt-create-an-ultrarealistic-luxury-beauty-cam__37201.webp
-public/LightSpeedimages/Personal care/5.webp
-public/LightSpeedimages/Personal care/4.webp
-public/LightSpeedimages/Personal care/12.webp
-public/LightSpeedimages/Personal care/1.webp
-public/LightSpeedimages/Personal care/freepik__a-photorealistic-composite-product-imageuse-the-eg__76806.webp
-public/LightSpeedimages/Personal care/7.webp
-public/LightSpeedimages/Personal care/freepik_prompt-a-clean-modern-product-photography-scene-featuring-four-laani-deodorant-sticks-arranged-on-a-glossy-reflective-surface.-two-deodorant-sticks-are-pastel-yellow-and-two-are-pastel-bl_0001.webp
-public/LightSpeedimages/Personal care/freepik__ultrarealistic-luxury-skincare-product-photography__35930.webp
-public/LightSpeedimages/Personal care/4(1).webp
-public/LightSpeedimages/Personal care/6.webp
+public/LightSpeedimages/Personal Care/5.webp
+public/LightSpeedimages/Personal Care/4.webp
+public/LightSpeedimages/Personal Care/12.webp
+public/LightSpeedimages/Personal Care/1.webp
+public/LightSpeedimages/Personal Care/freepik__a-photorealistic-composite-product-imageuse-the-eg__76806.webp
+public/LightSpeedimages/Personal Care/7.webp
+public/LightSpeedimages/Personal Care/freepik_prompt-a-clean-modern-product-photography-scene-featuring-four-laani-deodorant-sticks-arranged-on-a-glossy-reflective-surface.-two-deodorant-sticks-are-pastel-yellow-and-two-are-pastel-bl_0001.webp
+public/LightSpeedimages/Personal Care/freepik__ultrarealistic-luxury-skincare-product-photography__35930.webp
+public/LightSpeedimages/Personal Care/4(1).webp
+public/LightSpeedimages/Personal Care/6.webp
 public/LightSpeedimages/Lifestyle Fashion/freepik__without-changing-anything-in-this-img1-make-the-sp__36487.webp
 public/LightSpeedimages/Lifestyle Fashion/freepik__hyperrealistic-closeup-studio-fashion-photograph-o__18174.webp
 public/LightSpeedimages/Lifestyle Fashion/freepik__without-changing-anything-in-this-img1-also-keep-t__14708.webp

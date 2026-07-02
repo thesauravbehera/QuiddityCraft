@@ -3,7 +3,7 @@ import { motion } from 'motion/react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
-import { Brain, Sparkles, Film, Palette, Camera } from 'lucide-react';
+import { Palette, Sparkles, Brain, Camera, Sliders, Users } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -12,32 +12,46 @@ export function ServicesSection() {
 
   const services = [
     {
-      span: "col-span-1 md:col-span-12",
+      span: "col-span-1 md:col-span-6",
       icon: Palette,
       title: "brand positioning",
-      desc: "Architecting the core identity and digital footprint to dominate market perception.",
-      video: "/videos/Fenty Beauty .mov"
+      desc: "Visual identity, creative direction, and brand storytelling for the digital era.",
+      video: "/videos/Fenty Beauty .webm"
     },
     {
-      span: "col-span-1 md:col-span-4",
+      span: "col-span-1 md:col-span-6",
       icon: Sparkles,
-      title: "AI accelerated video",
-      desc: "Deploying hyper-real generative visuals tailored for extreme conversion environments.",
+      title: "AI imagery & AI videos",
+      desc: "Hyper-real visuals, AI commercials, and next-gen creatives powered by expert prompt engineering.",
       video: "/videos/AI.webm"
     },
     {
       span: "col-span-1 md:col-span-4",
-      icon: Camera,
-      title: "shooting & commercials",
-      desc: "End-to-end commercial shooting and elite post-production editing engineered for maximum impact.",
-      video: "/videos/REEL.mp4"
+      icon: Brain,
+      title: "content planning & strategy",
+      desc: "Performance-driven content frameworks rooted in storytelling, psychology, and brand voice.",
+      video: "/videos/Motion graphics.webm"
     },
     {
       span: "col-span-1 md:col-span-4",
-      icon: Brain,
-      title: "content strategy",
-      desc: "Structuring performance-driven frameworks rooted in psychology and aggressive retention mechanics.",
-      video: "/videos/Motion graphics.webm"
+      icon: Camera,
+      title: "cinematography",
+      desc: "Combine artistic storytelling with technical expertise to deliver high-quality visual content that elevates brand narratives.",
+      video: "/videos/Mountain 1.webm"
+    },
+    {
+      span: "col-span-1 md:col-span-4",
+      icon: Sliders,
+      title: "video editing",
+      desc: "Refined video editing as per the brand's guidelines and required style.",
+      video: "/videos/REEL.webm"
+    },
+    {
+      span: "col-span-1 md:col-span-12",
+      icon: Users,
+      title: "social media management",
+      desc: "Comprehensive, data-driven services to manage and elevate a brand’s online presence, driving awareness, engagement, and ROI.",
+      video: "/videos/Clinique Video 04_04 English.webm"
     }
   ];
   // Removed GSAP stagger because it was locking opacity on mobile/Safari viewport mismatch
@@ -60,8 +74,8 @@ export function ServicesSection() {
                   Our Arsenal
                </p>
             </div>
-            <h2 className="text-white text-4xl md:text-5xl lg:text-7xl font-black capitalize tracking-tight leading-[0.9]" style={{ fontFamily: 'Outfit, sans-serif' }}>
-              Our Core<br />Competencies
+            <h2 className="text-white text-4xl md:text-5xl lg:text-7xl font-black lowercase tracking-tight leading-[0.9]" style={{ fontFamily: 'Outfit, sans-serif' }}>
+              what we do ?
             </h2>
           </div>
           <p className="text-white/60 text-base md:text-lg max-w-sm font-medium" style={{ fontFamily: 'Outfit, sans-serif' }}>
